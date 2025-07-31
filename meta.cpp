@@ -5,4 +5,4 @@ protocol = 1;
 publishedid = -1;
 
 // Steam Workshop item name
-name = "[16th] - Phoenix Compagny";
+name = "[16th] - Phoenix Company";

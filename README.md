@@ -2,11 +2,11 @@
 [![Discord](https://img.shields.io/discord/1400451720278048848?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/QNSgQCd76q)
 [![License](https://img.shields.io/badge/License-APL--SA-blue.svg)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
 
-# 16th Phoenix Compagny - Mod auxiliaire
+# 16th Phoenix Company - Mod auxiliaire
 
 ## 📖 Description
 
-Le mod auxiliaire de la 16th Phoenix Compagny est un mod pour Arma 3 qui ajoute des ressources et des fonctionnalités inspirées de l'univers de Star Wars, permettant aux joueurs de vivre des aventures épiques dans une galaxie lointaine, très lointaine.
+Le mod auxiliaire de la 16th Phoenix Company est un mod pour Arma 3 qui ajoute des ressources et des fonctionnalités inspirées de l'univers de Star Wars, permettant aux joueurs de vivre des aventures épiques dans une galaxie lointaine, très lointaine.
 
 ## 📜 Licence
 
