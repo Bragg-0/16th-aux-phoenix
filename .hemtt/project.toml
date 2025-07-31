@@ -1,0 +1,54 @@
+name = "[16th] - Phoenix Compagny"
+author = "PhoenixTeam"
+url = "https://phoenix-compagny.fr/"
+prefix = "PT"
+mainprefix = "x"
+
+[version]
+path = "addons/main/script_version.hpp"
+git_hash = 8
+
+[files]
+include = [
+    "mod.cpp",
+    "meta.cpp",
+    "*.paa",
+    "*.dll",
+    "LICENSE.md",
+    "README.md",
+]
+exclude = [
+    "*.psd",
+    "*.png",
+    "*.md",
+]
+
+[hemtt.build]
+pdrive = "require"
+binarize = true
+rapify = true
+optional_mod_folders = false
+
+[hemtt.check]
+pdrive = "require"
+
+[hemtt.release]
+sign = true
+binarize = true
+rapify = true
+archive = true
+
+[hemtt.launch.default]
+presets = [
+    "Dev_Preset",
+]
+
+parameters = [
+    "-noPause",
+    "-noPauseAudio",
+]
+
+executable = "arma3_x64"
+file_patching = false
+binarize = true
+rapify = true
