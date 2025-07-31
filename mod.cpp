@@ -1,0 +1,14 @@
+name = "[16th] - Phoenix Compagny";
+author = "PhoenixTeam";
+action = "https://phoenix-compagny.fr/";
+actionName = "Website";
+dlcColor[] = { 0.8, 0.263, 0, 1 };
+hideName = 0;
+hidePicture = 0;
+logo = "logo_white_ca.paa";
+logoOver = "logo_black_ca.paa";
+logoSmall = "logo_white_ca.paa";
+overview = "Ce mod contient des armures et des matériaux destinés au serveur 16th Phoenix Compagny.";
+picture = "logo_white_ca.paa";
+tooltip = "[16th] - Phoenix Compagny";
+tooltipOwned = "[16th] - Phoenix Compagny";
