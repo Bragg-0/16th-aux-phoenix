@@ -1,5 +1,5 @@
 [![Website](https://img.shields.io/badge/Website-Phoenix%20Company-orange?style=flat&logo=firefox&logoColor=white)](https://phoenix-compagny.fr/)
-[![Discord](https://img.shields.io/discord/1028856269307786240?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/6X3a7c4)
+[![Discord](https://img.shields.io/discord/1028856269307786240?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/QNSgQCd76q)
 [![License](https://img.shields.io/badge/License-APL--SA-blue.svg)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
 
 # 16th Phoenix Compagny - Mod auxiliaire
