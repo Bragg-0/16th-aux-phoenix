@@ -120,9 +120,9 @@
     }
 
 #define CLASS_ARCPLATE_VEST(var1)                                                   \
-    class ECVAR(var1,ARC_Plate) : ls_gar_arc_vest_base {                            \
+    class ECVAR(var1,ARCPlate) : ls_gar_arc_vest_base {                            \
         VESTS_BASE;                                                                 \
-        displayName = SUBCSTRING(ECVAR(var1,ARC_Plate));                            \
+        displayName = SUBCSTRING(ECVAR(var1,ARCPlate));                            \
         picture = QPATHTOEF(characters,data\vests\officer_ca.paa);                  \
         hiddenSelectionsTextures[] = {                                              \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_arc_accessories_co.paa),     \
