@@ -119,17 +119,6 @@
         };                                                                          \
     }
 
-#define CLASS_ARC_VEST(var1)                                                        \
-    class ECVAR(var1,ARC) : ls_gar_arc_vest_base {                                  \
-        VESTS_BASE;                                                                 \
-        displayName = SUBCSTRING(ECVAR(var1,ARC));                                  \
-        picture = QPATHTOEF(characters,data\vests\officer_ca.paa);                  \
-        hiddenSelectionsTextures[] = {                                              \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_arc_accessories_co.paa),     \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_officer_accessories_co.paa)  \
-        };                                                                          \
-    }
-
 #define CLASS_ARCPLATE_VEST(var1)                                                   \
     class ECVAR(var1,ARC_Plate) : ls_gar_arc_vest_base {                            \
         VESTS_BASE;                                                                 \
@@ -159,16 +148,6 @@
         picture = QPATHTOEF(characters,data\vests\vest_ca.paa);                     \
         hiddenSelectionsTextures[] = {                                              \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_heavy_accessories_co.paa)    \
-        };                                                                          \
-    }
-
-#define CLASS_COMMANDER_VEST(var1)                                                  \
-    class ECVAR(var1,Commander) : ls_gar_commander_vest_base {                      \
-        VESTS_BASE;                                                                 \
-        displayName = SUBCSTRING(ECVAR(var1,Commander));                            \
-        picture = QPATHTOEF(characters,data\vests\officer_ca.paa);                  \
-        hiddenSelectionsTextures[] = {                                              \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_officer_accessories_co.paa)  \
         };                                                                          \
     }
 
