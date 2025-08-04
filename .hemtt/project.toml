@@ -1,7 +1,7 @@
 name = "[16th] - Phoenix Company"
 author = "PhoenixTeam"
 url = "https://phoenix-company.fr/"
-prefix = "PT"
+prefix = "PC"
 mainprefix = "x"
 
 [version]
