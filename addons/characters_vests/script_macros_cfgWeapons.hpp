@@ -182,14 +182,14 @@
         };                                                                          \
     }
 
-#define CLASS_MEDIC_VEST(var1)                                                      \
-    class ECVAR(var1,Medic) : ls_gar_medic_vest_base {                              \
-        VESTS_BASE;                                                                 \
-        displayName = SUBCSTRING(ECVAR(var1,Medic));                                \
-        picture = QPATHTOEF(characters,data\vests\vest_ca.paa);                     \
-        hiddenSelectionsTextures[] = {                                              \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_heavy_accessories_co.paa)    \
-        };                                                                          \
+#define CLASS_MEDIC_VEST(var1)                                                          \
+    class ECVAR(var1,Medic) : ls_gar_medic_vest_base {                                  \
+        VESTS_BASE;                                                                     \
+        displayName = SUBCSTRING(ECVAR(var1,Medic));                                    \
+        picture = QPATHTOEF(characters,data\vests\vest_ca.paa);                         \
+        hiddenSelectionsTextures[] = {                                                  \
+            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_medic_heavy_accessories_co.paa)  \
+        };                                                                              \
     }
 
 #define CLASS_OFFICER_VEST(var1)                                                    \
