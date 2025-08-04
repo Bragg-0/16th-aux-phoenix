@@ -1,6 +1,6 @@
 class CfgMarkers {
     class GVAR(Marker_Black) {
-        name = CSTRING(marker_black);
+        name = CSTRING(Marker_Black); // str_PC_Main_Marker_Black
         scope = 2;
         scopeCurator = 2;
         color[] = { 1, 1, 1, 1 };
@@ -11,7 +11,7 @@ class CfgMarkers {
         texture = QPATHTOF(data\logo_black_ca.paa);
     };
     class GVAR(Marker_White) {
-        name = CSTRING(marker_white);
+        name = CSTRING(Marker_White); // str_PC_Main_Marker_White
         scope = 2;
         scopeCurator = 2;
         color[] = { 1, 1, 1, 1 };

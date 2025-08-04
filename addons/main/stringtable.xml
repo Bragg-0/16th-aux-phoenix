@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="TP_Main">
-    <Package name="CfgMarkers"></Package>
+    <Package name="3den">
+        <Key ID="str_PC_Main_3den">
+            <English>[16th] Phoenix Compagny</English>
+            <French>[16th] Phoenix Compagny</French>
+        </Key>
+        <Key ID="str_PC_Main_3den_FactionBlufor">
+            <English>[16th] Phoenix Compagny</English>
+            <French>[16th] Phoenix Compagny</French>
+        </Key>
+    </Package>
+    <Package name="CfgMarkers">
+        <Key ID="str_PC_Main_marker_black">
+            <English>[16th] Phoenix Compagny [Black]</English>
+            <French>[16th] Phoenix Compagny [Noir]</French>
+        </Key>
+        <Key ID="str_PC_Main_marker_white">
+            <English>[16th] Phoenix Compagny [White]</English>
+            <French>[16th] Phoenix Compagny [Blanc]</French>
+        </Key>
+    </Package>
 </Project>
