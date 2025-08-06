@@ -15,7 +15,7 @@
 #define QCVAR(var1) QUOTE(CVAR(var1))
 
 #define CVARF(var1) DOUBLES(CVAR(var1),F)
-#define QFCVARF(var1) QUOTE(CVARF(var1))
+#define QCVARF(var1) QUOTE(CVARF(var1))
 
 #define ECVAR(var1,var2) DOUBLES(CHARACTERS_CATEGORY,TRIPLES(CHARACTERS_TYPE,var1,var2))
 #define QECVAR(var1,var2) QUOTE(ECVAR(var1,var2))
