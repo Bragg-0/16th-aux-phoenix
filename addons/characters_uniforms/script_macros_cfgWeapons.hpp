@@ -8,7 +8,7 @@
         class ItemInfo : ItemInfo {                                 \
             uniformModel = "-";                                     \
             uniformType = "neopren";                                \
-            uniformClass = CVARF(var1);                             \
+            uniformClass = QCVARF(var1);                             \
             containerClass = SUPPLY_XX(100);                        \
             mass = 20;                                              \
         };                                                          \

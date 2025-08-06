@@ -3,7 +3,7 @@
         Author = AUTHOR;                                                \
         scopeCurator = 1;                                               \
         scope = 1;                                                      \
-        uniformClass = CVAR(var1);                                      \
+        uniformClass = QCVAR(var1);                                      \
         hiddenSelectionsTextures[] = {                                  \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_camo1_co.paa),   \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_camo2_co.paa),   \
