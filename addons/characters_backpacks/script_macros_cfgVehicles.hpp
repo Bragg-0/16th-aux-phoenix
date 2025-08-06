@@ -12,7 +12,7 @@
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,HeavyMedic));                   \
         maximumLoad = 500;                                                  \
-        picture = QPATHTOEF(characters,data\backpacks\medic_ca.paa);        \
+        picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_medic_ca.paa);        \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Cover_co.paa),       \
@@ -27,7 +27,7 @@
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Heavy));                        \
         maximumLoad = 500;                                                  \
-        picture = QPATHTOEF(characters,data\backpacks\heavy_ca.paa);        \
+        picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_heavy_ca.paa);        \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Cover_co.paa),       \
@@ -41,7 +41,7 @@
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Radio));                        \
         maximumLoad = 300;                                                  \
-        picture = QPATHTOEF(characters,data\backpacks\radio_ca.paa);        \
+        picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_radio_ca.paa);        \
         backpackClass = QECVAR(var1,Radio);                                 \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
@@ -56,7 +56,7 @@
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Rocket));                       \
         maximumLoad = 400;                                                  \
-        picture = QPATHTOEF(characters,data\backpacks\rocket_ca.paa);       \
+        picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_rocket_ca.paa);       \
         backpackClass = QECVAR(var1,Rocket);                                \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
@@ -72,7 +72,7 @@
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Invisible));                    \
         maximumLoad = 300;                                                  \
-        picture = QPATHTOEF(characters,data\backpacks\invisible_ca.paa);    \
+        picture = QPATHTOEF(characters,data\##CHARACTERS_TYPE##_ca.paa);    \
         backpackClass = QECVAR(var1,Invisible);                             \
         hiddenSelectionsTextures[] = {};                                    \
     }

@@ -4,7 +4,7 @@
         scopeArsenal = 2;                                           \
         scope = 2;                                                  \
         displayName = SUBCSTRING(CVAR(var1));                       \
-        picture = QPATHTOEF(characters,data\uniforms\body_ca.paa);  \
+        picture = QPATHTOEF(characters,data\uniforms\##CHARACTERS_TYPE##_body_ca.paa);  \
         class ItemInfo : ItemInfo {                                 \
             uniformModel = "-";                                     \
             uniformType = "neopren";                                \
