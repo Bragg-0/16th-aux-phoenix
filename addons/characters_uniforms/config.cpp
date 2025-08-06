@@ -48,11 +48,11 @@ class CfgPatches {
 class CfgVehicles {
     class lsd_gar_phase2_base;
     #include "CfgVehicles_Regs.hpp"
-
+    #include "CfgVehicles_Customs.hpp"
 };
 
 class CfgWeapons {
     CLASS_INHERITANCE(ls_gar_phase2_uniform);
     #include "CfgWeapons_Regs.hpp"
-
+    #include "CfgWeapons_Customs.hpp"
 };
