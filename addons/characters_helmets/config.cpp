@@ -48,7 +48,7 @@ class CfgVehicles {
 
 class CfgWeapons {
     CLASS_INHERITANCE(ls_gar_phase2_helmet);
-    CLASS_INHERITANCE(ls_gar_phase2_pilot_helmet);
+    CLASS_INHERITANCE(ls_gar_phase2Pilot_helmet);
     #include "CfgWeapons_Regs.hpp"
     #include "CfgWeapons_Customs.hpp"
 };
