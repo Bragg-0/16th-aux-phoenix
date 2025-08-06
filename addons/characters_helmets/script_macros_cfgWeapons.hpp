@@ -2,7 +2,7 @@
     author = AUTHOR;                        \
     scope = 2;                              \
     scopeArsenal = 2;                       \
-    class ItemInfo {                        \
+    class ItemInfo : ItemInfo {             \
         mass = 10;                          \
         class HitpointsProtectionInfo {     \
             class Head {                    \
