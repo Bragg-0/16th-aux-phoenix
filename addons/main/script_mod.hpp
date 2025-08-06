@@ -1,7 +1,7 @@
 #define MAINPREFIX x
 #define PREFIX PC
 #define MOD_NAME 16th Phoenix Company
-#define AUTHOR "Phoenix Team"
+#define AUTHOR "PhoenixTEAM"
 
 #define REQUIRED_VERSION 2.18
 
