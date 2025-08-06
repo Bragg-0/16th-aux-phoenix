@@ -14,11 +14,11 @@
         maximumLoad = 500;                                                  \
         picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_medic_ca.paa);        \
         hiddenSelectionsTextures[] = {                                      \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Cover_co.paa),       \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Pouches_co.paa),     \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Medic_co.paa),       \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Medic_co.paa)        \
+            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_Medic_co.paa),                  \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\cover_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\pouches_co.paa",   \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\medic_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\medic_co.paa"      \
         };                                                                  \
     }
 
@@ -30,9 +30,9 @@
         picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_heavy_ca.paa);        \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Cover_co.paa),       \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Pouches_co.paa),     \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Tube_co.paa)         \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\cover_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\pouches_co.paa",   \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\tube_co.paa"       \
         };                                                                  \
     }
 
@@ -45,9 +45,9 @@
         backpackClass = QECVAR(var1,Radio);                                 \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Radio_co.paa),       \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Screen_co.paa),      \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Pouches_co.paa)      \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\radio_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\screen_co.paa",    \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\pouches_co.paa"    \
         };                                                                  \
     }
 
@@ -59,11 +59,11 @@
         picture = QPATHTOEF(characters,data\backpacks\##CHARACTERS_TYPE##_rocket_ca.paa);       \
         backpackClass = QECVAR(var1,Rocket);                                \
         hiddenSelectionsTextures[] = {                                      \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Holder_co.paa),      \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Rocket_co.paa),      \
-            "#(rgb,8,8,3)color(1,0,0,1)",                                   \
-            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Pouches_co.paa)      \
+            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),                        \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\holder_co.paa",    \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\rocket_co.paa",    \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\light_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\pouches_co.paa"    \
         };                                                                  \
     }
 
