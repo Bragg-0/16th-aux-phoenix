@@ -7,7 +7,7 @@
         editorCategory = QEGVAR(main,3den);         \
         editorSubcategory = "EdSubcat_Helmets";     \
         class TransportItems {                      \
-            ITEM_XX(CVAR(var1,P2),1);               \
+            ITEM_XX(ECVAR(var1,P2),1);              \
         };                                          \
     }
 
@@ -20,6 +20,6 @@
         editorCategory = QEGVAR(main,3den);                 \
         editorSubcategory = "EdSubcat_Helmets";             \
         class TransportItems {                              \
-            ITEM_XX(CVAR(var1,P2_Pilot),1);                 \
+            ITEM_XX(ECVAR(var1,P2_Pilot),1);                \
         };                                                  \
     }
