@@ -11,6 +11,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {
             // Regs
+                #define CHARACTERS_TYPE Regs
                 QECVAR(Base,ARF),
                 QECVAR(Base,Engineer),
                 QECVAR(Base,EngineerNCO),
@@ -29,9 +30,12 @@ class CfgPatches {
                 QECVAR(Base,ReconNCO),
                 QECVAR(Base,Specialist),
                 QECVAR(Base,Clone),
+                #undef CHARACTERS_TYPE
 
             // Customs
+                #define CHARACTERS_TYPE Customs
                 //* Add the class names for custom vests here
+                #undef CHARACTERS_TYPE
         };
         VERSION_CONFIG;
     };
