@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_backpacks)">
+    <Package name="CfgVehicles_Regs">
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Heavy">
+            <English>[16th] Backpack</English>
+            <French>[16th] Sac à dos</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_HeavyMedic">
+            <English>[16th] Medic Backpack</English>
+            <French>[16th] Sac à dos de médecin</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Invisible">
+            <English>[16th] Invisible Backpack</English>
+            <French>[16th] Sac à dos invisible</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Radio">
+            <English>[16th] Radio Backpack</English>
+            <French>[16th] Sac à dos radio</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Rocket">
+            <English>[16th] Rocket Backpack</English>
+            <French>[16th] Sac à dos roquettes</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_EOD_Heavy">
+            <English>[16th] EOD Backpack</English>
+            <French>[16th] Sac à dos EOD</French>
+        </Key>
+    </Package>
+</Project>

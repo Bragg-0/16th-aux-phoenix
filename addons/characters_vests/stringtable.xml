@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_vests)">
+    <Package name="CfgWeapons_Regs">
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_ARCPlate">
+            <English>[16th] ARC Plate Vest</English>
+            <French>[16th] Gilet ARC Blindé</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_ARF">
+            <English>[16th] ARF Vest</English>
+            <French>[16th] Gilet ARF</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Assault">
+            <English>[16th] Assault Vest</English>
+            <French>[16th] Gilet d'Assaut</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_CFR">
+            <English>[16th] CFR Vest</English>
+            <French>[16th] Gilet CFR</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Clone">
+            <English>[16th] Clone Vest</English>
+            <French>[16th] Gilet Clone</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Engineer">
+            <English>[16th] Engineer Vest</English>
+            <French>[16th] Gilet Ingénieur</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_EngineerNCO">
+            <English>[16th] Engineer NCO Vest</English>
+            <French>[16th] Gilet Ingénieur Sous-Officier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_ForceReconNCO">
+            <English>[16th] Force Recon NCO Vest</English>
+            <French>[16th] Gilet Force Recon Sous-Officier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Grenadier">
+            <English>[16th] Grenadier Vest</English>
+            <French>[16th] Gilet Grenadier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Hazard">
+            <English>[16th] Hazard Vest</English>
+            <French>[16th] Gilet Hazard</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Heavy">
+            <English>[16th] Heavy Vest</English>
+            <French>[16th] Gilet Lourd</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Kama">
+            <English>[16th] Kama Vest</English>
+            <French>[16th] Gilet Kama</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Lieutenant">
+            <English>[16th] Lieutenant Vest</English>
+            <French>[16th] Gilet Lieutenant</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Medic">
+            <English>[16th] Medic Vest</English>
+            <French>[16th] Gilet Médecin</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Officer">
+            <English>[16th] Officer Vest</English>
+            <French>[16th] Gilet Officier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Recon">
+            <English>[16th] Recon Vest</English>
+            <French>[16th] Gilet Reconnaissance</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_ReconNCO">
+            <English>[16th] Sergent Vest</English>
+            <French>[16th] Gilet Sergent</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Regs_Base_Specialist">
+            <English>[16th] Specialist Vest</English>
+            <French>[16th] Gilet Spécialiste</French>
+        </Key>
+    </Package>
+</Project>

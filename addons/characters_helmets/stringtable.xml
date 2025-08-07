@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_helmets)">
+    <Package name="CfgVehicles_Regs">
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Shiny_P2_F">
+            <English>[16th] Shiny P2 Helmet</English>
+            <French>[16th] Casque P2 Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Shiny_P2_Pilot_F">
+            <English>[16th] Shiny P2 Pilot Helmet</English>
+            <French>[16th] Casque P2 Pilote Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Trooper_P2_F">
+            <English>[16th] Trooper P2 Helmet</English>
+            <French>[16th] Casque P2 Trooper</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Trooper_P2_Pilot_F">
+            <English>[16th] Trooper P2 Pilot Helmet</English>
+            <French>[16th] Casque P2 Pilote Trooper</French>
+        </Key>
+    </Package>
+    <Package name="CfgWeapons_Regs">
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Shiny_P2">
+            <English>[16th] Shiny P2 Helmet</English>
+            <French>[16th] Casque P2 Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Shiny_P2_Pilot">
+            <English>[16th] Shiny P2 Pilot Helmet</English>
+            <French>[16th] Casque P2 Pilote Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Trooper_P2">
+            <English>[16th] Trooper P2 Helmet</English>
+            <French>[16th] Casque P2 Trooper</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Trooper_P2_Pilot">
+            <English>[16th] Trooper P2 Pilot Helmet</English>
+            <French>[16th] Casque P2 Pilote Trooper</French>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Main)">
+    <Package name="CfgEditorCategories">
+        <Key ID="str_pc_main_3den">
+            <English>[16th] Phoenix</English>
+            <French>[16th] Phoenix</French>
+        </Key>
+    </Package>
+    <Package name="CfgFactionClasses">
+        <Key ID="str_pc_main_3den_FactionBlufor">
+            <English>[16th] Phoenix Company</English>
+            <French>[16th] Phoenix Company</French>
+        </Key>
+    </Package>
+    <Package name="CfgMarkers">
+        <Key ID="str_pc_main_Marker_Black">
+            <English>[16th] Phoenix Marker (Black)</English>
+            <French>[16th] Phoenix Marker (Noir)</French>
+        </Key>
+        <Key ID="str_pc_main_Marker_White">
+            <English>[16th] Phoenix Marker (White)</English>
+            <French>[16th] Phoenix Marker (Blanc)</French>
+        </Key>
+    </Package>
+    <Package name="CfgPatches">
+        <Key ID="str_pc_main_url">
+            <English>https://phoenix-company.fr/</English>
+            <French>https://phoenix-company.fr/</French>
+        </Key>
+    </Package>
+</Project>

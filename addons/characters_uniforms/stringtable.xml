@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_uniforms)">
+    <Package name="CfgWeapons_Regs">
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Shiny">
+            <English>[16th] Shiny Uniform</English>
+            <French>[16th] Uniforme Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Shiny_EOD">
+            <English>[16th] Shiny EOD Uniform</English>
+            <French>[16th] Uniforme EOD Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Shiny_Medic">
+            <English>[16th] Shiny Medic Uniform</English>
+            <French>[16th] Uniforme Médecin Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Trooper">
+            <English>[16th] Trooper Uniform</English>
+            <French>[16th] Uniforme Trooper</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Trooper_EOD">
+            <English>[16th] Trooper EOD Uniform</English>
+            <French>[16th] Uniforme Trooper EOD</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Uniforms_PC_Uniforms_Regs_Trooper_Medic">
+            <English>[16th] Trooper Medic Uniform</English>
+            <French>[16th] Uniforme Trooper Médecin</French>
+        </Key>
+    </Package>
+</Project>
