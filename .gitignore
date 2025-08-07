@@ -13,3 +13,6 @@ releases
 # Images dans addons
 **/addons/**/*.png
 **/addons/*.png
+
+# Fichiers substance painter
+*.spp

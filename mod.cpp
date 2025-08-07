@@ -1,5 +1,5 @@
 name = "[16th] - Phoenix Company";
-author = "PhoenixTeam";
+author = "PhoenixTEAM";
 action = "https://phoenix-company.fr/";
 actionName = "Website";
 dlcColor[] = { 0.8, 0.263, 0, 1 };
