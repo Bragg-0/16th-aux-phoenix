@@ -14,7 +14,7 @@ class CfgPatches {
     };
 };
 
-#include "CfgCategories.hpp"
+#include "CfgEditorCategories.hpp"
 
 #include "CfgFactionClasses.hpp"
 
