@@ -1,18 +1,17 @@
-# Fichiers binaires et exécutables
-*.pbo
-hemtt
+# HEMTT
 hemtt.exe
-.hemttout
+.hemtt/missions/~*
+.hemttout/
+releases/
 
-# Clés privées
-*.biprivatekey
-
-# Répertoires de release
-releases
-
-# Images dans addons
-**/addons/**/*.png
-**/addons/*.png
-
-# Fichiers substance painter
+# Textures
+Exports/
 *.spp
+*.spp.painter_lock
+*.psd
+
+# Other
+*.biprivatekey
+*.zip
+*.pbo
+*.sqfc

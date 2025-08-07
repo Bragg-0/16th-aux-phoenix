@@ -1,12 +1,11 @@
 name = "[16th] - Phoenix Company"
 author = "PhoenixTEAM"
-url = "https://phoenix-company.fr/"
 prefix = "PC"
 mainprefix = "x"
 
 [version]
 path = "addons/main/script_version.hpp"
-git_hash = 8
+git_hash = 0
 
 [files]
 include = [
@@ -23,32 +22,5 @@ exclude = [
     "*.md",
 ]
 
-[hemtt.build]
-pdrive = "require"
-binarize = true
-rapify = true
-optional_mod_folders = false
-
-[hemtt.check]
-pdrive = "require"
-
-[hemtt.release]
-sign = true
-binarize = true
-rapify = true
-archive = true
-
-[hemtt.launch.default]
-presets = [
-    "Dev_Preset",
-]
-
-parameters = [
-    "-noPause",
-    "-noPauseAudio",
-]
-
-executable = "arma3_x64"
-file_patching = false
-binarize = true
-rapify = true
+[properties]
+author = "PhoenixTEAM"

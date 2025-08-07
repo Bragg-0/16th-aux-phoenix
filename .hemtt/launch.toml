@@ -1,0 +1,11 @@
+[default]
+workshop = []
+presets = [
+    "Dev_Preset",
+]
+dlc = []
+optionals = []
+parameters = [
+    "-noPause",
+    "-noPauseAudio",
+]
