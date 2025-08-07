@@ -8,10 +8,10 @@
     "files.insertFinalNewline": true,
 
     "files.associations": {
-        "*.cpp": "arma-config",
-        "*.hpp": "arma-config",
-        "*.inc": "arma-config",
-        "*.cfg": "arma-config",
+        "*.cpp": "cpp",
+        "*.hpp": "cpp",
+        "*.inc": "cpp",
+        "*.cfg": "cpp",
         "*.rvmat": "arma-config"
     }
 }
