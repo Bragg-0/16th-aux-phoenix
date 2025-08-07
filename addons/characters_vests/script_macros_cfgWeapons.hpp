@@ -2,6 +2,7 @@
     author = AUTHOR;                            \
     scope = 2;                                  \
     scopeArsenal = 2;                           \
+    picture = QPATHTOEF(characters,data\##CHARACTERS_TYPE##_ca.paa); \
     class ItemInfo : ItemInfo {                 \
         mass = 40;                              \
         containerClass = SUPPLY_XX(100);        \

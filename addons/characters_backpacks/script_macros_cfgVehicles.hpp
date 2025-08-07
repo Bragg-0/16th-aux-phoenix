@@ -5,6 +5,7 @@
         scope = 2;                                  \
         editorCategory = QEGVAR(main,3den);         \
         editorSubcategory = "EdSubcat_Backpacks";   \
+        picture = QPATHTOEF(characters,data\##CHARACTERS_TYPE##_ca.paa); \
         mass = 50
 
 #define CLASS_MEDIC_BACKPACK(var1)                                          \

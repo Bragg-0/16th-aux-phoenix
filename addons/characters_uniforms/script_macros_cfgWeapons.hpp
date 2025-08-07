@@ -4,10 +4,11 @@
         scopeArsenal = 2;                                           \
         scope = 2;                                                  \
         displayName = SUBCSTRING(CVAR(var1));                       \
+        picture = QPATHTOEF(characters,data\##CHARACTERS_TYPE##_ca.paa); \
         class ItemInfo : ItemInfo {                                 \
             uniformModel = "-";                                     \
             uniformType = "neopren";                                \
-            uniformClass = QCVARF(var1);                             \
+            uniformClass = QCVARF(var1);                            \
             containerClass = SUPPLY_XX(100);                        \
             mass = 20;                                              \
         };                                                          \
