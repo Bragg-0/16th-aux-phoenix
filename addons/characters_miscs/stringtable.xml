@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_miscs)">
+    <Package name="CfgGlasses_Customs">
+        <Key ID="STR_PC_Characters_Miscs_PC_Miscs_Customs_0770_EngineerNCO">
+            <English>[16th] Additional Vest (0770)</English>
+            <French>[16th] Gilet Supplémentaire (0770)</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Miscs_PC_Miscs_Customs_1298_Engineer">
+            <English>[16th] Additional Vest (1298)</English>
+            <French>[16th] Gilet Supplémentaire (1298)</French>
+        </Key>
+    </Package>
+    <Package name="CfgWeapons_Customs">
+        <Key ID="STR_PC_Characters_Miscs_PC_Miscs_Customs_1298_CommanderNVG">
+            <English>[16th] NVG (1298)</English>
+            <French>[16th] NVG (1298)</French>
+        </Key>
+    </Package>
+</Project>
