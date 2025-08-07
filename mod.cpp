@@ -1,6 +1,6 @@
 author = "PhoenixTEAM";
 name = "[16th] - Phoenix Company";
-description = "[16th] - Phoenix Company - Version 0.0.0";
+description = "[16th] - Phoenix Company is a mod for 16th Phoenix Company.";
 overview = "";
 overviewPicture = "logo_white_ca.paa";
 picture = "logo_white_ca.paa";
