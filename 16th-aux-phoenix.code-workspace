@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+    ],
+    "settings": {
+        "files.associations": {
+            "*.cpp": "cpp",
+            "*.hpp": "cpp",
+            "*.inc": "cpp",
+            "*.cfg": "cpp",
+            "*.rvmat": "arma-config"
+        }
+    }
+}
