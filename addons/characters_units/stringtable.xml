@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (characters_units)">
+    <Package name="CfgVehicles">
+        <Key ID="STR_PC_Characters_Caporal">
+            <English>[16th] Caporal</English>
+            <French>[16th] Caporal</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Lieutenant">
+            <English>[16th] Lieutenant</English>
+            <French>[16th] Lieutenant</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Sergent">
+            <English>[16th] Sergent</English>
+            <French>[16th] Sergent</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny">
+            <English>[16th] Shiny</English>
+            <French>[16th] Shiny</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_AT">
+            <English>[16th] Shiny AT</English>
+            <French>[16th] Shiny Antichar</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_EOD">
+            <English>[16th] Shiny EOD</English>
+            <French>[16th] Shiny EOD</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_Grenadier">
+            <English>[16th] Shiny Grenadier</English>
+            <French>[16th] Shiny Grenadier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_Heavy">
+            <English>[16th] Shiny Heavy</English>
+            <French>[16th] Shiny Lourd</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_Medic">
+            <English>[16th] Shiny Medic</English>
+            <French>[16th] Shiny Médecin</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Shiny_Pilot">
+            <English>[16th] Shiny Pilot</English>
+            <French>[16th] Shiny Pilote</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper">
+            <English>[16th] Trooper</English>
+            <French>[16th] Soldat</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_AT">
+            <English>[16th] Trooper AT</English>
+            <French>[16th] Soldat Antichar</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_EOD">
+            <English>[16th] Trooper EOD</English>
+            <French>[16th] Soldat EOD</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_Grenadier">
+            <English>[16th] Trooper Grenadier</English>
+            <French>[16th] Soldat Grenadier</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_Heavy">
+            <English>[16th] Trooper Heavy</English>
+            <French>[16th] Soldat Lourd</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_Medic">
+            <English>[16th] Trooper Medic</English>
+            <French>[16th] Soldat Médecin</French>
+        </Key>
+        <Key ID="STR_PC_Characters_Trooper_Pilot">
+            <English>[16th] Trooper Pilot</English>
+            <French>[16th] Soldat Pilote</French>
+        </Key>
+    </Package>
+</Project>
