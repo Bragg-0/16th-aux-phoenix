@@ -11,7 +11,7 @@
 	 * Return description <NONE>
 	 *
 	 * Example:
-	 * [params] call pc_missions_fnc_updateEarProtection
+	 * [player, true] call pc_missions_fnc_updateEarProtection
 	 *
 	 * Public: No
  */
@@ -35,8 +35,8 @@ _player setVariable [QGVAR(earProtection), _state, true];
 
 if (_state) then {
     // Ear protection activated
-    1 fadeSound 0.2;
+    0 fadeSound 0.2;
 } else {
     // Ear protection deactivated
-    1 fadeSound 1;
+    0 fadeSound 1;
 };

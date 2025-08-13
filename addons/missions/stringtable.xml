@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Missions)">
+    <Package name="CfgVehicles">
+        <Key ID="STR_PC_Missions_activateEarProtection">
+            <English>Activate Ear Protection</English>
+            <French>Activer les protections auditives</French>
+        </Key>
+        <Key ID="STR_PC_Missions_deactivateEarProtection">
+            <English>Deactivate Ear Protection</English>
+            <French>Désactiver les protections auditives</French>
+        </Key>
+    </Package>
+</Project>
