@@ -1,4 +1,4 @@
-[![Website](https://img.shields.io/badge/Website-Phoenix%20Company-orange?style=flat&logo=firefox&logoColor=white)](https://phoenix-compagny.fr/)
+[![Website](https://img.shields.io/badge/Website-Phoenix%20Company-orange?style=flat&logo=firefox&logoColor=white)](https://phoenix-company.fr/)
 [![Discord](https://img.shields.io/discord/1400451720278048848?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/QNSgQCd76q)
 [![License](https://img.shields.io/badge/License-APL--SA-blue.svg)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
 
