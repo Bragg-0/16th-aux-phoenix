@@ -21,3 +21,5 @@ class CfgPatches {
 #include "CfgEditorSubcategories.hpp"
 
 #include "CfgMarkers.hpp"
+
+#include "CfgDifficultyPresets.hpp"
