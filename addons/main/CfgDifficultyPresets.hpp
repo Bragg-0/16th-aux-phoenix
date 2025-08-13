@@ -3,7 +3,8 @@ class CfgDifficultyPresets {
 
     class Phoenix {
         displayName = CSTRING(Phoenix); // Name of the difficulty preset.
-        optionDescription = CSTRING(Phoenix_Description); // Description of the difficulty preset.
+        description = CSTRING(Phoenix_Description); // Description
+        optionDescription = CSTRING(Phoenix_Description); // Description
         optionPicture = "\x\pc\addons\main\data\logo_white_ca.paa"; // Picture
         levelAI = "AILevelHigh"; // Level of AI skill
 
