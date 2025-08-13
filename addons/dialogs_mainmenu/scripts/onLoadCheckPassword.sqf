@@ -18,7 +18,6 @@
 TRACE_1("onLoadCheckPassword.sqf",_this);
 
 private _savedPassword = profileNamespace getVariable [QGVAR(PasswordSaved), ""];
-private _serverName = uiNamespace getVariable [QGVAR(serverName), ""];
 
 private _passwordInput = findDisplay 6100 displayCtrl 1234;
 private _header = findDisplay 6100 displayCtrl 1000;
@@ -30,5 +29,3 @@ if (_savedPassword isEqualTo "") then {
 	_passwordInput ctrlSetText _savedPassword;
 	INFO("Saved password found, password input set to saved value.");
 };
-
-_header ctrlSetText FORMAT_1(LSUBLSTRING(header),_serverName);

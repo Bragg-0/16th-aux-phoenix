@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Main)">
+    <Package name="CfgDifficultyPresets">
+        <Key ID="STR_PC_Main_Phoenix">
+            <English>Phoenix Company</English>
+            <French>Phoenix Company</French>
+        </Key>
+        <Key ID="STR_PC_Main_Phoenix_Description">
+            <English>Phoenix Company - Difficulty preset</English>
+            <French>Phoenix Company - Preset de difficulté</French>
+        </Key>
+    </Package>
     <Package name="CfgEditorCategories">
         <Key ID="str_pc_main_3den">
             <English>[16th] Phoenix</English>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Dialogs - MainMenu)">
+    <Package name="rsc (checkPassword)">
+        <Key ID="STR_PC_Dialogs_MainMenu_header">
+            <English>Password Verification</English>
+            <French>Vérification du Mot de Passe</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_MainMenu_info">
+            <English>Please enter the server password to continue.</English>
+            <French>Veuillez entrer le mot de passe du serveur pour continuer.</French>
+        </Key>
+    </Package>
+    <Package name="rsc (mainMenu)">
+        <Key ID="STR_PC_Dialogs_MainMenu_connect">
+            <English>Connect</English>
+            <French>Se Connecter</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_MainMenu_name1">
+            <English>Server Main</English>
+            <French>Serveur Principal</French>
+        </Key>
+    </Package>
+</Project>

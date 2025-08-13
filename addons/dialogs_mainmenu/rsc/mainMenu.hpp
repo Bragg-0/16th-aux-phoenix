@@ -81,7 +81,7 @@ class RscDisplayMain : RscStandardDisplay {
             y = Y_COORD(0.55462963);
             w = GUI_MAINMENU_WIDTH;
             h = H_COORD(0.20648149);
-            onButtonClick = QUOTE(_this execvm '\x\ar\addons\dialogs_mainmenu\scripts\connectToServer.sqf';);
+            onButtonClick = QUOTE(_this execvm '\x\pc\addons\dialogs_mainmenu\scripts\connectToServer.sqf';);
             colorBackground[] = CA_UI_transparent;
             colorBackgroundActive[] = GUI_BCG_COLOR_SELECTED;
             colorBackgroundDisabled[] = GUI_BCG_MENU;
