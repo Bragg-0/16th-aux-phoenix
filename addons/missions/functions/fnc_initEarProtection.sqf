@@ -27,12 +27,17 @@ _handle = [
 
 		TRACE_1("fnc_initEarProtection",_player);
 		private _state = _player getVariable [QGVAR(earProtection), false];
-		if (_state) then {
-			// Ear protection activated
-			0 fadeSound 0.2;
-		} else {
-			// Ear protection deactivated
+		if ((headgear _player) isEqualTo "") then {
+			// Ear protection not worn
 			0 fadeSound 1;
+        } else {
+			if (_state) then {
+				// Ear protection activated
+				0 fadeSound 0.2;
+			} else {
+				// Ear protection deactivated
+				0 fadeSound 1;
+			};
 		};
 	},
 	1,

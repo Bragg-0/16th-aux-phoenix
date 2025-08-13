@@ -25,10 +25,17 @@ TRACE_1("fnc_canEarProtection",_this);
 
 if (isNull _player) exitWith {
 	WARNING_1("fnc_canEarProtection: %1 is null",_player);
+    false
 };
 
 if (!hasInterface) exitWith {
 	WARNING("fnc_canEarProtection: Interface is not available");
+    false
+};
+
+if ((headgear _player) isEqualTo "") exitWith {
+    TRACE_1("fnc_canEarProtection: %1 has no headgear",_player);
+    false
 };
 
 private _earProtectionState = _player getVariable [QGVAR(earProtection), false];
