@@ -29,7 +29,7 @@ private _uid = getPlayerUID _player;
 
 // Récupération des données du joueur
 private _name = name _player;
-private _loadout = getUnitLoadout [_player,true];
+private _loadout = str getUnitLoadout [_player,true];
 private _isMedic = _player getUnitTrait "medic";
 private _isEOD = _player getUnitTrait "explosiveSpecialist";
 
