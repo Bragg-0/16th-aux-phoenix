@@ -41,7 +41,7 @@ private _data = FORMAT_4("%1:%2:%3:%4",_name,_loadout,_isMedic,_isEOD);
 	{
 		params ["_uid","_player","_data"];
 		// Prépare la requête
-		private _query = FORMAT_2("updatePlayerData:%1:%2",_uid,_data);
+		private _query = FORMAT_2("insertOrUpdateUserBySteamId:%1:%2",_uid,_data);
 		TRACE_1("fn_updatePlayerData Query",_query);
 
 		// Exécute la requête

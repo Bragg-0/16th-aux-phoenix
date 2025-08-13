@@ -33,7 +33,7 @@ private _uid = getPlayerUID _player;
 		params ["_uid","_player"];
 
 		// Prépare la requête
-		private _query = FORMAT_1("getPlayerData:%1",_uid);
+		private _query = FORMAT_1("getUserBySteamId:%1",_uid);
 		TRACE_1("fn_extractPlayerData Query",_query);
 
 		// Exécute la requête
