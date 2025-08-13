@@ -15,3 +15,6 @@ Exports/
 *.zip
 *.pbo
 *.sqfc
+
+# Arma 3 Server Configuration
+server.cfg
