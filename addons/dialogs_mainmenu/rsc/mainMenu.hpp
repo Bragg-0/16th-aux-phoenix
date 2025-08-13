@@ -6,10 +6,10 @@ class RscDisplayMain : RscStandardDisplay {
     enableDisplay = 1;
     class ControlsBackground {
         class GVAR(background) : RscText {
-            x = X_COORD(0.29375);
+            x = X_COORD(0.42773438);
             y = Y_COORD(0.54166667);
-            w = W_COORD(0.4125);
-            h = H_COORD(0.23333334);
+            w = W_COORD(0.14453125);
+            h = H_COORD(0.23263889);
             colorBackground[] = GUI_BCG_MENU;
         };
         class GVAR(Img1): RscPicture {
