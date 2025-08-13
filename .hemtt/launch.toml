@@ -1,7 +1,7 @@
 [default]
 workshop = []
 presets = [
-    "Dev_Preset",
+    "preset",
 ]
 dlc = []
 optionals = []
