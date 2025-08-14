@@ -4,58 +4,63 @@
 	 * Description: Extract player data from the database
 	 *
 	 * Arguments:
-	 * 0: _players (optional,default: player) <OBJECT> - The player to extract data for
+	 * 0: _players <OBJECT> - The player to extract data for
 	 *
 	 * Return Value:
      * <NONE> //? <HASHMAP> - Player data is stored on the player object and can be accessed using `player getVariable "pc_database_playerData"`
 	 *
 	 * Example:
-	 * [player] call pc_database_fnc_extractPlayerData
+	 * [player] call pc_database_fnc_extractPlayerData //! Need to be executed by the server
 	 *
 	 * Public: No
  */
 
 params [
-	["_player",player,[player]]
+	["_player",objNull,[objNull]]
 ];
 
-TRACE_1("fn_savePlayerData",_this);
+if !(isDedicated) exitWith {
+    WARNING("fn_extractPlayerData: This function must be called on the server");
+};
 
-// Vérification si le joueur est valide
-if !(isPlayer _player) exitWith {};
+if ((isNull _player) || !(isPlayer _player)) exitWith {
+    WARNING("fn_extractPlayerData: Invalid player object");
+};
+
+TRACE_1("fn_extractPlayerData",_this);
 
 // Récupération de l'UID du joueur
 private _uid = getPlayerUID _player;
 
-[
-	-1,// Server execution
-	{
-		params ["_uid","_player"];
+// Prépare la requête
+private _query = FORMAT_1("getUserBySteamId:%1",_uid);
+TRACE_1("fn_extractPlayerData Query",_query);
 
-		// Prépare la requête
-		private _query = FORMAT_1("getUserBySteamId:%1",_uid);
-		TRACE_1("fn_extractPlayerData Query",_query);
+// Exécute la requête
+private _return = [_query,2,true] call FUNC(asyncCall);
 
-		// Exécute la requête
-		private _return = [_query,2,true] call FUNC(asyncCall);
+// Traitement du résultat
+TRACE_1("fn_extractPlayerData PreProcess",_return);
+_return = ARG_1(_return,0);
+TRACE_1("fn_extractPlayerData PostProcess",_return);
 
-		// Traitement du résultat
-		TRACE_1("fn_extractPlayerData PreProcess",_return);
-		_return = ((_return select 0) select 0);
-		TRACE_1("fn_extractPlayerData PostProcess",_return);
+// Création de la hashmap
+private _hashmap = [
+    "money",
+    "is_medic",
+    "is_eod",
+    "loadout"
+] createHashMapFromArray _return;
 
-		// Création de la hashmap
-		private _hashmap = [
-			"uid",
-			"name",
-			"loadout",
-			"isMedic",
-			"isEOD"
-		] createHashMapFromArray _return;
+// Traitement des données pour les mettre à format utilisable par arma 3
+private _isMedic = _hashmap getOrDefault ["is_medic", 0, 0];
+private _isEod = _hashmap getOrDefault ["is_eod", 0, 0];
+private _loadout = _hashmap getOrDefault ["loadout", [], []];
 
-		// Sauvegarde des données du joueur
-		TRACE_1("fn_extractPlayerData Save",_hashmap);
-		_player setVariable [QGVAR(playerData),_hashmap];
-	},
-	[_uid,_player]
-] call CBA_fnc_globalExecute;
+_hashmap set ["is_medic", [false, true] select _isMedic];
+_hashmap set ["is_eod", [false, true] select _isEod];
+_hashmap set ["loadout", call compile _loadout];
+
+// Sauvegarde des données du joueur
+TRACE_1("fn_extractPlayerData Save",_hashmap);
+_player setVariable [QGVAR(playerData), _hashmap, true];

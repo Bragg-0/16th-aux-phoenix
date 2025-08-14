@@ -7,9 +7,7 @@
 	 * <NONE>
 	 *
 	 * Return Value:
-	 * <BOOL>
-	     * - <true> : if the connection was successful
-	     * - <false> : otherwise
+	     * <NONE>
 	 *
 	 * Example:
 	 * [] call pc_database_fnc_init
@@ -18,37 +16,42 @@
  */
 
 if (isDedicated) then {
-	INFO("[extDB3] Initializing database connection...");
+	// Vérifiez si la base de données est déjà connectée
+	if (isNil {
+		uiNamespace getVariable "JL_persistence_protocolID"
+	}) then {
+		/* get extDB3 version */
+		private _ret = "extDB3" callExtension "9:VERSION";
+		if (_ret == "") exitWith {
+            WARNING("extDB3 - Initialization failed");
+		};
+        INFO_1("extDB3 - Version %1",_ret);
 
-	_dbName = "a3phoenix";
-    _dbCustomFileName = "a3phoenix.ini";
+		/* Add database */
+		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE:%1", "phoenix-company"]);
+		if (_ret select 0 == 0) exitWith {
+            WARNING_1("extDB3 - Database error %1",_ret);
+		};
+        INFO("extDB3 - Database connected");
 
-    GVAR(protocolID) = "sqf_a3phoenix";
-    publicVariable QGVAR(protocolID);
+		/* Add custom SQL protocol */
+		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:a3phoenix.ini", "phoenix-company", "sqf"]);
+		if (_ret select 0 == 0) exitWith {
+			WARNING_1("extDB3 - Database error %1",_ret);
+		};
+		INFO("extDB3 - Custom protocol added");
 
-	// Connexion à la DB
-	private _dbLoad = "extDB3" callExtension FORMAT_1("9:ADD_DATABASE:%1",_dbName);
-    if (_dbLoad#0 isEqualTo 0) exitWith {
-        ERROR_1("[extDB3] Failed to load database: %1",_dbLoad#1);
-        GVAR(protocolID) = "";
-        publicVariable QGVAR(protocolID);
-        false
-    };
-    INFO_1("[extDB3] Database %1 loaded successfully.",_dbName);
+		/* lock database */
+		"extDB3" callExtension "9:LOCK";
+		INFO("extDB3 - Database locked");
 
-	// Activation du protocole
-	private _dbProto = "extDB3" callExtension FORMAT_3("9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:%3",_dbName,GVAR(protocolID),_dbCustomFileName);
-    if (_dbProto#0 isEqualTo 0) exitWith {
-        ERROR_1("[extDB3] Failed to activate database protocol: %1",_dbProto#1);
-        GVAR(protocolID) = "";
-        publicVariable QGVAR(protocolID);
-        false
-    };
-    INFO_1("[extDB3] Database protocol %1 activated successfully.",GVAR(protocolID));
-
-    "extDB3" callExtension "9:LOCK";
-    INFO_1("[extDB3] Database %1 locked successfully.",_dbName);
-
-    INFO_2("[extDB3] Database %1 connection by %2 initialized successfully.",_dbName,GVAR(protocolID));
-    true
+		/* Store protocol ID */
+		uiNamespace setVariable ["JL_persistence_protocolID", _ret];
+	} else {
+	// La base de données est déjà connectée et le protocole est en place
+		INFO("extDB3 - Database already connected");
+	};
+} else {
+    // Si ce n'est pas un serveur dédié, on ne fait rien
+    INFO("extDB3 - Not a dedicated server, skipping initialization");
 };
