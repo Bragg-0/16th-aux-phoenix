@@ -1,5 +1,5 @@
 // Mission information
-loadScreen = "";
+loadScreen = "\x\pc\addons\missions\data\loadscreen_co.paa";
 author = "PhoenixTEAM";
 onLoadName = "Mission Phoenix Company";
 onLoadMission = "Bienvenue dans la Phoenix Company";
