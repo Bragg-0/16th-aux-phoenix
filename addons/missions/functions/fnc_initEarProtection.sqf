@@ -40,6 +40,6 @@ _handle = [
 			};
 		};
 	},
-	1,
+	0.1,
 	_player
 ] call CBA_fnc_addPerFrameHandler;
