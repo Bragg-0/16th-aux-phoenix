@@ -3,7 +3,7 @@
 class CfgPatches {
     class SUBADDON {
         author = AUTHOR;
-        authors[] = { "Admors", "Bragg", "Archer" };
+        authors[] = { "Bragg"};
         url = ECSTRING(main,url);
         name = COMPONENT_NAME;
         addonRootClass = QUOTE(ADDON);
