@@ -10,7 +10,7 @@
 	     * <NONE>
 	 *
 	 * Example:
-	 * [] call pc_database_fnc_init
+	 * [] call pc_database_fnc_init //! Need to be executed by the server
 	 *
 	 * Public: No
  */
