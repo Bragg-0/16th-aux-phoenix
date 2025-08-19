@@ -15,11 +15,14 @@
 #define W_COORD(w) QUOTE((safezoneW * w))
 #define H_COORD(h) QUOTE((safezoneH * h))
 
-#define GUI_STD_WIDTH \
-    W_COORD(0.103125)
+#define SAFEZONE_X_SMALL X_COORD(0.29375)
+#define SAFEZONE_Y_SMALL Y_COORD(0.225)
+#define SAFEZONE_W_SMALL W_COORD(0.4125)
+#define SAFEZONE_H_SMALL H_COORD(0.55)
 
-#define GUI_STD_HEIGHT \
-    H_COORD(0.02777778)
+#define GUI_STD_WIDTH W_COORD(0.103125)
+
+#define GUI_STD_HEIGHT H_COORD(0.02777778)
 
 // Define dialog colors
 #define GUI_CO_WHITE { 1, 1, 1, 1 }
