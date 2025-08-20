@@ -3,4 +3,5 @@
 if (hasInterface) then {
 	[player] call FUNC(initUnderfire);
     [player] call FUNC(initEarProtection);
+    [player] call FUNC(loadPlayer);
 };
