@@ -47,6 +47,17 @@ if (isDedicated) then {
 
 		/* Store protocol ID */
 		uiNamespace setVariable ["JL_persistence_protocolID", _ret];
+
+        /* Add per-frame handler */
+        _handle = [
+            {
+                {
+                    [_x] call FUNC(updatePlayerData);
+                    INFO_1("Updated data for %1",name _x);
+                } forEach allPlayers;
+            }, 300
+        ] call CBA_fnc_addPerFrameHandler;
+
 	} else {
 	// La base de données est déjà connectée et le protocole est en place
 		INFO("extDB3 - Database already connected");
