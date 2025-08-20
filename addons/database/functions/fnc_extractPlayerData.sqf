@@ -61,6 +61,13 @@ _hashmap set ["is_medic", [false, true] select _isMedic];
 _hashmap set ["is_eod", [false, true] select _isEod];
 _hashmap set ["loadout", call compile _loadout];
 
-// Sauvegarde des données du joueur
-TRACE_1("fn_extractPlayerData Save",_hashmap);
-_player setVariable [QGVAR(playerData), _hashmap, true];
+if (count (_hashmap get "loadout") == 0) then {
+    // if loadout is empty == is a new player
+    INFO("fn_extractPlayerData New Player, updating database");
+    [_player,true] call FUNC(updatePlayerData);
+} else {
+    // if loadout is not empty == is an existing player
+    // Sauvegarde des données du joueur
+    TRACE_1("fn_extractPlayerData Save",_hashmap);
+    _player setVariable [QGVAR(playerData), _hashmap, true];
+};
