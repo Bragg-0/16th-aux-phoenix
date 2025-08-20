@@ -1,0 +1,20 @@
+class CfgWeapons {
+    ITEM_ACE_BASED(Splint,Splint);
+    ITEM_ACE_BASED(SurgicalKit,SurgicalKit);
+    ITEM_ACE_BASED(PersonalAidKit,PersonalAidKit);
+    ITEM_ACE_BASED(Epinephrine,Epinephrine);
+    ITEM_ACE_BASED(Adenosine,Adenosine);
+    ITEM_ACE_BASED(Morphine,Morphine);
+    ITEM_ACE_BASED(PackingBandage,PackingBandage);
+    ITEM_ACE_BASED(ElasticBandage,ElasticBandage);
+    ITEM_ACE_BASED(Quikclot,Quikclot);
+    ITEM_ACE_BASED(BloodIV,BloodIV);
+    ITEM_ACE_BASED(BloodIV_250,BloodIV);
+    ITEM_ACE_BASED(BloodIV_500,BloodIV);
+    ITEM_ACE_BASED(SalineIV,SalineIV);
+    ITEM_ACE_BASED(SalineIV_250,SalineIV);
+    ITEM_ACE_BASED(SalineIV_500,SalineIV);
+    ITEM_ACE_BASED(PlasmaIV,PlasmaIV);
+    ITEM_ACE_BASED(PlasmaIV_250,PlasmaIV);
+    ITEM_ACE_BASED(PlasmaIV_500,PlasmaIV);
+};

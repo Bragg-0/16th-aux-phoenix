@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Medical)">
+    <Package name="ACE_Medical_Treatment"></Package>
+    <Package name="ACE_Medical_Treatment_Actions"></Package>
+    <Package name="CfgMagazines"></Package>
+    <Package name="CfgWeapons"></Package>
+</Project>
