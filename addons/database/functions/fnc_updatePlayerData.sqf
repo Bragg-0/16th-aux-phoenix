@@ -5,7 +5,6 @@
 	 *
 	 * Arguments:
 	 * 0: _player <OBJECT> - The player to update data for
-     * 1: _needExtraction <BOOL> - Whether to extract data from the player
 	 *
 	 * Return Value:
 	 * <NONE>
@@ -17,8 +16,7 @@
  */
 
 params [
-	["_player",objNull,[objNull]],
-    ["_needExtraction",false,[false]]
+	["_player",objNull,[objNull]]
 ];
 
 if !(isDedicated) exitWith {
@@ -51,7 +49,5 @@ TRACE_1("fn_updatePlayerData Query",_query);
 // Exécute la requête
 [_query] call FUNC(asyncCall);
 
-// Extraction des données du joueur quand c'est un nouveau joueur
-if (_needExtraction) then {
-    [_player] call FUNC(extractPlayerData);
-};
+// Extraction des données
+[_player] call FUNC(extractPlayerData);

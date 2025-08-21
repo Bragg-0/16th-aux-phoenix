@@ -64,7 +64,7 @@ _hashmap set ["loadout", call compile _loadout];
 if (count (_hashmap get "loadout") == 0) then {
     // if loadout is empty == is a new player
     INFO("fn_extractPlayerData New Player, updating database");
-    [_player,true] call FUNC(updatePlayerData);
+    [_player] call FUNC(updatePlayerData);
 } else {
     // if loadout is not empty == is an existing player
     // Sauvegarde des données du joueur
