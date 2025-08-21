@@ -1,7 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Medical)">
-    <Package name="ACE_Medical_Treatment"></Package>
-    <Package name="ACE_Medical_Treatment_Actions"></Package>
-    <Package name="CfgMagazines"></Package>
-    <Package name="CfgWeapons"></Package>
+    <Package name="ACE_Medical_Treatment_Actions">
+        <Key ID="STR_PC_Medical_Adenosine_ActionName">
+            <English>Use Adenosine</English>
+            <French>Utiliser Adénosine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Adenosine_ActionProgress">
+            <English>Injecting Adenosine...</English>
+            <French>Injection de Adénosine...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_250_ActionName">
+            <English>Use Blood IV (250ml)</English>
+            <French>Utiliser Sang IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_500_ActionName">
+            <English>Use Blood IV (500ml)</English>
+            <French>Utiliser Sang IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_ActionName">
+            <English>Use Blood IV (1000ml)</English>
+            <French>Utiliser Sang IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_ActionProgress">
+            <English>Injecting Blood IV...</English>
+            <French>Injection de Sang IV...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_ElasticBandage_ActionName">
+            <English>Apply Elastic Bandage</English>
+            <French>Appliquer Bandage élastique</French>
+        </Key>
+        <Key ID="STR_PC_Medical_ElasticBandage_ActionProgress">
+            <English>Applying Elastic Bandage...</English>
+            <French>Application du Bandage élastique...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Epinephrine_ActionName">
+            <English>Use Epinephrine</English>
+            <French>Utiliser Épinéphrine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Epinephrine_ActionProgress">
+            <English>Injecting Epinephrine...</English>
+            <French>Injection de Épinéphrine...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Morphine_ActionName">
+            <English>Use Morphine</English>
+            <French>Utiliser Morphine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Morphine_ActionProgress">
+            <English>Injecting Morphine...</English>
+            <French>Injection de Morphine...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PackingBandage_ActionName">
+            <English>Apply Packing Bandage</English>
+            <French>Appliquer Bandage compressif</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PackingBandage_ActionProgress">
+            <English>Applying Packing Bandage...</English>
+            <French>Application du Bandage compressif...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Painkillers_ActionName">
+            <English>Use Nebulex (Painkillers)</English>
+            <French>Utiliser Nebulex (Antidouleurs)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Painkillers_ActionProgress">
+            <English>Giving Nebulex (Painkillers)...</English>
+            <French>Distribution de Nebulex (Antidouleurs)...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PersonalAidKit_ActionName">
+            <English>Use Medikit</English>
+            <French>Utiliser Medikit</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PersonalAidKit_ActionProgress">
+            <English>Using Medikit...</English>
+            <French>Utilisation du Medikit...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_250_ActionName">
+            <English>Use Plasma IV (250ml)</English>
+            <French>Utiliser Plasma IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_500_ActionName">
+            <English>Use Plasma IV (500ml)</English>
+            <French>Utiliser Plasma IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_ActionName">
+            <English>Use Plasma IV (1000ml)</English>
+            <French>Utiliser Plasma IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_ActionProgress">
+            <English>Injecting Plasma IV...</English>
+            <French>Injection de Plasma IV...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_QuikClot_ActionName">
+            <English>Apply QuikClot</English>
+            <French>Appliquer Bandage hémostatique</French>
+        </Key>
+        <Key ID="STR_PC_Medical_QuikClot_ActionProgress">
+            <English>Applying QuikClot...</English>
+            <French>Application du Bandage hémostatique...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Reorientation_ActionName">
+            <English>Reorient Patient</English>
+            <French>Réorienter le patient</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Reorientation_ActionProgress">
+            <English>Reorienting Patient...</English>
+            <French>Réorientation du patient...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_250_ActionName">
+            <English>Use Saline IV (250ml)</English>
+            <French>Utiliser Saline IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_500_ActionName">
+            <English>Use Saline IV (500ml)</English>
+            <French>Utiliser Saline IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_ActionName">
+            <English>Use Saline IV (1000ml)</English>
+            <French>Utiliser Saline IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_ActionProgress">
+            <English>Injecting Saline IV...</English>
+            <French>Injection de Saline IV...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Splint_ActionName">
+            <English>Apply Splint</English>
+            <French>Appliquer Attelle</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Splint_ActionProgress">
+            <English>Applying Splint...</English>
+            <French>Application de Attelle...</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SurgicalKit_ActionName">
+            <English>Use Bacto-spray</English>
+            <French>Utiliser Bacto-spray</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SurgicalKit_ActionProgress">
+            <English>Using Bacto-spray...</English>
+            <French>Utilisation du Bacto-spray...</French>
+        </Key>
+    </Package>
+    <Package name="CfgMagazines">
+        <Key ID="STR_PC_Medical_Painkillers_descriptionShort">
+            <English>Box of 10 painkillers.&lt;br/&gt;Pain: -&lt;br/&gt;Viscosity: +&lt;br/&gt;Lethal Dose: 6</English>
+            <French>Boite de 10 antidouleurs.&lt;br/&gt;Douleur : -&lt;br/&gt;Viscosite : +&lt;br/&gt;Dose Letal : 6</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Painkillers_displayName">
+            <English>[16th] Nebulex (Painkillers)</English>
+            <French>[16th] Nebulex (Antidouleurs)</French>
+        </Key>
+    </Package>
+    <Package name="CfgWeapons">
+        <Key ID="STR_PC_Medical_Adenosine_descriptionShort">
+            <English>1 Dose of adenosine.&lt;br/&gt;Heart rate: - -&lt;br/&gt;Lethal dose: 6</English>
+            <French>1 Dose d'adénosine.&lt;br/&gt;Fréquence cardiaque : - -&lt;br/&gt;Dose létale : 6</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Adenosine_displayName">
+            <English>[16th] Adenosine</English>
+            <French>[16th] Adénosine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_250_displayName">
+            <English>[16th] Blood IV (250ml)</English>
+            <French>[16th] Sang IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_500_displayName">
+            <English>[16th] Blood IV (500ml)</English>
+            <French>[16th] Sang IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_descriptionShort">
+            <English>Used to treat severe blood loss.&lt;br/&gt;Restores blood volume.&lt;br/&gt;IV Rate: +</English>
+            <French>Utilisé pour traiter les pertes de sang sévères.&lt;br/&gt;Restaure le volume sanguin.&lt;br/&gt;Débit IV : +</French>
+        </Key>
+        <Key ID="STR_PC_Medical_BloodIV_displayName">
+            <English>[16th] Blood IV (1000ml)</English>
+            <French>[16th] Sang IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_ElasticBandage_descriptionShort">
+            <English>Used to treat all types of wounds.&lt;br/&gt;Stops bleeding from the wound.</English>
+            <French>Utilisé pour traiter tous les types de plaies.&lt;br/&gt;Arrête le saignement de la plaie.</French>
+        </Key>
+        <Key ID="STR_PC_Medical_ElasticBandage_displayName">
+            <English>[16th] Elastic Bandage</English>
+            <French>[16th] Bandage élastique</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Epinephrine_descriptionShort">
+            <English>1 Dose of epinephrine.&lt;br/&gt;Heart rate: + + + +&lt;br/&gt;Lethal dose: 10</English>
+            <French>1 Dose d'épinéphrine.&lt;br/&gt;Fréquence cardiaque : + + + +&lt;br/&gt;Dose létale : 10</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Epinephrine_displayName">
+            <English>[16th] Epinephrine</English>
+            <French>[16th] Épinéphrine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Morphine_descriptionShort">
+            <English>1 Dose of morphine.&lt;br/&gt;Heart rate: - - -&lt;br/&gt;Pain: - - -&lt;br/&gt;Viscosity: - -&lt;br/&gt;Lethal dose: 4</English>
+            <French>1 Dose de morphine.&lt;br/&gt;Fréquence cardiaque : - - -&lt;br/&gt;Douleur : - - -&lt;br/&gt;Viscosité : - -&lt;br/&gt;Dose létale : 4</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Morphine_displayName">
+            <English>[16th] Morphine</English>
+            <French>[16th] Morphine</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PackingBandage_descriptionShort">
+            <English>Used to treat medium and large wounds.&lt;br/&gt;Stops bleeding from the wound.</English>
+            <French>Utilisé pour traiter les plaies moyennes et grandes.&lt;br/&gt;Arrête le saignement de la plaie.</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PackingBandage_displayName">
+            <English>[16th] Packing Bandage</English>
+            <French>[16th] Bandage compressif</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PersonalAidKit_descriptionShort">
+            <English>Advanced treatment that can be used in a medical location.</English>
+            <French>Traitement avancé pouvant être utilisé dans un lieu médical.</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PersonalAidKit_displayName">
+            <English>[16th] Medikit</English>
+            <French>[16th] Medikit</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_250_displayName">
+            <English>[16th] Plasma IV (250ml)</English>
+            <French>[16th] Plasma IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_500_displayName">
+            <English>[16th] Plasma IV (500ml)</English>
+            <French>[16th] Plasma IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_descriptionShort">
+            <English>Used to treat severe blood loss.&lt;br/&gt;Restores blood volume.&lt;br/&gt;IV Rate: + +</English>
+            <French>Utilisé pour traiter les pertes de sang sévères.&lt;br/&gt;Restaure le volume sanguin.&lt;br/&gt;Débit IV : + +</French>
+        </Key>
+        <Key ID="STR_PC_Medical_PlasmaIV_displayName">
+            <English>[16th] Plasma IV (1000ml)</English>
+            <French>[16th] Plasma IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Quikclot_descriptionShort">
+            <English>Used to treat severe bleeding wounds.&lt;br/&gt;Stops bleeding from the wound.&lt;br/&gt;Useful for treating burns.</English>
+            <French>Utilisé pour traiter les plaies saignantes sévères.&lt;br/&gt;Arrête le saignement de la plaie.&lt;br/&gt;Utile pour le Traitement des brûlures.</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Quikclot_displayName">
+            <English>[16th] QuikClot</English>
+            <French>[16th] Bandage hémostatique</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_250_displayName">
+            <English>[16th] Saline IV (250ml)</English>
+            <French>[16th] Saline IV (250ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_500_displayName">
+            <English>[16th] Saline IV (500ml)</English>
+            <French>[16th] Saline IV (500ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_descriptionShort">
+            <English>Used to treat severe blood loss.&lt;br/&gt;Restores blood volume.&lt;br/&gt;IV Rate: + + +</English>
+            <French>Utilisé pour traiter les pertes de sang sévères.&lt;br/&gt;Restaure le volume sanguin.&lt;br/&gt;Débit IV : + + +</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SalineIV_displayName">
+            <English>[16th] Saline IV (1000ml)</English>
+            <French>[16th] Saline IV (1000ml)</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Splint_descriptionShort">
+            <English>Lightweight splint for stabilizing a fractured limb.</English>
+            <French>Attelle légère pour stabiliser un membre fracturé.</French>
+        </Key>
+        <Key ID="STR_PC_Medical_Splint_displayName">
+            <English>[16th] Splint</English>
+            <French>[16th] Attelle</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SurgicalKit_descriptionShort">
+            <English>Close wounds.&lt;br/&gt;Success chance: 99%</English>
+            <French>Referme les plaies.&lt;br/&gt;Chance de reussite : 99%</French>
+        </Key>
+        <Key ID="STR_PC_Medical_SurgicalKit_displayName">
+            <English>[16th] Bacto-spray</English>
+            <French>[16th] Bacto-spray</French>
+        </Key>
+    </Package>
 </Project>

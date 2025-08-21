@@ -5,7 +5,7 @@
         scope = 2;                                                  \
         scopeArsenal = 2;                                           \
         displayName = CSTRING(DOUBLES(var1,displayName));           \
-        descriptionShort = CSTRING(DOUBLES(var1,descriptionShort)); \
+        descriptionShort = CSTRING(DOUBLES(var2,descriptionShort)); \
         picture = QPATHTOF(data\ui\##var2##_ca.paa);                \
         ACE_isMedicalItem = 1;                                      \
     }
