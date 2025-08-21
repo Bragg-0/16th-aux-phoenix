@@ -57,6 +57,9 @@
     #undef PATHTOF
     #define PATHTOF(var1) PATHTOF_SYS(PREFIX,DOUBLES(COMPONENT,SUBCOMPONENT),var1)
 
+    #undef PATHTO
+    #define PATHTO(var1) PATHTO_SYS(PREFIX,DOUBLES(COMPONENT_F,SUBCOMPONENT),var1)
+
     #define SUBGVAR(var1) DOUBLES(SUBADDON,var1)
     #define QSUBGVAR(var1) QUOTE(SUBGVAR(var1))
 
@@ -66,6 +69,9 @@
     #define SUBFUNC(var1) TRIPLES(SUBADDON,fnc,var1)
     #define QSUBFUNC(var1) QUOTE(SUBFUNC(var1))
     #define QQSUBFUNC(var1) QUOTE(QSUBFUNC(var1))
+
+    #undef COMPILE_SCRIPT
+    #define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PREFIX,DOUBLES(COMPONENT_F,SUBCOMPONENT),var1)']
 #endif
 
 /*
