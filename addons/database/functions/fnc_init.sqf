@@ -58,6 +58,12 @@ if (isDedicated) then {
             }, 300
         ] call CBA_fnc_addPerFrameHandler;
 
+        /* Add player Disconnect handler */
+        addMissionEventHandler ["HandleDisconnect", {
+            params ["_unit", "_id", "_uid", "_name"];
+            [_unit] call FUNC(updatePlayerData);
+        }];
+
 	} else {
 	// La base de données est déjà connectée et le protocole est en place
 		INFO("extDB3 - Database already connected");

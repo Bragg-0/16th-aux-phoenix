@@ -36,8 +36,6 @@ if (isNull _unit || !isPlayer _unit) exitWith {
     params ["_unit"];
     private _playerData = _unit getVariable [QEGVAR(database,playerData), []];
 
-    createHashMapFromArray _playerData;
-
     private _isMedic = _playerData get "is_medic";
     private _isEOD = _playerData get "is_eod";
     private _loadout = _playerData get "loadout";

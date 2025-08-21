@@ -18,7 +18,7 @@
 
 params [
 	["_player",objNull,[objNull]],
-    ["_needExtraction",false,[bool]]
+    ["_needExtraction",false,[false]]
 ];
 
 if !(isDedicated) exitWith {
