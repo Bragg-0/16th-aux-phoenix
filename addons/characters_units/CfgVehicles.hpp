@@ -50,8 +50,8 @@ class CfgVehicles {
         displayName = CSTRING(Shiny_Grenadier);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Grenadier" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Grenadier" };
-        weapons[] = WEAPONS(DC15A_GL,DC17S,"");
-        respawnWeapons[] = WEAPONS(DC15A_GL,DC17S,"");
+        weapons[] = WEAPONS_2(DC15A_GL,DC17S);
+        respawnWeapons[] = WEAPONS_2(DC15A_GL,DC17S);
         magazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
     };
@@ -62,8 +62,8 @@ class CfgVehicles {
         backpack = "PC_Backpacks_Regs_Base_Standard";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Heavy" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Heavy" };
-        weapons[] = WEAPONS(Z6,DC17S,"");
-        respawnWeapons[] = WEAPONS(Z6,DC17S,"");
+        weapons[] = WEAPONS_2(Z6,DC17S);
+        respawnWeapons[] = WEAPONS_2(Z6,DC17S);
         magazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
     };
@@ -72,8 +72,8 @@ class CfgVehicles {
     class ECVARF(Shiny,AT) : CVARF(Shiny) {
         displayName = CSTRING(Shiny_AT);
         backpack = "PC_Backpacks_Regs_Base_Rocket";
-        weapons[] = WEAPONS(DC15S,DC17S,RPS6);
-        respawnWeapons[] = WEAPONS(DC15S,DC17S,RPS6);
+        weapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
+        respawnWeapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
         magazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
         respawnMagazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
     };
@@ -121,8 +121,8 @@ class CfgVehicles {
         displayName = CSTRING(Trooper_Grenadier);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Grenadier" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Grenadier" };
-        weapons[] = WEAPONS(DC15A_GL,DC17S,"");
-        respawnWeapons[] = WEAPONS(DC15A_GL,DC17S,"");
+        weapons[] = WEAPONS_2(DC15A_GL,DC17S);
+        respawnWeapons[] = WEAPONS_2(DC15A_GL,DC17S);
         magazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
     };
@@ -133,8 +133,8 @@ class CfgVehicles {
         backpack = "PC_Backpacks_Regs_Base_Standard";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Heavy" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Heavy" };
-        weapons[] = WEAPONS(Z6,DC17S,"");
-        respawnWeapons[] = WEAPONS(Z6,DC17S,"");
+        weapons[] = WEAPONS_2(Z6,DC17S);
+        respawnWeapons[] = WEAPONS_2(Z6,DC17S);
         magazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
     };
@@ -143,8 +143,8 @@ class CfgVehicles {
     class ECVARF(Trooper,AT) : CVARF(Trooper) {
         displayName = CSTRING(Trooper_AT);
         backpack = "PC_Backpacks_Regs_Base_Rocket";
-        weapons[] = WEAPONS(DC15S,DC17S,RPS6);
-        respawnWeapons[] = WEAPONS(DC15S,DC17S,RPS6);
+        weapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
+        respawnWeapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
         magazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
         respawnMagazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
     };
