@@ -1,11 +1,11 @@
 class Extended_PreStart_EventHandlers {
-    class ADDON {
+    class SUBADDON {
         init = QUOTE(call COMPILE_SCRIPT(XEH_preStart));
     };
 };
 
 class Extended_PreInit_EventHandlers {
-    class ADDON {
+    class SUBADDON {
         init = QUOTE(call COMPILE_SCRIPT(XEH_preInit));
     };
 };
