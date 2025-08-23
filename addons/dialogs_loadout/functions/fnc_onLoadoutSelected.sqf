@@ -29,8 +29,8 @@ if (isNull _control) exitWith {
 private _listLoadouts = _control;
 private _listVariants = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Variants" >> "idc") call BIS_fnc_getCfgData);
 private _listInventory = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Inventory" >> "idc") call BIS_fnc_getCfgData);
-private _isMedicIndicator = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "Is_Medic" >> "idc") call BIS_fnc_getCfgData);
-private _isEODIndicator = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "Is_EOD" >> "idc") call BIS_fnc_getCfgData);
+private _isMedicIndicator = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "IsMedic" >> "idc") call BIS_fnc_getCfgData);
+private _isEODIndicator = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "IsEOD" >> "idc") call BIS_fnc_getCfgData);
 
 // Clear the variants list
 lbClear _listVariants;

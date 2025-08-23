@@ -2,6 +2,8 @@ class CfgLoadouts {
     class GVAR(Soldat) {
         displayName = SUBCSTRING(Soldat);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -25,9 +27,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(AT) : GVAR(Soldat) {
+    class GVAR(AT) {
         displayName = SUBCSTRING(AT);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -51,9 +55,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(Heavy) : GVAR(Soldat) {
+    class GVAR(Heavy) {
         displayName = SUBCSTRING(Heavy);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -77,9 +83,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(Grenadier) : GVAR(Soldat) {
+    class GVAR(Grenadier) {
         displayName = SUBCSTRING(Grenadier);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -103,9 +111,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(Pilot) : GVAR(Soldat) {
+    class GVAR(Pilot) {
         displayName = SUBCSTRING(Pilot);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -129,9 +139,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(RTO) : GVAR(Soldat) {
+    class GVAR(RTO) {
         displayName = SUBCSTRING(RTO);
         icon = "";
+        isMedic = FALSE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -155,10 +167,11 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(Medic) : GVAR(Soldat) {
+    class GVAR(Medic) {
         displayName = SUBCSTRING(Medic);
         icon = "";
         isMedic = TRUE;
+        isEOD = FALSE;
         class loadoutsInfo {
             class DC15S_Shiny {
                 displayName = SUBCSTRING(DC15S_Shiny);
@@ -182,9 +195,10 @@ class CfgLoadouts {
             };
         };
     };
-    class GVAR(EOD) : GVAR(Soldat) {
+    class GVAR(EOD) {
         displayName = SUBCSTRING(EOD);
         icon = "";
+        isMedic = FALSE;
         isEOD = TRUE;
         class loadoutsInfo {
             class DC15S_Shiny {

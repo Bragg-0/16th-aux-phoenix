@@ -47,18 +47,18 @@ TRACE_1("fn_extractPlayerData PostProcess",_return);
 // Création de la hashmap
 private _hashmap = [
     "money",
-    "is_medic",
-    "is_eod",
+    "isMedic",
+    "isEOD",
     "loadout"
 ] createHashMapFromArray _return;
 
 // Traitement des données pour les mettre à format utilisable par arma 3
-private _isMedic = _hashmap getOrDefault ["is_medic", 0];
-private _isEod = _hashmap getOrDefault ["is_eod", 0];
+private _isMedic = _hashmap getOrDefault ["isMedic", 0];
+private _isEod = _hashmap getOrDefault ["isEOD", 0];
 private _loadout = _hashmap getOrDefault ["loadout", []];
 
-_hashmap set ["is_medic", [false, true] select _isMedic];
-_hashmap set ["is_eod", [false, true] select _isEod];
+_hashmap set ["isMedic", [false, true] select _isMedic];
+_hashmap set ["isEOD", [false, true] select _isEod];
 _hashmap set ["loadout", call compile _loadout];
 
 if (count (_hashmap get "loadout") == 0) then {

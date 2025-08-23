@@ -10,7 +10,7 @@
 	 * <NONE>
 	 *
 	 * Example:
-	 * [] call pc_dialogs_loadout_fnc_open
+	 * [this] call pc_dialogs_loadout_fnc_open
 	 *
 	 * Public: No
  */

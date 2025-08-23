@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Dialogs - Loadout)">
-    <Package name="rsc (loadoutMenu)"></Package>
+    <Package name="Functions">
+        <Key ID="STR_PC_Dialogs_Loadout_Open">
+            <English>Open Loadout Menu</English>
+            <French>Ouvrir le menu des équipements</French>
+        </Key>
+    </Package>
+    <Package name="rsc (loadoutMenu)">
+        <Key ID="STR_PC_Dialogs_Loadout_header">
+            <English>Loadout Menu</English>
+            <French>Menu des Équipements</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_isEOD">
+            <English>Is EOD (No)</English>
+            <French>Est EOD (Non)</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_isMedic">
+            <English>Is Medic (No)</English>
+            <French>Est Médecin (Non)</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_title_inventory">
+            <English>Inventory</English>
+            <French>Inventaire</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_title_loadout">
+            <English>Loadout</English>
+            <French>Équipement</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_title_variants">
+            <English>Variants</English>
+            <French>Variantes</French>
+        </Key>
+    </Package>
 </Project>

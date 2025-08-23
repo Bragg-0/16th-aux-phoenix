@@ -1,4 +1,4 @@
-class RscloadoutMenu {
+class RscLoadoutMenu {
     idd = -1;
     movingEnable = 0;
     enableSimulation = 1;
@@ -20,6 +20,7 @@ class RscloadoutMenu {
             h = GUI_STD_HEIGHT;
             colorBackground[] = GUI_BCG_COLOR;
             colorText[] = GUI_TITLETEXT_COLOR;
+            text = SUBCSTRING(header);
         };
         class Title_Loadouts : Header {
             x = X_COORD(0.30416667);
@@ -38,19 +39,19 @@ class RscloadoutMenu {
         };
     };
     class Controls {
-        class Is_Medic : RscText {
+        class IsMedic : RscText {
             idc = 1000;
             x = X_COORD(0.41770834);
             y = Y_COORD(0.6925926);
             w = GUI_STD_WIDTH;
             h = GUI_STD_HEIGHT;
-            text = SUBCSTRING(is_medic);
+            text = SUBCSTRING(ismedic);
             BTN_COLOR_RED;
         };
-        class Is_EOD : Is_Medic {
+        class IsEOD : IsMedic {
             idc = 1001;
             y = Y_COORD(0.73333334);
-            text = SUBCSTRING(is_eod);
+            text = SUBCSTRING(iseod);
         };
         class Logo : RscPicture {
             idc = 1002;
