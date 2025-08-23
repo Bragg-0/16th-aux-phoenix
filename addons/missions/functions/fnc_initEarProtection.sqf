@@ -25,7 +25,6 @@ _handle = [
 	{
 		params ["_player"];
 
-		TRACE_1("fnc_initEarProtection",_player);
 		private _state = _player getVariable [QGVAR(earProtection), false];
 		if ((headgear _player) isEqualTo "") then {
 			// Ear protection not worn
