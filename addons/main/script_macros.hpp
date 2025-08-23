@@ -63,7 +63,7 @@
     #define SUBGVAR(var1) DOUBLES(SUBADDON,var1)
     #define QSUBGVAR(var1) QUOTE(SUBGVAR(var1))
 
-    #define ESUBGVAR(var1,var2) QUOTE(TRIPLES(ADDON,var1,var2))
+    #define ESUBGVAR(var1,var2) TRIPLES(SUBADDON,var1,var2)
     #define QESUBGVAR(var1,var2) QUOTE(ESUBGVAR(var1,var2))
 
     #define SUBFUNC(var1) TRIPLES(SUBADDON,fnc,var1)
