@@ -29,6 +29,10 @@
             <English>[16th] Phoenix Units (Trooper)</English>
             <French>[16th] Phoenix Unités (Trooper)</French>
         </Key>
+        <Key ID="str_pc_main_Vehicles_Laat">
+            <English>[16th] Phoenix Vehicles (LAAT)</English>
+            <French>[16th] Phoenix Véhicules (LAAT)</French>
+        </Key>
     </Package>
     <Package name="CfgFactionClasses">
         <Key ID="str_pc_main_3den_FactionBlufor">

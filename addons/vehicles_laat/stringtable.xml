@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Vehicles_LAAT)">
+    <Package name="CfgVehicles (LAAT_C)">
+        <Container name="Textures">
+            <Key ID="STR_PC_Vehicles_LAAT_C_texture_0">
+                <English>Card Games</English>
+                <French>Jeux de cartes</French>
+            </Key>
+        </Container>
+        <Container name="vehicles">
+            <Key ID="STR_PC_Vehicles_LAAT_C">
+                <English>[16th] LAAT/C</English>
+                <French>[16th] LAAT/C</French>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="CfgVehicles (LAAT_I)">
+        <Container name="Textures">
+            <Key ID="STR_PC_Vehicles_LAAT_I_texture_0">
+                <English>Phoenix Flight</English>
+                <French>Vol du phoenix</French>
+            </Key>
+        </Container>
+        <Container name="vehicles">
+            <Key ID="STR_PC_Vehicles_LAAT_I_Mk1">
+                <English>[16th] LAAT/I (Mk1)</English>
+                <French>[16th] LAAT/I (Mk1)</French>
+            </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_I_Mk1Lights">
+                <English>[16th] LAAT/I (Mk1 w/ Lights)</English>
+                <French>[16th] LAAT/I (Mk1 w/ Lights)</French>
+            </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_I_Mk2">
+                <English>[16th] LAAT/I (Mk2)</English>
+                <French>[16th] LAAT/I (Mk2)</French>
+            </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_I_Mk2Lights">
+                <English>[16th] LAAT/I (Mk2 w/ Lights)</English>
+                <French>[16th] LAAT/I (Mk2 w/ Lights)</French>
+            </Key>
+        </Container>
+    </Package>
+</Project>
