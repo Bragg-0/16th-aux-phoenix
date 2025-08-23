@@ -21,6 +21,10 @@ params [
 
 TRACE_1("fnc_loadPlayer",_this);
 
+if !(isDedicated) exitWith {
+    WARNING("fnc_loadPlayer: This function must be called on the server");
+};
+
 if (isNull _unit || !isPlayer _unit) exitWith {
 	WARNING_1("fnc_loadPlayer: Invalid player object %1",_unit);
 };
