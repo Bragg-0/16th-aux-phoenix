@@ -5,6 +5,10 @@
             <English>Open Loadout Menu</English>
             <French>Ouvrir le menu des équipements</French>
         </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_loadMsg">
+            <English>You have successfully loaded your loadout :&lt;br/&gt;&lt;t color='#cc4300'&gt;%1&lt;/t&gt; (%2)</English>
+            <French>Vous avez chargé avec succès votre équipement :&lt;br/&gt;&lt;t color='#cc4300'&gt;%1&lt;/t&gt; (%2)</French>
+        </Key>
     </Package>
     <Package name="rsc (loadoutMenu)">
         <Key ID="STR_PC_Dialogs_Loadout_EOD">
