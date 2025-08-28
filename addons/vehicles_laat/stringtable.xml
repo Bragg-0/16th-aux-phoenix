@@ -6,6 +6,10 @@
                 <English>Card Games</English>
                 <French>Jeux de cartes</French>
             </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_C_texture_1">
+                <English>Hello there !</English>
+                <French>Hello there !</French>
+            </Key>
         </Container>
         <Container name="vehicles">
             <Key ID="STR_PC_Vehicles_LAAT_C">
@@ -17,8 +21,16 @@
     <Package name="CfgVehicles (LAAT_I)">
         <Container name="Textures">
             <Key ID="STR_PC_Vehicles_LAAT_I_texture_0">
-                <English>Phoenix Flight</English>
+                <English>Phoenix flight</English>
                 <French>Vol du phoenix</French>
+            </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_I_texture_1">
+                <English>Twi'lek</English>
+                <French>Twi'lek</French>
+            </Key>
+            <Key ID="STR_PC_Vehicles_LAAT_I_texture_2">
+                <English>Phoenix bomber</English>
+                <French>Bombardier phoenix</French>
             </Key>
         </Container>
         <Container name="vehicles">
