@@ -20,6 +20,6 @@ class CfgPatches {
 class RscButtonMenuCancel;
 class RscButtonMenuOK;
 class RscListBox;
-class RscPicture;
+class RscPictureKeepAspect;
 class RscText;
 #include "rsc\loadoutMenu.hpp"

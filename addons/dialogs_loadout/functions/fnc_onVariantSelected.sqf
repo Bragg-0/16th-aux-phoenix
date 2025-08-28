@@ -25,20 +25,24 @@ if (isNull _control) exitWith {
 	ERROR("fnc_onVariantSelected: Invalid control provided");
 };
 
+// Get the display
+private _display = ctrlParent _control;
+
 // get controls
 private _listLoadouts = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Loadouts" >> "idc") call BIS_fnc_getCfgData);
 private _listVariants = _control;
 private _listInventory = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Inventory" >> "idc") call BIS_fnc_getCfgData);
-
-// Clear the inventory list
-lbClear _listInventory;
+private _buttonLoad = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "Button_Load" >> "idc") call BIS_fnc_getCfgData);
 
 // Get the selected variant from the selected loadout
-private _selectedLoadout = _listLoadouts lbData [lbCurSel _listLoadouts];
-private _selectedVariant = _listVariants lbData [lbCurSel _listVariants];
+private _selectedLoadout = _listLoadouts lbData (lbCurSel _listLoadouts);
+private _selectedVariant = _listVariants lbData (lbCurSel _listVariants);
 
 // Get the loadout selected
 private _loadoutSelected = (configFile >> "CfgLoadouts" >> _selectedLoadout >> "loadoutsInfo" >> _selectedVariant >> "loadout") call BIS_fnc_getCfgData;
 
 // Display the selected loadout
-[_loadoutSelected, _listInventory] call FUNC(displayLoadout);
+[_loadoutSelected, _listInventory] call SUBFUNC(displayLoadout);
+
+// Enable the load button
+_buttonLoad ctrlEnable true;

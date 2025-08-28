@@ -5,7 +5,7 @@
 	 *
 	 * Arguments:
 	 * 0: _display <DISPLAY> - The display to unload
-	     * 1: _exitCode (default: 0) <NUMBER> - The exit code to return
+	 * 1: _exitCode (default: 0) <NUMBER> - The exit code to return
 	 *
 	 * Return Value:
 	 * <NONE>
@@ -34,8 +34,8 @@ if (_exitCode == 1) then {
 	private _listVariants = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Variants" >> "idc") call BIS_fnc_getCfgData);
 
 	// get current loadout selection
-	private _currentLoadout = _listLoadouts lbData [lbCurSel _listLoadouts];
-	private _currentVariant = _listVariants lbData [lbCurSel _listVariants];
+	private _currentLoadout = _listLoadouts lbData (lbCurSel _listLoadouts);
+	private _currentVariant = _listVariants lbData (lbCurSel _listVariants);
 
 	// get the loadout selected
 	private _loadoutSelected = (configFile >> "CfgLoadouts" >> _currentLoadout >> "loadoutsInfo" >> _currentVariant >> "loadout") call BIS_fnc_getCfgData;

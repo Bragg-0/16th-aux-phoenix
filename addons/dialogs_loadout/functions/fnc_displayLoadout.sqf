@@ -27,12 +27,15 @@ if (isNull _listInventory) exitWith {
 	ERROR("fnc_displayLoadout: Invalid inventory list control");
 };
 
-if (count _loadout != 10) exitWith {
-	ERROR("fnc_displayLoadout: Invalid loadout");
-};
-
 // Clear the inventory list
 lbClear _listInventory;
+
+if (count _loadout < 5) exitWith {
+    ERROR("fnc_displayLoadout: Invalid loadout data");
+};
+
+// Préparation des données
+_loadout = ARG_2(_loadout,0,0);
 
 // Fonction locale pour ajouter des items multiples (magasins ou équipements)
 private _addItems = {
@@ -46,9 +49,14 @@ private _addItems = {
 				_cfgSource = configFile >> "CfgMagazines" >> _item;
 				_itemDisplayName = [_cfgSource] call BIS_fnc_displayName;
 			};
-			private _itemName = FORMAT_2("%1 (x%2)",_itemDisplayName,_count);
-			private _index = _listInventory lbAdd _itemName;
-			_listInventory lbSetPicture [_index,getText (_cfgSource >> "picture")];
+            if (_count > 1) then {
+				private _itemName = FORMAT_2("%1 (x%2)",_itemDisplayName,_count);
+				private _index = _listInventory lbAdd _itemName;
+				_listInventory lbSetPicture [_index,getText (_cfgSource >> "picture")];
+			} else {
+				private _index = _listInventory lbAdd _itemDisplayName;
+				_listInventory lbSetPicture [_index,getText (_cfgSource >> "picture")];
+            }
 		};
 	} forEach _items;
 };
@@ -72,9 +80,6 @@ private _secondaryWeapon = ARG_2(_loadout,1,0);
 private _handgun = ARG_2(_loadout,2,0);
 [_handgun] call _addItem;
 
-_listEquipement lbAdd " ";// Add a space before
-_listEquipement lbAdd " ";// Add a space before
-
 private _headgear = ARG_1(_loadout,6);
 [_headgear] call _addItem;
 
@@ -87,35 +92,26 @@ private _binoculars = ARG_2(_loadout,8,0);
 private _assignedItems = ARG_1(_loadout,9);
 [_assignedItems] call _addItems;
 
-_listEquipement lbAdd " ";// Add a space before
-_listEquipement lbAdd " ";// Add a space before
-
 private _uniform = ARG_2(_loadout,3,0);
-[_uniform] call _addItem;
+if (_uniform != "") then {
+    [_uniform] call _addItem;
 
-_listEquipement lbAdd " ";// Add a space before
-
-private _uniformItems = ARG_2(_loadout,3,1);
-[_uniformItems] call _addItems;
-
-_listEquipement lbAdd " ";// Add a space before
-_listEquipement lbAdd " ";// Add a space before
+    private _uniformItems = ARG_2(_loadout,3,1);
+    [_uniformItems] call _addItems;
+};
 
 private _vest = ARG_2(_loadout,4,0);
-[_vest] call _addItem;
+if (_vest != "") then {
+    [_vest] call _addItem;
 
-_listEquipement lbAdd " ";// Add a space before
-
-private _vestItems = ARG_2(_loadout,4,1);
-[_vestItems] call _addItems;
-
-_listEquipement lbAdd " ";// Add a space before
-_listEquipement lbAdd " ";// Add a space before
+    private _vestItems = ARG_2(_loadout,4,1);
+    [_vestItems] call _addItems;
+};
 
 private _backpack = ARG_2(_loadout,5,0);
-[_backpack,"CfgVehicles"] call _addItem;
+if (_backpack != "") then {
+    [_backpack,"CfgVehicles"] call _addItem;
 
-_listEquipement lbAdd " ";// Add a space before
-
-private _backpackItems = ARG_2(_loadout,5,1);
-[_backpackItems] call _addItems;
+    private _backpackItems = ARG_2(_loadout,5,1);
+    [_backpackItems] call _addItems;
+};

@@ -27,5 +27,5 @@ if (isNull _object) exitWith {
 
 _object addAction [LSUBLSTRING(Open), {
 	params ["_target", "_caller", "_actionId"];
-	[_caller] call FUNC(open);
+	[_caller] call SUBFUNC(open);
 }, nil, 1.5, true, true, "", "true", 5];

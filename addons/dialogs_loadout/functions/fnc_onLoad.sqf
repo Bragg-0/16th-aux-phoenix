@@ -29,6 +29,7 @@ if (isNull _display) exitWith {
 private _listLoadouts = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Loadouts" >> "idc") call BIS_fnc_getCfgData);
 private _listVariants = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Variants" >> "idc") call BIS_fnc_getCfgData);
 private _listInventory = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Inventory" >> "idc") call BIS_fnc_getCfgData);
+private _buttonLoad = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "Button_Load" >> "idc") call BIS_fnc_getCfgData);
 
 // Reset controls
 lbClear _listLoadouts;
@@ -44,3 +45,6 @@ private _allLoadout = "true" configClasses (configFile >> "CfgLoadouts");
 	_listLoadouts lbSetPicture [_index, getText (configFile >> "CfgLoadouts" >> _classname >> "icon")];
 	_listLoadouts lbSetData [_index, _classname];
 } forEach _allLoadout;
+
+// Disable the load button
+_buttonLoad ctrlEnable false;

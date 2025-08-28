@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Missions)">
+    <Package name="CfgLoadouts">
+        <Key ID="STR_PC_Missions_AT">
+            <English>Anti-Tank</English>
+            <French>Anti-Tank</French>
+        </Key>
+        <Key ID="STR_PC_Missions_EOD">
+            <English>EOD</English>
+            <French>EOD</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Grenadier">
+            <English>Grenadier</English>
+            <French>Grenadier</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Heavy">
+            <English>Heavy soldier</English>
+            <French>Soldat lourd</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Medic">
+            <English>Medic</English>
+            <French>Médecin</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Pilot">
+            <English>Pilot</English>
+            <French>Pilote</French>
+        </Key>
+        <Key ID="STR_PC_Missions_RTO">
+            <English>Radio Operator</English>
+            <French>Opérateur radio</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Soldat">
+            <English>Soldier</English>
+            <French>Soldat</French>
+        </Key>
+        <Container name="loadoutsInfo">
+            <Key ID="STR_PC_Missions_DC15A_Shiny">
+                <English>DC-15A (Shiny)</English>
+                <French>DC-15A (Shiny)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC15A_Trooper">
+                <English>DC-15A (Trooper)</English>
+                <French>DC-15A (Trooper)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC15S_Shiny">
+                <English>DC-15S (Shiny)</English>
+                <French>DC-15S (Shiny)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC15S_Trooper">
+                <English>DC-15S (Trooper)</English>
+                <French>DC-15S (Trooper)</French>
+            </Key>
+        </Container>
+    </Package>
     <Package name="CfgVehicles">
         <Key ID="STR_PC_Missions_activateEarProtection">
             <English>Activate Ear Protection</English>

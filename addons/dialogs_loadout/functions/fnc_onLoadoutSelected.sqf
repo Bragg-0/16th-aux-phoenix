@@ -25,6 +25,9 @@ if (isNull _control) exitWith {
 	ERROR("fnc_onLoadoutSelected: Invalid control provided");
 };
 
+// Get the display
+private _display = ctrlParent _control;
+
 // get controls
 private _listLoadouts = _control;
 private _listVariants = _display displayCtrl ((configFile >> "RscloadoutMenu" >> "Controls" >> "List_Variants" >> "idc") call BIS_fnc_getCfgData);
@@ -37,10 +40,10 @@ lbClear _listVariants;
 lbClear _listInventory;
 
 // get the selected loadout
-private _selectedLoadout = _listLoadouts lbData [lbCurSel _listLoadouts];
+private _selectedLoadout = _listLoadouts lbData (lbCurSel _listLoadouts);
 
 // get Medic loadout traits and update indicators
-private _LoadoutIsMedic = (configFile >> "CfgLoadouts" >> _currentLoadout >> "isMedic") call BIS_fnc_getCfgDataBool;
+private _LoadoutIsMedic = (configFile >> "CfgLoadouts" >> _selectedLoadout >> "isMedic") call BIS_fnc_getCfgDataBool;
 
 if (_LoadoutIsMedic) then {
 	_isMedicIndicator ctrlSetText LSUBLSTRING(Medic);
@@ -51,7 +54,7 @@ if (_LoadoutIsMedic) then {
 };
 
 // get EOD loadout traits and update indicators
-private _LoadoutIsEOD = (configFile >> "CfgLoadouts" >> _currentLoadout >> "isEOD") call BIS_fnc_getCfgDataBool;
+private _LoadoutIsEOD = (configFile >> "CfgLoadouts" >> _selectedLoadout >> "isEOD") call BIS_fnc_getCfgDataBool;
 
 if (_LoadoutIsEOD) then {
 	_isEODIndicator ctrlSetText LSUBLSTRING(EOD);

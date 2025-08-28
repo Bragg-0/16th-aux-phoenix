@@ -7,17 +7,25 @@
         </Key>
     </Package>
     <Package name="rsc (loadoutMenu)">
+        <Key ID="STR_PC_Dialogs_Loadout_EOD">
+            <English>Is EOD - Yes</English>
+            <French>Est EOD - Oui</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_Medic">
+            <English>Is Medic - Yes</English>
+            <French>Est Médecin - Oui</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_NotEOD">
+            <English>Is EOD - No</English>
+            <French>Est EOD - Non</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_Loadout_NotMedic">
+            <English>Is Medic - No</English>
+            <French>Est Médecin - Non</French>
+        </Key>
         <Key ID="STR_PC_Dialogs_Loadout_header">
             <English>Loadout Menu</English>
             <French>Menu des Équipements</French>
-        </Key>
-        <Key ID="STR_PC_Dialogs_Loadout_isEOD">
-            <English>Is EOD (No)</English>
-            <French>Est EOD (Non)</French>
-        </Key>
-        <Key ID="STR_PC_Dialogs_Loadout_isMedic">
-            <English>Is Medic (No)</English>
-            <French>Est Médecin (Non)</French>
         </Key>
         <Key ID="STR_PC_Dialogs_Loadout_title_inventory">
             <English>Inventory</English>
