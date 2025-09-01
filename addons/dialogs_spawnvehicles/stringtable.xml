@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Dialogs - Spawn Vehicles)">
+    <Package name="Functions">
+        <Key ID="STR_PC_Dialogs_SpawnVehicles_Open">
+            <English>Open Spawn Vehicles Menu</English>
+            <French>Ouvrir le menu des véhicules de spawn</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_SpawnVehicles_loadMsg">
+            <English>You have successfully loaded your vehicle :&lt;br/&gt;&lt;t color='#cc4300'&gt;%1&lt;/t&gt;</English>
+            <French>Vous avez chargé avec succès votre véhicule :&lt;br/&gt;&lt;t color='#cc4300'&gt;%1&lt;/t&gt;</French>
+        </Key>
+    </Package>
+    <Package name="rsc (spawnVehiclesMenu)">
+        <Key ID="STR_PC_Dialogs_SpawnVehicles_header">
+            <English>Request vehicles</English>
+            <French>Demander des véhicules</French>
+        </Key>
+        <Key ID="STR_PC_Dialogs_SpawnVehicles_title_vehicles">
+            <English>Available Vehicles</English>
+            <French>Véhicules disponibles</French>
+        </Key>
+    </Package>
+</Project>
