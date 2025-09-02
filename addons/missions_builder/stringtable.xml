@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="16th_aux_phoenix (Missions Builder)">
+    <Package name="Functions">
+        <Key ID="STR_PC_Missions_Builder_errorGenerationDescriptionEXT">
+            <English>Error generating description.ext</English>
+            <French>Erreur lors de la génération de description.ext</French>
+        </Key>
+        <Key ID="STR_PC_Missions_Builder_successGenerationDescriptionEXT">
+            <English>Successfully generated description.ext</English>
+            <French>Génération de description.ext réussie</French>
+        </Key>
+    </Package>
+</Project>

@@ -4,12 +4,12 @@ class Display3DEN {
         class MenuStrip: ctrlMenuStrip {
             class Items {
                 class Tools {
-                    items[] += {QGVAR(missionParameters)};
+                    items[] += {QGVAR(generate)};
                 };
-                class GVAR(missionParameters) {
-                    text = CSTRING(missionParametersText);
+                class GVAR(generate) {
+                    text = CSTRING(generateText);
                     picture = QPATHTOEF(main,data\logo_white_ca.paa);
-                    action = QUOTE(call FUNC(addMissionParameters));
+                    action = QUOTE(call FUNC(generate));
                 };
             };
         };
