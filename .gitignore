@@ -10,6 +10,10 @@ Exports/
 *.spp.painter_lock
 *.psd
 
+# Music
+*.ogg
+*.wav
+
 # Other
 *.biprivatekey
 *.zip
