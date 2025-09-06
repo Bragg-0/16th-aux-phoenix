@@ -6,6 +6,12 @@
             <French>[16th] Venator</French>
         </Key>
     </Package>
+    <Package name="Display3den">
+        <Key ID="STR_PC_Missions_Builder_generateText">
+            <English>Generate Configuration</English>
+            <French>Générer la configuration</French>
+        </Key>
+    </Package>
     <Package name="Functions">
         <Key ID="STR_PC_Missions_Builder_errorGenerationDescriptionEXT">
             <English>Error generating description.ext</English>
@@ -14,12 +20,6 @@
         <Key ID="STR_PC_Missions_Builder_successGenerationDescriptionEXT">
             <English>Successfully generated description.ext</English>
             <French>Génération de description.ext réussie</French>
-        </Key>
-    </Package>
-    <Package name="Display3den">
-        <Key ID="STR_PC_Missions_Builder_generateText">
-            <English>Generate Configuration</English>
-            <French>Générer la configuration</French>
         </Key>
     </Package>
 </Project>
