@@ -20,7 +20,7 @@ onLoadMission = %MISSION_DESCRIPTION%;
 // Respawn settings
 respawn = 3;
 respawnTemplates[] = { "MenuPosition" };
-respawnDelay = %RESPAWN_DELAY%;
+respawnDelay = 20;
 respawnOnStart = -1;
 respawnButton = 1;
 respawnDialog = 0;

@@ -19,8 +19,7 @@
 
 params [
 	["_nameText", "16th Phoenix Company", [""]],
-	["_descriptionText", "Bienvenue à la Phoenix Company", [""]],
-	["_respawnDelay", 20, [0]]
+	["_descriptionText", "Bienvenue à la Phoenix Company", [""]]
 ];
 
 TRACE_1("fnc_getDescriptionTemplate",_this);
@@ -32,7 +31,6 @@ _replacements set ["%LOADSCREEN_PATH%", QPATHTOEF(missions,data\loadscreen_co.pa
 _replacements set ["%AUTHOR%", str profileName];
 _replacements set ["%MISSION_NAME%", str _nameText];
 _replacements set ["%MISSION_DESCRIPTION%", str _descriptionText];
-_replacements set ["%RESPAWN_DELAY%", _respawnDelay];
 
 // Load template from external file
 private _templateContent = loadFile QPATHTOF(data\description_template.inc);
