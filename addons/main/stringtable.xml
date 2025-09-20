@@ -18,20 +18,20 @@
     </Package>
     <Package name="CfgEditorSubcategories">
         <Key ID="str_pc_main_Characters_Regs_NCO_Officer">
-            <English>[16th] Phoenix Units (NCO Officer)</English>
-            <French>[16th] Phoenix Unités (NCO Officer)</French>
+            <English>[16th] Units (NCO Officer)</English>
+            <French>[16th] Unités (NCO Officer)</French>
         </Key>
         <Key ID="str_pc_main_Characters_Regs_Shiny">
-            <English>[16th] Phoenix Units (Shiny)</English>
-            <French>[16th] Phoenix Unités (Shiny)</French>
+            <English>[16th] Units (Shiny)</English>
+            <French>[16th] Unités (Shiny)</French>
         </Key>
         <Key ID="str_pc_main_Characters_Regs_Trooper">
-            <English>[16th] Phoenix Units (Trooper)</English>
-            <French>[16th] Phoenix Unités (Trooper)</French>
+            <English>[16th] Units (Trooper)</English>
+            <French>[16th] Unités (Trooper)</French>
         </Key>
         <Key ID="str_pc_main_Vehicles_Laat">
-            <English>[16th] Phoenix Vehicles (LAAT)</English>
-            <French>[16th] Phoenix Véhicules (LAAT)</French>
+            <English>[16th] Vehicles (LAAT)</English>
+            <French>[16th] Véhicules (LAAT)</French>
         </Key>
     </Package>
     <Package name="CfgFactionClasses">

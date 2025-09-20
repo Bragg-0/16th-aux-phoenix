@@ -55,7 +55,11 @@ private _vehicleList = [];
         };
         case "box": {
             _vehicles = [
-                //TODO : Add boxes
+                QEGVAR(objects_supply,weapons),
+                QEGVAR(objects_supply,ammo),
+                QEGVAR(objects_supply,grenades),
+                QEGVAR(objects_supply,launchers),
+                QEGVAR(objects_supply,medical)
             ];
         };
         default {
