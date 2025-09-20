@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Objects Supply)">
     <Package name="CfgVehicles">
-        <Key ID="STR_PC_Objects_Weapons">
-            <English>[16th] Weapons crate</English>
-            <French>[16th] Caisse d'armes</French>
-        </Key>
         <Key ID="STR_PC_Objects_Ammo">
             <English>[16th] Ammo crate</English>
             <French>[16th] Caisse de munitions</French>
@@ -20,6 +16,10 @@
         <Key ID="STR_PC_Objects_Medical">
             <English>[16th] Medical crate</English>
             <French>[16th] Caisse médicale</French>
+        </Key>
+        <Key ID="STR_PC_Objects_Weapons">
+            <English>[16th] Weapons crate</English>
+            <French>[16th] Caisse d'armes</French>
         </Key>
     </Package>
 </Project>
