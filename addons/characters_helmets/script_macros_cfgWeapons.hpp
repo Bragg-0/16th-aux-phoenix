@@ -29,6 +29,16 @@
         };                                                                  \
     }
 
+#define CLASS_P2_HELMET_VISOR(var1)                                         \
+    class ECVAR(var1,P2) : ls_gar_phase2_helmet_base {                      \
+        HELMET_BASE;                                                        \
+        displayName = SUBCSTRING(ECVAR(var1,P2));                           \
+        hiddenSelectionsTextures[] = {                                      \
+            QPATHTOF(data\##CHARACTERS_TYPE##\P2\##var1##_helmet_co.paa),   \
+            QPATHTOF(data\##CHARACTERS_TYPE##\P2\##var1##_visor_co.paa)     \
+        };                                                                  \
+    }
+
 #define CLASS_P2_PILOT_HELMET(var1)                                                 \
     class ECVAR(var1,P2_Pilot) : ls_gar_phase2Pilot_helmet_base {                   \
         HELMET_BASE;                                                                \
