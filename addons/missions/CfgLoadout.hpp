@@ -1,5 +1,5 @@
 class CfgLoadouts {
-    //TODO: Fill out loadouts
+    //TODO: Configure loadouts
     class GVAR(Soldat) {
         displayName = CSTRING(Soldat);
         icon = "";
