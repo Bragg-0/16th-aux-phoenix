@@ -91,21 +91,33 @@
         </Key>
     </Package>
     <Package name="Functions">
-        <Key ID="STR_PC_Missions_giveEODUnitTrait">
-            <English>&lt;t color='#00FF00'&gt;Give EOD trait&lt;/t&gt;</English>
-            <French>&lt;t color='#00FF00'&gt;Attribuer les permissions EOD&lt;/t&gt;</French>
-        </Key>
-        <Key ID="STR_PC_Missions_giveMedicalUnitTrait">
-            <English>&lt;t color='#00FF00'&gt;Give Medic trait&lt;/t&gt;</English>
-            <French>&lt;t color='#00FF00'&gt;Attribuer les permissions Médicales&lt;/t&gt;</French>
-        </Key>
-        <Key ID="STR_PC_Missions_removeEODUnitTrait">
-            <English>&lt;t color='#FF0000'&gt;Remove EOD trait&lt;/t&gt;</English>
-            <French>&lt;t color='#FF0000'&gt;Retirer les permissions EOD&lt;/t&gt;</French>
-        </Key>
-        <Key ID="STR_PC_Missions_removeMedicalUnitTrait">
-            <English>&lt;t color='#FF0000'&gt;Remove Medic trait&lt;/t&gt;</English>
-            <French>&lt;t color='#FF0000'&gt;Retirer les permissions Médicales&lt;/t&gt;</French>
-        </Key>
+        <Container name="Medical">
+            <Key ID="STR_PC_Missions_HealTerminal">
+                <English>Receive Medical Treatment</English>
+                <French>Recevoir un traitement médical</French>
+            </Key>
+            <Key ID="STR_PC_Missions_ReceivingMedicalTreatment">
+                <English>Receiving medical treatment...</English>
+                <French>Traitement médical en cours...</French>
+            </Key>
+        </Container>
+        <Container name="Traits">
+            <Key ID="STR_PC_Missions_giveEODUnitTrait">
+                <English>&lt;t color='#00FF00'&gt;Give EOD trait&lt;/t&gt;</English>
+                <French>&lt;t color='#00FF00'&gt;Attribuer les permissions EOD&lt;/t&gt;</French>
+            </Key>
+            <Key ID="STR_PC_Missions_giveMedicalUnitTrait">
+                <English>&lt;t color='#00FF00'&gt;Give Medic trait&lt;/t&gt;</English>
+                <French>&lt;t color='#00FF00'&gt;Attribuer les permissions Médicales&lt;/t&gt;</French>
+            </Key>
+            <Key ID="STR_PC_Missions_removeEODUnitTrait">
+                <English>&lt;t color='#FF0000'&gt;Remove EOD trait&lt;/t&gt;</English>
+                <French>&lt;t color='#FF0000'&gt;Retirer les permissions EOD&lt;/t&gt;</French>
+            </Key>
+            <Key ID="STR_PC_Missions_removeMedicalUnitTrait">
+                <English>&lt;t color='#FF0000'&gt;Remove Medic trait&lt;/t&gt;</English>
+                <French>&lt;t color='#FF0000'&gt;Retirer les permissions Médicales&lt;/t&gt;</French>
+            </Key>
+        </Container>
     </Package>
 </Project>

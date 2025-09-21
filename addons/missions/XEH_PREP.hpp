@@ -1,7 +1,9 @@
 PREP(canEarProtection);
 PREP(initEarProtection);
+PREP(initHealTerminal);
 PREP(initUnderfire);
 PREP(initUnitTraitTerminal);
 PREP(loadPlayer);
+PREP(onUseHealTerminal);
 PREP(setUnitTrait);
 PREP(updateEarProtection);
