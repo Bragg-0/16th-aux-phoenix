@@ -47,16 +47,16 @@ class RscSpawnVehiclesMenu {
             onLBSelChanged = QUOTE(_this call SUBFUNC(onVehicleSelected));
         };
         class Button_Load : RscButtonMenuOK {
-            x = X_COORD(0.53072917);
-            y = Y_COORD(0.73333334);
-            w = W_COORD(0.16510417);
+            x = X_COORD(0.47916667);
+            y = Y_COORD(0.51388889);
+            w = W_COORD(0.103125);
             h = GUI_STD_HEIGHT;
             BTN_COLOR_GREEN;
         };
         class Button_Cancel : RscButtonMenuCancel {
-            x = X_COORD(0.53072917);
-            y = Y_COORD(0.6925926);
-            w = W_COORD(0.16510417);
+            x = X_COORD(0.59270834);
+            y = Y_COORD(0.51388889);
+            w = W_COORD(0.103125);
             h = GUI_STD_HEIGHT;
             BTN_COLOR_RED;
         };
