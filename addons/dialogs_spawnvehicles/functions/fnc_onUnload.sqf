@@ -42,7 +42,7 @@ if (_exitCode == 1) then {
         _vehicle setPosATL (getPosATL _spawnPos);
         _vehicle setDir (getDir _spawnPos);
         TRACE_1("fnc_onUnload: Spawned vehicle",_vehicle);
-    [parseText FORMAT_1(LSUBLSTRING(loadMsg),name _vehicle), true, nil, 7, 0.7, 0] remoteExec ["BIS_fnc_textTiles", player];
+    [parseText FORMAT_1(LSUBLSTRING(loadMsg),([configOf _vehicle] call BIS_fnc_displayName)), true, nil, 7, 0.7, 0] remoteExec ["BIS_fnc_textTiles", player];
     } else {
         ERROR_1("fnc_onUnload: Failed to create '%1'",_selectedVehicle);
     };

@@ -39,7 +39,7 @@ private _listVehicles = _control;
 private _previewImage = _display displayCtrl ((configFile >> "RscSpawnVehiclesMenu" >> "Controls" >> "Preview_Image" >> "idc") call BIS_fnc_getCfgData);
 
 // Update the preview image based on the selected vehicle
-private _selectedVehicle = _listVehicles lbData _lbCurSel;
+private _selectedVehicle = _listVehicles lbData (lbCurSel _listVehicles);
 
 private _vehiclePreview = (configFile >> "CfgVehicles" >> _selectedVehicle >> "picture") call BIS_fnc_getCfgData;
 
