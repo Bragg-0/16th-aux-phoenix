@@ -40,26 +40,44 @@ private _vehicleList = [];
     switch (_x) do {
         case "car": {
             _vehicles = [
-                //TODO : Add vehicles
+                "3AS_Barc",
+                "3AS_BarcSideCar",
+                "3AS_ISP",
+                "3AS_ISP_Transport",
+                "3AS_Saber_M1",
+                "3AS_UTAT",
+                "3AS_Saber_M1G",
+                "3AS_Saber_M1Recon",
+                "3AS_Saber_Super",
+                "3AS_ATTE_TCW"
             ];
         };
         case "helicopter": {
             _vehicles = [
-                //TODO : Add vehicles
+                "PC_Vehicles_LAAT_C",
+                "PC_Vehicles_LAAT_I_Mk1Lights",
+                "PC_Vehicles_LAAT_I_Mk1",
+                "PC_Vehicles_LAAT_I_Mk2Lights",
+                "PC_Vehicles_LAAT_I_Mk2",
+                "3AS_Nu_REP_F",
+                "3AS_Rho_REP_F"
             ];
         };
         case "plane": {
             _vehicles = [
-                //TODO : Add vehicles
+                "3AS_BTLB_Bomber",
+                "3AS_ARC_170_Orange",
+                "3AS_Z95_Orange",
+                "3as_V19_base"
             ];
         };
         case "box": {
             _vehicles = [
-                QEGVAR(objects_supply,weapons),
-                QEGVAR(objects_supply,ammo),
-                QEGVAR(objects_supply,grenades),
-                QEGVAR(objects_supply,launchers),
-                QEGVAR(objects_supply,medical)
+                "PC_Objects_Supply_ammo",
+                "PC_Objects_Supply_grenades",
+                "PC_Objects_Supply_launchers",
+                "PC_Objects_Supply_medical",
+                "PC_Objects_Supply_weapons"
             ];
         };
         default {
