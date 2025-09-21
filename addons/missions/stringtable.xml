@@ -33,6 +33,10 @@
             <English>Soldier</English>
             <French>Soldat</French>
         </Key>
+        <Key ID="STR_PC_Missions_TP">
+            <English>Marksman</English>
+            <French>Tireur d'élite</French>
+        </Key>
         <Container name="loadoutsInfo">
             <Key ID="STR_PC_Missions_DC15A_Shiny">
                 <English>DC-15A (Shiny)</English>
@@ -50,6 +54,30 @@
                 <English>DC-15S (Trooper)</English>
                 <French>DC-15S (Trooper)</French>
             </Key>
+            <Key ID="STR_PC_Missions_DC15X_Shiny">
+                <English>DC-15X (Shiny)</English>
+                <French>DC-15X (Shiny)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC15X_Trooper">
+                <English>DC-15X (Trooper)</English>
+                <French>DC-15X (Trooper)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC17_Shiny">
+                <English>DC-17 (Shiny)</English>
+                <French>DC-17 (Shiny)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_DC17_Trooper">
+                <English>DC-17 (Trooper)</English>
+                <French>DC-17 (Trooper)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_Z6_Shiny">
+                <English>Z-6 (Shiny)</English>
+                <French>Z-6 (Shiny)</French>
+            </Key>
+            <Key ID="STR_PC_Missions_Z6_Trooper">
+                <English>Z-6 (Trooper)</English>
+                <French>Z-6 (Trooper)</French>
+            </Key>
         </Container>
     </Package>
     <Package name="CfgVehicles">
@@ -60,6 +88,24 @@
         <Key ID="STR_PC_Missions_deactivateEarProtection">
             <English>Deactivate Ear Protection</English>
             <French>Désactiver les protections auditives</French>
+        </Key>
+    </Package>
+    <Package name="Functions">
+        <Key ID="STR_PC_Missions_giveEODUnitTrait">
+            <English>&lt;t color='#00FF00'&gt;Give EOD trait&lt;/t&gt;</English>
+            <French>&lt;t color='#00FF00'&gt;Attribuer les permissions EOD&lt;/t&gt;</French>
+        </Key>
+        <Key ID="STR_PC_Missions_giveMedicalUnitTrait">
+            <English>&lt;t color='#00FF00'&gt;Give Medic trait&lt;/t&gt;</English>
+            <French>&lt;t color='#00FF00'&gt;Attribuer les permissions Médicales&lt;/t&gt;</French>
+        </Key>
+        <Key ID="STR_PC_Missions_removeEODUnitTrait">
+            <English>&lt;t color='#FF0000'&gt;Remove EOD trait&lt;/t&gt;</English>
+            <French>&lt;t color='#FF0000'&gt;Retirer les permissions EOD&lt;/t&gt;</French>
+        </Key>
+        <Key ID="STR_PC_Missions_removeMedicalUnitTrait">
+            <English>&lt;t color='#FF0000'&gt;Remove Medic trait&lt;/t&gt;</English>
+            <French>&lt;t color='#FF0000'&gt;Retirer les permissions Médicales&lt;/t&gt;</French>
         </Key>
     </Package>
 </Project>

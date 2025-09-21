@@ -34,9 +34,6 @@ if (count _loadout < 5) exitWith {
     ERROR("fnc_displayLoadout: Invalid loadout data");
 };
 
-// Préparation des données
-_loadout = ARG_2(_loadout,0,0);
-
 // Fonction locale pour ajouter des items multiples (magasins ou équipements)
 private _addItems = {
 	params ["_items"];
