@@ -39,4 +39,4 @@ lbClear _listVehicles;
 } forEach (uiNamespace getVariable [QGVAR(vehiclesList), ["B_Lifeboat"]]);
 
 // Select the first vehicle by default
-_listVehicles lbSetCurSel [0,true,true];
+_listVehicles lbSetCurSel 0;
