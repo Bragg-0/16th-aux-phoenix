@@ -27,20 +27,20 @@ if (isNull _object) exitWith {
 
 _object addAction [LLSTRING(giveMedicalUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
-	[_target, "medic", true] call FUNC(setUnitTrait);
+	[_caller, "medic", true] call FUNC(setUnitTrait);
 }, nil, 1.5, true, true, "", QUOTE(!(_this getUnitTrait 'medic')), 5];
 
 _object addAction [LLSTRING(giveEODUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
-	[_target, "eod", true] call FUNC(setUnitTrait);
+	[_caller, "eod", true] call FUNC(setUnitTrait);
 }, nil, 1.5, true, true, "", QUOTE(!(_this getUnitTrait 'explosiveSpecialist')), 5];
 
 _object addAction [LLSTRING(removeMedicalUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
-	[_target, "medic", false] call FUNC(setUnitTrait);
+	[_caller, "medic", false] call FUNC(setUnitTrait);
 }, nil, 1.5, true, true, "", QUOTE(_this getUnitTrait 'medic'), 5];
 
 _object addAction [LLSTRING(removeEODUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
-	[_target, "eod", false] call FUNC(setUnitTrait);
+	[_caller, "eod", false] call FUNC(setUnitTrait);
 }, nil, 1.5, true, true, "", QUOTE(_this getUnitTrait 'explosiveSpecialist'), 5];
