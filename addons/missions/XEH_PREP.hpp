@@ -1,4 +1,5 @@
 PREP(canEarProtection);
+PREP(initArsenal);
 PREP(initEarProtection);
 PREP(initHealTerminal);
 PREP(initUnderfire);

@@ -91,6 +91,12 @@
         </Key>
     </Package>
     <Package name="Functions">
+        <Container name="Arsenal">
+            <Key ID="STR_PC_Missions_openArsenal">
+                <English>Open Arsenal</English>
+                <French>Ouvrir l'arsenal</French>
+            </Key>
+        </Container>
         <Container name="Medical">
             <Key ID="STR_PC_Missions_HealTerminal">
                 <English>Receive Medical Treatment</English>
