@@ -35,10 +35,18 @@ if (_exitCode == 1) then {
     // Get the selected vehicle
     private _selectedVehicle = _listVehicles lbData (lbCurSel _listVehicles);
 
+    // Get the spawn position
+    private _spawnPos = uiNamespace getVariable QGVAR(spawnPos);
+
+    // Delete existing vehicle on spawnPos if any
+    private _existingVehicle = nearestObjects [getPosATL _spawnPos, ["AllVehicles","ReammoBox_F"], 10];
+    {
+        deleteVehicle _x;
+    } forEach _existingVehicle;
+
     // Spawn the vehicle
     private _vehicle = createVehicle [_selectedVehicle, [0,0,0]];
     if (!isNull _vehicle) then {
-        private _spawnPos = uiNamespace getVariable QGVAR(spawnPos);
         _vehicle setPosATL (getPosATL _spawnPos);
         _vehicle setDir (getDir _spawnPos);
         TRACE_1("fnc_onUnload: Spawned vehicle",_vehicle);
