@@ -19,6 +19,7 @@ class CfgVehicles {
             WEAP_XX(3AS_DC15X_F,2);
         };
         EMPTY_MAGAZINE;
+        editorPreview = EDITORPREVIEW(SUBGVAR(weapons));
     };
 
     class SUBGVAR(ammo) : JLTS_Ammobox_ammo_GAR {
@@ -34,6 +35,7 @@ class CfgVehicles {
             MAG_XX(3AS_60Rnd_EC30_mag,20);
             MAG_XX(JLTS_Z6_mag,10);
         };
+        editorPreview = EDITORPREVIEW(SUBGVAR(ammo));
     };
 
     class SUBGVAR(grenades) : JLTS_Ammobox_grenades_GAR {
@@ -56,6 +58,7 @@ class CfgVehicles {
             MAG_XX(3AS_ThermalDetonator,10);
             MAG_XX(3AS_BaridumCore,5);
         };
+        editorPreview = EDITORPREVIEW(SUBGVAR(grenades));
     };
 
     class SUBGVAR(launchers) : JLTS_Ammobox_launchers_GAR {
@@ -70,6 +73,7 @@ class CfgVehicles {
             MAG_XX(3AS_MK41_AT,20);
             MAG_XX(3AS_MK42_HE,10);
         };
+        editorPreview = EDITORPREVIEW(SUBGVAR(launchers));
     };
 
     class SUBGVAR(medical) : JLTS_Ammobox_support_GAR {
@@ -96,5 +100,6 @@ class CfgVehicles {
         class TransportMagazines {
             MAG_XX(PC_Medical_Painkillers,20);
         };
+        editorPreview = EDITORPREVIEW(SUBGVAR(medical));
     };
 };

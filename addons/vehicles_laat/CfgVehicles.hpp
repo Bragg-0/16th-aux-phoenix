@@ -10,24 +10,28 @@ class CfgVehicles {
         BASE_LAAT;
         displayName = SUBCSTRING(I_Mk1);
         TEXTURES_LAAT_I;
+        editorPreview = EDITORPREVIEW(ESUBGVAR(I,Mk1));
     };
 
     class ESUBGVAR(I,Mk1Lights) : 3as_LAAT_Mk1Lights {
         BASE_LAAT;
         displayName = SUBCSTRING(I_Mk1Lights);
         TEXTURES_LAAT_I;
+        editorPreview = EDITORPREVIEW(ESUBGVAR(I,Mk1Lights));
     };
 
     class ESUBGVAR(I,Mk2) : 3as_LAAT_Mk2 {
         BASE_LAAT;
         displayName = SUBCSTRING(I_Mk2);
         TEXTURES_LAAT_I;
+        editorPreview = EDITORPREVIEW(ESUBGVAR(I,Mk2));
     };
 
     class ESUBGVAR(I,Mk2Lights) : 3as_LAAT_Mk2Lights {
         BASE_LAAT;
         displayName = SUBCSTRING(I_Mk2Lights);
         TEXTURES_LAAT_I;
+        editorPreview = EDITORPREVIEW(ESUBGVAR(I,Mk2Lights));
     };
 
     // LAAT_C
@@ -59,5 +63,6 @@ class CfgVehicles {
             QSUBGVAR(texture_0), 1,
             QSUBGVAR(texture_1), 1
         };
+        editorPreview = EDITORPREVIEW(SUBGVAR(C));
     };
 };

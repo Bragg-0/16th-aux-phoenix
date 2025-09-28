@@ -98,3 +98,8 @@
     Material Light
 */
 #define MATERIAL_LIGHT(var1) QPATHTOEF(main,data\rvmat\Light.rvmat)
+
+/*
+    editorPreviews
+*/
+#define EDITORPREVIEW(var1) QPATHTOF(data\editorPreviews\DOUBLES(var1,co).jpg)

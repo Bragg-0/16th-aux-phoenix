@@ -23,6 +23,7 @@ class CfgVehicles {
         respawnItems[] = { ITEM_DEFAULT };
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Clone" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Clone" };
+        editorPreview = EDITORPREVIEW(CVARF(Shiny));
     };
 
     // EOD
@@ -32,6 +33,7 @@ class CfgVehicles {
         backpack = "PC_Backpacks_Regs_EOD_Standard";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Engineer" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Engineer" };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,EOD));
     };
 
     // Medic
@@ -43,6 +45,7 @@ class CfgVehicles {
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2","PC_Vests_Regs_Base_Medic" };
         items[] = { ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT };
         respawnItems[] = { ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,Medic));
     };
 
     // Grenadier
@@ -54,6 +57,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_2(DC15A_GL,DC17S);
         magazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,Grenadier));
     };
 
     // Heavy
@@ -66,6 +70,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_2(Z6,DC17S);
         magazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,Heavy));
     };
 
     // AT
@@ -76,6 +81,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
         magazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
         respawnMagazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,AT));
     };
 
     // Pilot
@@ -84,6 +90,7 @@ class CfgVehicles {
         backpack = "ls_gar_rto_mini_backpack";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2_Pilot","PC_Vests_Regs_Base_CFR" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Shiny_P2_Pilot","PC_Vests_Regs_Base_CFR" };
+        editorPreview = EDITORPREVIEW(ECVARF(Shiny,Pilot));
     };
 
     // Trooper P2
@@ -94,6 +101,7 @@ class CfgVehicles {
         editorSubcategory = QEGVAR(Main,Characters_Regs_Trooper);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Clone" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Clone" };
+        editorPreview = EDITORPREVIEW(CVARF(Trooper));
     };
 
     // EOD
@@ -103,6 +111,7 @@ class CfgVehicles {
         backpack = "PC_Backpacks_Regs_EOD_Standard";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Engineer" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Engineer" };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,EOD));
     };
 
     // Medic
@@ -114,6 +123,7 @@ class CfgVehicles {
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Medic" };
         items[] = { ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT };
         respawnItems[] = { ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT,ITEM_DEFAULT };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,Medic));
     };
 
     // Grenadier
@@ -125,6 +135,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_2(DC15A_GL,DC17S);
         magazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(DC15A_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DC15A_MAG_GL),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,Grenadier));
     };
 
     // Heavy
@@ -137,6 +148,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_2(Z6,DC17S);
         magazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
         respawnMagazines[] = { MAGS_X6(Z6_MAG),MAGS_X2(DC17S_MAG),MAGS_X2(DETONATOR),MAGS_X2("SmokeShellRed"),MAGS_X2("SmokeShellGreen"),MAGS_X2("SmokeShell"),CTBI };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,Heavy));
     };
 
     // AT
@@ -147,6 +159,7 @@ class CfgVehicles {
         respawnWeapons[] = WEAPONS_3(DC15S,DC17S,RPS6);
         magazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
         respawnMagazines[] = { MAGAZINE_DEFAULT,MAGS_X6(RPS6_MAG) };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,AT));
     };
 
     // Pilot
@@ -155,6 +168,7 @@ class CfgVehicles {
         backpack = "ls_gar_rto_mini_backpack";
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2_Pilot","PC_Vests_Regs_Base_CFR" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2_Pilot","PC_Vests_Regs_Base_CFR" };
+        editorPreview = EDITORPREVIEW(ECVARF(Trooper,Pilot));
     };
 
     // NCOs and Officers
@@ -164,6 +178,7 @@ class CfgVehicles {
         editorSubcategory = QEGVAR(Main,Characters_Regs_NCO_Officer);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Recon" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Recon" };
+        editorPreview = EDITORPREVIEW(CVARF(Caporal));
     };
 
     // Sergent
@@ -171,6 +186,7 @@ class CfgVehicles {
         displayName = CSTRING(Sergent);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_ReconNCO" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_ReconNCO" };
+        editorPreview = EDITORPREVIEW(CVARF(Sergent));
     };
 
     // Lieutenant
@@ -178,6 +194,7 @@ class CfgVehicles {
         displayName = CSTRING(Lieutenant);
         linkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Lieutenant" };
         respawnlinkedItems[] = { LINKED_ITEMS_DEFAULT,"PC_Helmets_Regs_Trooper_P2","PC_Vests_Regs_Base_Lieutenant" };
+        editorPreview = EDITORPREVIEW(CVARF(Lieutenant));
     };
 };
 
