@@ -5,31 +5,11 @@ class RscDisplayMain : RscStandardDisplay {
     idc = 1;
     enableDisplay = 1;
     class ControlsBackground {
-        class GVAR(background) : RscText {
-            x = X_COORD(0.42773438);
-            y = Y_COORD(0.54166667);
-            w = W_COORD(0.14453125);
-            h = H_COORD(0.23263889);
-            colorBackground[] = GUI_BCG_MENU;
-        };
-        class GVAR(Img1): RscPicture {
+        class GVAR(connect1): RscText {
             x = X_COORD(0.43802084);
-            y = Y_COORD(0.55462963);
-            w = GUI_MAINMENU_WIDTH;
-            h = H_COORD(0.20648149);
-            text = QPATHTOF(data\img1_co.paa);
-        };
-        class GVAR(name1): RscText {
-            x = X_COORD(0.43802084);
-            y = Y_COORD(0.55462963);
-            w = GUI_MAINMENU_WIDTH;
+            y = Y_COORD(0.225);
+            w = W_COORD(0.12395834);
             h = GUI_STD_HEIGHT;
-            text = SUBCSTRING(name1);
-            colorText[] = GUI_TEXT_COLOR;
-            colorBackground[] = GUI_BCG_MENU;
-        };
-        class GVAR(connect1): GVAR(name1) {
-            y = Y_COORD(0.73333334);
             text = SUBCSTRING(connect);
             style = ST_CENTER;
             BTN_COLOR_DEFAULT;
@@ -78,9 +58,9 @@ class RscDisplayMain : RscStandardDisplay {
         class GVAR(connect1): RscButton {
             idc = 6101;
             x = X_COORD(0.43802084);
-            y = Y_COORD(0.55462963);
-            w = GUI_MAINMENU_WIDTH;
-            h = H_COORD(0.20648149);
+            y = Y_COORD(0.225);
+            w = W_COORD(0.12395834);
+            h = GUI_STD_HEIGHT;
             onButtonClick = QUOTE(_this execvm '\x\pc\addons\dialogs_mainmenu\scripts\connectToServer.sqf';);
             colorBackground[] = CA_UI_transparent;
             colorBackgroundActive[] = GUI_BCG_COLOR_SELECTED;

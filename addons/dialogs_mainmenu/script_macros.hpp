@@ -1,2 +1,0 @@
-#define GUI_MAINMENU_WIDTH \
-    W_COORD(0.12395834)

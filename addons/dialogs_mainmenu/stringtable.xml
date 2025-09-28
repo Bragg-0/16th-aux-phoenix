@@ -12,12 +12,8 @@
     </Package>
     <Package name="rsc (mainMenu)">
         <Key ID="STR_PC_Dialogs_MainMenu_connect">
-            <English>Connect</English>
-            <French>Se Connecter</French>
-        </Key>
-        <Key ID="STR_PC_Dialogs_MainMenu_name1">
-            <English>Server Main</English>
-            <French>Serveur Principal</French>
+            <English>Connect to Server</English>
+            <French>Se Connecter au serveur</French>
         </Key>
     </Package>
 </Project>

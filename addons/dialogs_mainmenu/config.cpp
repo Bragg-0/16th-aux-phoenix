@@ -23,7 +23,6 @@ class RscButton;
 class RscButtonMenuCancel;
 class RscButtonMenuOK;
 class RscEdit;
-class RscPicture;
 class RscShortcutButton;
 class RscText;
 #include "rsc\checkPassword.hpp"
