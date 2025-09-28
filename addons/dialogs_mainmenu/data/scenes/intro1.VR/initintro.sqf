@@ -1,4 +1,4 @@
-["", [worldName, (getPosATL cam_pos), (getDir cam_pos), 0.75, [-1.17921, 0], 0, 0, 265.831, 1, 0, 1, 0, 1]] call BIS_fnc_camera;
+["", [worldName, (getPosATL cam_pos), (getDir cam_pos), 0.75, [-1.17921, 0], 10, 0, 817, 0, 0, 1, 0, 1]] call BIS_fnc_camera;
 
 showChat false;
 enableEnvironment false;
@@ -12,7 +12,7 @@ setViewDistance 200;
 "colorCorrections" ppEffectCommit 0;
 
 // Musique d'ambiance
-private _musiclist = ["PC_Music_SW_Epic_The_Clones_Epic_Original_Theme_Brothers_In_Arms"];
+_musiclist = ["PC_Music_SW_Epic_The_Clones_Epic_Original_Theme_Brothers_In_Arms"];
 
 0 fadeMusic 1;
 playMusic (selectRandom _musiclist);
@@ -23,39 +23,40 @@ addMusicEventHandler ["MusicStop", {
 
 // Caméra loop dans les couloirs pour le main menu
 // Création caméra
-private _cam = "camera" camCreate getPosATL camPos_0;
+_cam = "camera" camCreate getPosATL cam_pos;
 _cam cameraEffect ["Internal", "Back"];
 
 // Liste de points de passage
-private _path = [
-	[camPos_1,targetPos_0],
-	[camPos_2,targetPos_0],
-	[camPos_3,targetPos_0],
-	[camPos_4,targetPos_1],
-	[camPos_5,targetPos_1],
-	[camPos_6,targetPos_2],
-	[camPos_5,targetPos_3],
-	[camPos_4,targetPos_4],
-	[camPos_3,targetPos_5],
-	[camPos_2,targetPos_5],
-	[camPos_1,targetPos_6],
-	[camPos_0,targetPos_0]
+_path = [
+	[startPos_0, endPos_0, targetPos_0],
+	[startPos_1, endPos_1, targetPos_1],
+	[startPos_2, endPos_2, targetPos_2]
 ];
 
 // Désactivation de l'interface utilisateur de DIWAKO DUI
 diwako_dui_main_inFeatureCamera = true;
 
-// Durée de déplacement entre chaque point
-private _time = 10;
-
 // Boucle infinie
-while {true} do {
-    {
-		_x params ["_pathPoint", "_targetPoint"];
-		private _pathPos = getPosATL _pathPoint;
-        _cam camPreparePos _pathPos;
-        _cam camPrepareTarget getPosATL _targetPoint;
-        _cam camCommitPrepared _time;
-        waitUntil {camCommitted _cam};
-    } forEach _path;
+while { true } do {
+	{
+		_x params ["_startPoint", "_endPoint", "_targetPoint"];
+		private _dist = _startPoint distance _endPoint;
+		private _time = _dist / 2; // Vitesse de 2 m/s
+		_cam camSetPos getPosATL _startPoint;
+		_cam camPrepareTarget getPosATL _targetPoint;
+		_cam camCommit 0;
+		"menu" cutText ["", "BLACK IN", 0.5, true];
+		_cam camPreparePos getPosATL _endPoint;
+		_cam camCommitPrepared _time;
+		// Déclenche le BLACK OUT 1s avant la fin du mouvement
+		[_time] spawn {
+			params ["_t"];
+			private _delay = (_t - 1) max 0;
+			sleep _delay;
+			"menu" cutText ["", "BLACK OUT", 0.5, true];
+		};
+		waitUntil {
+			camCommitted _cam
+		};
+	} forEach _path;
 };
