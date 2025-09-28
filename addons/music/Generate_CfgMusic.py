@@ -57,7 +57,7 @@ with open(output_file, 'w') as f_out:
                         # Crée le chemin relatif à partir du dossier 'Data/' et utilise la macro QPATHTOF()
                         data_index = abs_path.find('Data')
                         if data_index != -1:
-                            relative_path = abs_path[data_index:].replace('\\', '/')
+                            relative_path = abs_path[data_index:].replace('\\', '\\')
                             arma_path = f'QPATHTOF({relative_path})'
                         else:
                             arma_path = abs_path.replace('\\', '/')
