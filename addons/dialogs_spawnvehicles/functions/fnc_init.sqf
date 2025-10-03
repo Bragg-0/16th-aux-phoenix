@@ -89,7 +89,7 @@ private _vehicleList = [];
     } forEach _vehicles;
 } forEach _types;
 
-if (count _vehicleList == 0) then {
+if (_vehicleList isEqualTo []) then {
     ERROR("fnc_init: No vehicles available to spawn");
     _vehicleList = ["B_Lifeboat"];
 };
