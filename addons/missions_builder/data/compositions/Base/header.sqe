@@ -1,0 +1,24 @@
+version=54;
+name="[16th] Base";
+author="PhoenixTEAM";
+category="EdSubcat_Utilities";
+requiredAddons[]=
+{
+	"PC_Characters_Units",
+	"3AS_Weapons_Republic_DC17S",
+	"3AS_Weapons",
+	"A3_Weapons_F",
+	"ace_parachute",
+	"PC_Characters_Helmets",
+	"PC_Characters_Uniforms",
+	"A3_Weapons_F_Items",
+	"ace_medical_treatment",
+	"PC_Characters_Vests",
+	"3AS_Equipment",
+	"ace_realisticnames",
+	"ls_weapons_grenades",
+	"3AS_Prop_Terminals",
+	"3as_GNK_Prop",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Modules_F_Curator_Curator"
+};

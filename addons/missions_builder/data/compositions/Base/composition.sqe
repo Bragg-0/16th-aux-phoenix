@@ -1,0 +1,3707 @@
+version=54;
+center[]={2784.3379,5,6152.8579};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Script";
+		class Entities
+		{
+			items=5;
+			class Item0
+			{
+				dataType="Layer";
+				name="Heal";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={5.6621094,0.0014419556,-0.80810547};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									init="[this] call pc_missions_fnc_initHealTerminal;";
+									name="healTerminal";
+									disableSimulation=1;
+									ignoreByDynSimulGrid=1;
+									class Inventory
+									{
+										class handgun
+										{
+											name="3AS_DC17S_F";
+											firemode="3AS_DC17S_F:Single";
+											class primaryMuzzleMag
+											{
+												name="3AS_16Rnd_EC20_Mag";
+												ammoLeft=16;
+											};
+										};
+										class uniform
+										{
+											typeName="PC_Uniforms_Regs_Trooper_Medic";
+											isBackpack=0;
+											class ItemCargo
+											{
+												items=1;
+												class Item0
+												{
+													name="FirstAidKit";
+													count=15;
+												};
+											};
+										};
+										class vest
+										{
+											typeName="PC_Vests_Regs_Base_Medic";
+											isBackpack=0;
+											class MagazineCargo
+											{
+												items=6;
+												class Item0
+												{
+													name="3AS_16Rnd_EC20_Mag";
+													count=1;
+													ammoLeft=16;
+												};
+												class Item1
+												{
+													name="3AS_ThermalDetonator";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item2
+												{
+													name="SmokeShellRed";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item3
+												{
+													name="SmokeShellGreen";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item4
+												{
+													name="SmokeShell";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item5
+												{
+													name="ls_grenade_n20_magazine";
+													count=1;
+													ammoLeft=1;
+												};
+											};
+										};
+										compass="ItemCompass";
+										watch="ACE_Altimeter";
+										headgear="PC_Helmets_Regs_Trooper_P2";
+									};
+								};
+								id=9;
+								type="PC_Units_Regs_Trooper_Medic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="allowDamage";
+										expression="_this allowdamage _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="face";
+										expression="_this setface _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ENH_doStop";
+										expression="if (!is3DEN && _value) then {doStop _this}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute5
+									{
+										property="InfantryBackpack";
+										expression="if (_value isNotEqualTo false) then {[(backpackContainer _this), _value] remoteExecCall ['lockInventory', 0, _this]};";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute6
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									class Attribute7
+									{
+										property="ENH_AmbientAnimations";
+										expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=4;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="STAND_IDLE";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Acts_CivilIdle_1";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Acts_CivilIdle_2";
+																	};
+																};
+															};
+														};
+													};
+													class Item2
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+													class Item3
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute8
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute9
+									{
+										property="enableStamina";
+										expression="_this enablestamina _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute10
+									{
+										property="ENH_allowSprint";
+										expression="[_this, _value] remoteExec ['allowSprint', _this]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									nAttributes=11;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=8;
+					};
+				};
+				id=7;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="TraitTerminal";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6621094,1.2069526,7.1420898};
+							angles[]={-0,3.1415927,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="[this] call pc_missions_fnc_initUnitTraitTerminal";
+							name="unitTraitTerminal";
+							disableSimulation=1;
+						};
+						id=11;
+						type="3AS_Terminal_Screen_Prop";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				id=10;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="Arsenal";
+				class Entities
+				{
+					items=2;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={5.6621094,0.0014419556,3.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									init="[this] call pc_dialogs_loadout_fnc_init";
+									name="Loadout";
+									ignoreByDynSimulGrid=1;
+									class Inventory
+									{
+										class handgun
+										{
+											name="3AS_DC17S_F";
+											firemode="3AS_DC17S_F:Single";
+											class primaryMuzzleMag
+											{
+												name="3AS_16Rnd_EC20_Mag";
+												ammoLeft=16;
+											};
+										};
+										class uniform
+										{
+											typeName="PC_Uniforms_Regs_Trooper";
+											isBackpack=0;
+											class MagazineCargo
+											{
+												items=4;
+												class Item0
+												{
+													name="3AS_ThermalDetonator";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item1
+												{
+													name="SmokeShellRed";
+													count=2;
+													ammoLeft=1;
+												};
+												class Item2
+												{
+													name="SmokeShellGreen";
+													count=1;
+													ammoLeft=1;
+												};
+												class Item3
+												{
+													name="ls_grenade_n20_magazine";
+													count=1;
+													ammoLeft=1;
+												};
+											};
+											class ItemCargo
+											{
+												items=1;
+												class Item0
+												{
+													name="FirstAidKit";
+													count=3;
+												};
+											};
+										};
+										class vest
+										{
+											typeName="PC_Vests_Regs_Base_CFR";
+											isBackpack=0;
+											class MagazineCargo
+											{
+												items=2;
+												class Item0
+												{
+													name="SmokeShellGreen";
+													count=1;
+													ammoLeft=1;
+												};
+												class Item1
+												{
+													name="SmokeShell";
+													count=2;
+													ammoLeft=1;
+												};
+											};
+										};
+										headgear="PC_Helmets_Regs_Trooper_P2";
+									};
+								};
+								id=14;
+								type="PC_Units_Regs_Trooper_Heavy_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="allowDamage";
+										expression="_this allowdamage _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="face";
+										expression="_this setface _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ENH_doStop";
+										expression="if (!is3DEN && _value) then {doStop _this}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute5
+									{
+										property="InfantryBackpack";
+										expression="if (_value isNotEqualTo false) then {[(backpackContainer _this), _value] remoteExecCall ['lockInventory', 0, _this]};";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute6
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									class Attribute7
+									{
+										property="ENH_AmbientAnimations";
+										expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=4;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="BRIEFING";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=8;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_loop";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_loop";
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_loop";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_lookaround1";
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_lookaround2";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_scratch";
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_stretch";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="hubbriefing_talkaround";
+																	};
+																};
+															};
+														};
+													};
+													class Item2
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+													class Item3
+													{
+														class data
+														{
+															singleType="BOOL";
+															value=0;
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute8
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male01ENG";
+											};
+										};
+									};
+									class Attribute9
+									{
+										property="enableStamina";
+										expression="_this enablestamina _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute10
+									{
+										property="ENH_allowSprint";
+										expression="[_this, _value] remoteExec ['allowSprint', _this]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									nAttributes=11;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=13;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6621094,0.76012325,5.1420898};
+							angles[]={0,1.5707961,-0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="[this] call pc_missions_fnc_initArsenal";
+							name="ArsenalTerminal";
+							disableSimulation=1;
+						};
+						id=15;
+						type="3as_GNK";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				id=12;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="SpawnVehicule";
+				class Entities
+				{
+					items=6;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={15.662109,0,-12.85791};
+						};
+						side="Empty";
+						flags=1;
+						class Attributes
+						{
+							name="spawnPoint_Car";
+						};
+						id=17;
+						type="Land_HelipadEmpty_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={15.662109,0,-4.8579102};
+						};
+						side="Empty";
+						flags=1;
+						class Attributes
+						{
+							name="spawnPoint_Heli";
+						};
+						id=18;
+						type="Land_HelipadEmpty_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6621094,0.54398251,-12.85791};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="[this, spawnPoint_Car, [""car""]] call pc_dialogs_SpawnVehicles_fnc_init";
+							name="spawnTerminal_Car";
+						};
+						id=19;
+						type="3AS_T_Screen";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6621094,0.54398251,-4.8579102};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="[this, spawnPoint_Heli, [""helicopter"", ""plane""]] call pc_dialogs_SpawnVehicles_fnc_init";
+							name="spawnTerminal_Heli";
+						};
+						id=20;
+						type="3AS_T_Screen";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item4
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={15.662109,0,-8.8579102};
+						};
+						side="Empty";
+						flags=1;
+						class Attributes
+						{
+							name="spawnPoint_Box";
+						};
+						id=5999;
+						type="Land_HelipadEmpty_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item5
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6621094,0.54398251,-8.8579102};
+							angles[]={0,0.00099483761,0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="[this, spawnPoint_Box, [""box""]] call pc_dialogs_SpawnVehicles_fnc_init";
+							name="spawnTerminal_Box";
+						};
+						id=6000;
+						type="3AS_T_Screen";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ObjectCollision";
+								expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=16;
+				atlOffset=57.427292;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="Players";
+				class Entities
+				{
+					items=5;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=29;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									name="player_0";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=27;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_1";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=28;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_2";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=29;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_3";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=30;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item4
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_4";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=31;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item5
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_5";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=32;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item6
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_6";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=33;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item7
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_7";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=34;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item8
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_8";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=35;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item9
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_9";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=36;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item10
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_10";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=37;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item11
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_11";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=38;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item12
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_12";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=39;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item13
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_13";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=40;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item14
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_14";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=41;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item15
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_15";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=42;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item16
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_16";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=43;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item17
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_17";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=44;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item18
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_18";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=45;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item19
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_19";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=46;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item20
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_20";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=47;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item21
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_21";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=48;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item22
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_22";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=49;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item23
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_23";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=50;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item24
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_24";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=51;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item25
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_25";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=52;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item26
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_26";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=53;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item27
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_27";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=54;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item28
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,7.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="player_28";
+									description=" @16th Company Phoenix";
+									isPlayable=1;
+								};
+								id=55;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=26;
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,3.1918945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									name="Zeus_0";
+									description="Zeus @GameMaster";
+									isPlayer=1;
+									isPlayable=1;
+								};
+								id=5927;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,2.8168945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="Zeus_1";
+									description="Zeus @GameMaster";
+									isPlayable=1;
+								};
+								id=5928;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.33789063,0.0014419556,3.5668945};
+									angles[]={0,4.712389,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									name="Zeus_2";
+									description="Zeus @GameMaster";
+									isPlayable=1;
+								};
+								id=5929;
+								type="PC_Units_Regs_Shiny_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ObjectCollision";
+										expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="attachMarker";
+										expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=5926;
+					};
+					class Item2
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={-0.96337891,0,2.7670898};
+							angles[]={0,1.5707963,-0};
+						};
+						name="z1";
+						id=5930;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Zeus_1";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item3
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={-0.96337891,0,3.5170898};
+							angles[]={0,1.5707963,-0};
+						};
+						name="z2";
+						id=5931;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Zeus_2";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item4
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={-0.96337891,0,3.1420898};
+							angles[]={0,1.5707963,-0};
+						};
+						name="z0";
+						id=5932;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Zeus_0";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+				};
+				id=21;
+			};
+		};
+		id=0;
+		atlOffset=44.843048;
+	};
+};
+class connections
+{
+	class LinkIDProvider
+	{
+		nextID=3;
+	};
+	class Links
+	{
+		items=3;
+		class Item0
+		{
+			linkID=0;
+			item0=5931;
+			item1=5929;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item1
+		{
+			linkID=1;
+			item0=5930;
+			item1=5928;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item2
+		{
+			linkID=2;
+			item0=5932;
+			item1=5927;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+	};
+};

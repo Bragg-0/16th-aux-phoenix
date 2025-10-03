@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (Missions Builder)">
     <Package name="Cfg3DEN">
+        <Key ID="STR_PC_Missions_Builder_Base">
+            <English>[16th] Base</English>
+            <French>[16th] Base</French>
+        </Key>
         <Key ID="STR_PC_Missions_Builder_Venator">
             <English>[16th] Venator</English>
             <French>[16th] Venator</French>
