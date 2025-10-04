@@ -14,7 +14,7 @@ TAS_jetheatset = 1;
 TAS_jetsoundvol = 0.6;
 TAS_lcLoadDist = 20;
 TAS_lcLoadSpeed = 10;
-TAS_PersonalShieldFullTime = 30;
+TAS_PersonalShieldFullTime = 25;
 TAS_PersonalShieldTime = 60;
 TAS_SquadShieldTime = 240;
 
