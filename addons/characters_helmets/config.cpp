@@ -19,7 +19,7 @@ class CfgPatches {
 
             // Customs
                 #define CHARACTERS_TYPE Customs
-                //* Add the class names for custom vests here
+                QECVARF(1337,P2)
                 #undef CHARACTERS_TYPE
         };
         weapons[] = {
@@ -33,7 +33,7 @@ class CfgPatches {
 
             // Customs
                 #define CHARACTERS_TYPE Customs
-                //* Add the class names for custom vests here
+                QECVAR(1337,P2)
                 #undef CHARACTERS_TYPE
         };
         VERSION_CONFIG;
