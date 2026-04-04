@@ -8,7 +8,7 @@
 	 * 1: _state <NUMBER> - The test (0 = can deactivate ear protection ?, 1 = can activate ear protection ?)
 	 *
 	 * Return Value:
-	 * Return description <NONE>
+	 * <NONE>
 	 *
 	 * Example:
 	 * [player, 1] call pc_missions_fnc_canEarProtection

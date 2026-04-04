@@ -1,19 +1,19 @@
 #include "..\script_component.hpp"
 /*
- * Authors: Bragg
- * Description: Use a heal terminal
- *
- * Arguments:
- * 0: _target (default: ObjNull) <OBJECT> - The player using the heal terminal.
- * 1: _object (default: ObjNull) <OBJECT> - The object on which the heal terminal is initialized.
- *
- * Return Value:
- * <NONE>
- *
- * Example:
- * [player, this] call pc_missions_fnc_onUseHealTerminal
- *
- * Public: No
+    * Authors: Bragg
+    * Description: Use a heal terminal
+    *
+    * Arguments:
+    * 0: _target (default: ObjNull) <OBJECT> - The player using the heal terminal.
+    * 1: _object (default: ObjNull) <OBJECT> - The object on which the heal terminal is initialized.
+    *
+    * Return Value:
+    * <NONE>
+    *
+    * Example:
+    * [player, this] call pc_missions_fnc_onUseHealTerminal
+    *
+    * Public: No
  */
 
 params [

@@ -1,18 +1,18 @@
 #include "..\script_component.hpp"
 /*
- * Authors: Bragg
- * Description: Initialize the Arsenal
- *
- * Arguments:
- * 0: _object (default: ObjNull) <OBJECT> - The object to initialize the arsenal for
- *
- * Return Value:
- * <NONE>
- *
- * Example:
- * [this] call pc_missions_fnc_initArsenal
- *
- * Public: No
+    * Authors: Bragg
+    * Description: Initialize the Arsenal
+    *
+    * Arguments:
+    * 0: _object (default: ObjNull) <OBJECT> - The object to initialize the arsenal for
+    *
+    * Return Value:
+    * <NONE>
+    *
+    * Example:
+    * [this] call pc_missions_fnc_initArsenal
+    *
+    * Public: No
  */
 
 params [
