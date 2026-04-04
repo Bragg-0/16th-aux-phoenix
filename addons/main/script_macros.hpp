@@ -1,5 +1,6 @@
 #define DEBUG_SYNCHRONOUS
 
+//! Comment the following line to disable debug mode (requires for release build)
 #define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
 #define ENABLE_PERFORMANCE_COUNTERS
