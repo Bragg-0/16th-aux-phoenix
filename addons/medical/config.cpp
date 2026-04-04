@@ -9,7 +9,26 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = { QUOTE(MAIN_ADDON), "ace_medical" };
         units[] = {};
-        weapons[] = {};
+        weapons[] = {
+            QGVAR(Splint),
+            QGVAR(SurgicalKit),
+            QGVAR(PersonalAidKit),
+            QGVAR(Epinephrine),
+            QGVAR(Adenosine),
+            QGVAR(Morphine),
+            QGVAR(PackingBandage),
+            QGVAR(ElasticBandage),
+            QGVAR(Quikclot),
+            QGVAR(BloodIV),
+            QGVAR(BloodIV_250),
+            QGVAR(BloodIV_500),
+            QGVAR(SalineIV),
+            QGVAR(SalineIV_250),
+            QGVAR(SalineIV_500),
+            QGVAR(PlasmaIV),
+            QGVAR(PlasmaIV_250),
+            QGVAR(PlasmaIV_500)
+        };
         VERSION_CONFIG;
     };
 };
