@@ -24,7 +24,13 @@ TRACE_1("fnc_initArsenal",_this);
 // Build the whitelist from all classnames used in CfgLoadouts
 private _allItems = [
     // Add your classnames here
+    "3AS_5Rnd_Stun_Mag",
+    "3AS_DC15X_F",
+    "3AS_bipod_DC15X_F",
+    "3AS_optic_DC15LE_F",
+    "3AS_optic_DC15X_F",
     "ACE_CableTie",
+    "ACE_Fortify",
     "ACE_bodyBag",
     "ACE_bodyBag_blue",
     "ACE_bodyBag_white",
