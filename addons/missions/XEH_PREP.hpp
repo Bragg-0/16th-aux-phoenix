@@ -1,3 +1,4 @@
+PREP(autoPayment);
 PREP(canEarProtection);
 PREP(initArsenal);
 PREP(initEarProtection);
