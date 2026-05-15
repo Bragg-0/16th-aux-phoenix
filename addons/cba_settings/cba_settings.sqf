@@ -127,7 +127,7 @@ force force ace_csw_progressBarTimeCoefficent = 1;
 force force ace_dragging_allowRunWithLightweight = true;
 force force ace_dragging_dragAndFire = true;
 force force ace_dragging_skipContainerWeight = true;
-force force ace_dragging_weightCoefficient = 2;
+force force ace_dragging_weightCoefficient = 0;
 
 // ACE Explosives
 force force ace_explosives_customTimerDefault = 30;
@@ -270,7 +270,7 @@ force force ace_map_gestures_maxRangeCamera = 14;
 force force ace_map_gestures_onlyShowFriendlys = false;
 
 // ACE Map Tools
-force force ace_maptooforce force ls_drawStraightLines = true;
+force force ace_maptools_drawStraightLines = true;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 2;
@@ -302,7 +302,6 @@ force force ace_medical_statemachine_cardiacArrestTime = 300;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;
 force force ace_medical_statemachine_fatalInjuriesPlayer = 0;
 force force ace_medical_useLimbDamage = 0;
-force force ace_medical_vitaforce force ls_simulateSpO2 = true;
 
 // ACE Medical Interface
 force force ace_medical_feedback_bloodVolumeEffectType = 0;
@@ -444,14 +443,14 @@ force force ace_repair_engineerSetting_fullRepair = 1;
 force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 3;
-force force ace_repair_fullRepairRequiredItems = ["force force ace_repair_anyToolKit"];
+force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_locationsBoostTraining = true;
-force force ace_repair_miscRepairRequiredItems = ["force force ace_repair_anyToolKit"];
+force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_miscRepairTime = 15;
 force force ace_repair_patchWheelEnabled = 0;
 force force ace_repair_patchWheelLocation = ["ground","vehicle"];
 force force ace_repair_patchWheelMaximumRepair = 0.3;
-force force ace_repair_patchWheelRequiredItems = ["force force ace_repair_anyToolKit"];
+force force ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_patchWheelTime = 5;
 force force ace_repair_repairDamageThreshold = 0.6;
 force force ace_repair_repairDamageThreshold_engineer = 0.4;
@@ -613,7 +612,7 @@ force force diwako_dui_linecompass_showSpeaking = true;
 force force diwako_dui_linecompass_SwapOrder = false;
 
 // DUI - Squad Radar - Main
-force force diwako_dui_force force ace_hide_interaction = true;
+force force diwako_dui_ace_hide_interaction = true;
 force force diwako_dui_icon_style = "clones";
 force force diwako_dui_main_hide_dialog = true;
 
@@ -633,7 +632,7 @@ force force diwako_dui_nametags_useSideIsFriendly = true;
 // DUI - Squad Radar - Radar
 force force diwako_dui_enable_compass = true;
 force force diwako_dui_enable_compass_dir = 4;
-force force diwako_dui_radar_force force ace_medic = true;
+force force diwako_dui_radar_ace_medic = true;
 force force diwako_dui_radar_icon_priority_setting = 1;
 force force diwako_dui_radar_show_cardinal_points = true;
 force force diwako_dui_radar_showSpeaking = true;
@@ -666,7 +665,7 @@ force force FSPLUS_Not230mmBarrage = true;
 force force FSPLUS_RodsfromGod = true;
 force force FSPLUS_Smoke_white = true;
 
-// Fire support PLUS (Freestyle's Nuclear Blast)
+// Fire Support PLUS (Freestyle's Nuclear Blast)
 force force FSNB_AllowWeapons = true;
 force force FSNB_BlastWave = true;
 force force FSNB_CondensationRing = true;
@@ -733,11 +732,6 @@ force force grad_trenches_functions_vehicleEnvelopeDigTime = 45;
 force force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 
-// Heavy Weapons Framework
-force force WBK_HWF_AllowProneShootSetting = true;
-force force WBK_HWF_AllowRecoilSetting = true;
-force force WBK_HWF_WeapsArraySetting = "['force force JLTS_Z6','SWLW_Z6']";
-
 // Helmet on Ass
 force force hoa_sling_allowedModesSetting = "[1, 2, 3]";
 force force hoa_sling_canHideHelmet = false;
@@ -769,8 +763,8 @@ force force IMS_isStaticDeaths = true;
 force force IMS_RifleDodgeSet = true;
 force force IMS_StealthAI_Ears = 15;
 force force IMS_StealthAI_Eyes = 40;
-force force IMS_force force WBK_CUSTOMCAMSERVER = false;
-force force IMS_force force WBK_MAINFPTP = true;
+force force IMS_WBK_CUSTOMCAMSERVER = false;
+force force IMS_WBK_MAINFPTP = true;
 
 // JLTS - Debug
 force force JLTS_settings_Debug_chat = true;
@@ -807,7 +801,7 @@ force force ls_activecamo_camouflageCoefficientVehicle = 0;
 force force ls_activecamo_cooldown = 5;
 force force ls_activecamo_enabled = false;
 force force ls_activecamo_maxAllowedHits = 5;
-force force ls_compat_force force ace_customBloodDropsEnabled = true;
+force force ls_compat_ace_customBloodDropsEnabled = true;
 force force ls_holoprojector_maxDistance = 50;
 force force ls_impulsor_enableOverchargeCooldown = true;
 force force ls_impulsor_overchargeDamageChance = 0.5;
@@ -899,7 +893,6 @@ force force rps_setting_incense_enable = false;
 force force rps_setting_incense_healGroup = false;
 
 // Sci-fi Support PLUS
-force force ScifiSupportPlus_AmbientShipSound_Radius = "7000";
 force force ScifiSupportPlus_Archer = false;
 force force ScifiSupportPlus_ArcherBarrage = false;
 force force ScifiSupportPlus_AutoDeleteTimer = "180";
@@ -980,10 +973,10 @@ force force TFAR_globalRadioRangeCoef = 1;
 force force TFAR_instantiate_instantiateAtBriefing = false;
 force force TFAR_objectInterceptionEnabled = true;
 force force TFAR_objectInterceptionStrength = 400;
-force force TFAR_radiocode_east = "_opfor";
-force force TFAR_radiocode_independent = "_independent";
-force force TFAR_radiocode_west = "_bluefor";
-force force TFAR_radioCodesDisabled = true;
+force force tfar_radiocode_east = "_opfor";
+force force tfar_radiocode_independent = "_independent";
+force force tfar_radiocode_west = "_bluefor";
+force force tfar_radioCodesDisabled = true;
 force force TFAR_SameLRFrequenciesForSide = true;
 force force TFAR_SameSRFrequenciesForSide = true;
 force force TFAR_setting_defaultFrequencies_lr_east = "";
@@ -1010,16 +1003,8 @@ force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 2;
 force force TFAR_Teamspeak_Channel_Name = "Serveur Principal";
 force force TFAR_Teamspeak_Channel_Password = "HelloThere";
-force force TFAR_terrain_interception_coefficient = 7;
+force force tfar_terrain_interception_coefficient = 7;
 force force TFAR_voiceCone = true;
-
-force force TFAR_Teamspeak_Channel_Name = "Serveur Principal";
-force force TFAR_Teamspeak_Channel_Password = "HelloThere";
-
-// WBK Droids
-force force force WBK_Droids_B1_Health = "20";
-force force force WBK_Droids_B2_Health = "200";
-force force force WBK_Droids_BX_Health = "150";
 
 // TTS Beam Laser
 force force tts_beam_cleanupSkeletons = false;
@@ -1031,6 +1016,11 @@ force force tts_beam_structureFireMaxDuration = 120;
 force force tts_beam_structureFireMinDuration = 60;
 force force tts_beam_structureFiresEnabled = true;
 force force tts_beam_vaporiseBodies = true;
+
+// WBK Droids
+force force WBK_Droids_B1_Health = "25";
+force force WBK_Droids_B2_Health = "200";
+force force WBK_Droids_BX_Health = "150";
 
 // Zeus Enhanced
 force force zen_area_markers_editableMarkers = 0;
@@ -1045,7 +1035,7 @@ force force zen_common_cameraBird = false;
 force force zen_common_darkMode = true;
 force force zen_common_disableGearAnim = true;
 force force zen_common_preferredArsenal = 0;
-force force zen_compat_force force ace_hideModules = true;
+force force zen_compat_ace_hideModules = true;
 force force zen_context_menu_enabled = 2;
 force force zen_context_menu_overrideWaypoints = false;
 force force zen_editor_addGroupIcons = true;
