@@ -8,5 +8,8 @@ if (hasInterface) then {
 
 if (isServer) then {
 	[] call FUNC(initFortify);
-	[10, 6, 22, 30] call FUNC(autoPayment); //add 10 money, every saturday at 22:30 to allPlayer;
+};
+
+if (isDedicated) then {
+    [10, 6, 22, 30] call FUNC(autoPayment); //add 10 money, every saturday at 22:30 to allPlayer;
 };

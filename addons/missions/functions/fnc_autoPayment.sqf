@@ -27,7 +27,7 @@ params [
 
 TRACE_1("fnc_autoPayment",_this);
 
-if (!isServer) exitWith { false };
+if (!isDedicated) exitWith { false };
 
 private _existingHandler = missionNamespace getVariable [QGVAR(autoPaymentHandler), -1];
 if (_existingHandler isNotEqualTo -1) exitWith {
