@@ -1,0 +1,2 @@
+# cba_settings_userconfig is intentionally packed with CBA's legacy userconfig prefix.
+ignore_pboprefix = true
