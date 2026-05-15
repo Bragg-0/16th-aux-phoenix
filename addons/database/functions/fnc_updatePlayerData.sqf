@@ -33,17 +33,17 @@ TRACE_1("fn_updatePlayerData",_this);
 private _uid = getPlayerUID _player;
 
 // Récupération des données du joueur
-private _name = str (name _player);
+private _name = name _player;
 private _isMedic = parseNumber (_player getUnitTrait "medic");
 private _isEOD = parseNumber (_player getUnitTrait "explosiveSpecialist");
-private _loadout = FORMAT_1("'%1'",getUnitLoadout [ARR_2(_player,true)]);
+private _loadout = FORMAT_1("%1",getUnitLoadout [ARR_2(_player,true)]);
 private _lastOnline = [systemTimeUTC#0,systemTimeUTC#1,systemTimeUTC#2,systemTimeUTC#3 + 2,systemTimeUTC#4,systemTimeUTC#5]; // UTC+2 (Europe/Paris)
 
 // Création de la chaîne de données
 private _data = FORMAT_5("%1:%2:%3:%4:%5",_name,_isMedic,_isEOD,_loadout,_lastOnline);
 
 // Prépare la requête
-private _query = FORMAT_2("insertOrUpdateUserBySteamId:%1:%2",_uid,_data);
+private _query = FORMAT_2("insertOrUpdatePlayerProfileBySteamId:%1:%2",_uid,_data);
 TRACE_1("fn_updatePlayerData Query",_query);
 
 // Exécute la requête

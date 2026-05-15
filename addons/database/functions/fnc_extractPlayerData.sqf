@@ -33,7 +33,7 @@ TRACE_1("fn_extractPlayerData",_this);
 private _uid = getPlayerUID _player;
 
 // Prépare la requête
-private _query = FORMAT_1("getUserBySteamId:%1",_uid);
+private _query = FORMAT_1("getPlayerProfileBySteamId:%1",_uid);
 TRACE_1("fn_extractPlayerData Query",_query);
 
 // Exécute la requête
@@ -41,25 +41,44 @@ private _return = [_query,2,true] call FUNC(asyncCall);
 
 // Traitement du résultat
 TRACE_1("fn_extractPlayerData PreProcess",_return);
-_return = ARG_1(_return,0);
+if !(_return isEqualType []) exitWith {
+    WARNING("fn_extractPlayerData: Invalid database response");
+};
+
+if (_return isEqualTo []) exitWith {
+    INFO("fn_extractPlayerData New Player, updating database");
+    [_player] call FUNC(updatePlayerData);
+};
+
+_return = _return param [0, []];
 TRACE_1("fn_extractPlayerData PostProcess",_return);
+
+if (_return isEqualTo []) exitWith {
+    INFO("fn_extractPlayerData New Player, updating database");
+    [_player] call FUNC(updatePlayerData);
+};
 
 // Création de la hashmap
 private _hashmap = [
     "money",
+    "grade",
     "isMedic",
     "isEOD",
     "loadout"
 ] createHashMapFromArray _return;
 
 // Traitement des données pour les mettre à format utilisable par arma 3
-private _isMedic = _hashmap getOrDefault ["isMedic", 0];
-private _isEod = _hashmap getOrDefault ["isEOD", 0];
-private _loadout = _hashmap getOrDefault ["loadout", []];
+private _isMedic = (_hashmap getOrDefault ["isMedic", 0]) isEqualTo 1;
+private _isEod = (_hashmap getOrDefault ["isEOD", 0]) isEqualTo 1;
+private _loadout = _hashmap getOrDefault ["loadout", "[]"];
 
-_hashmap set ["isMedic", [false, true] select _isMedic];
-_hashmap set ["isEOD", [false, true] select _isEod];
-_hashmap set ["loadout", call compile _loadout];
+_hashmap set ["isMedic", _isMedic];
+_hashmap set ["isEOD", _isEod];
+if (_loadout isEqualType "") then {
+    _hashmap set ["loadout", call compile _loadout];
+} else {
+    _hashmap set ["loadout", _loadout];
+};
 
 if (count (_hashmap get "loadout") == 0) then {
     // if loadout is empty == is a new player

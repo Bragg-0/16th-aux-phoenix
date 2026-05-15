@@ -35,7 +35,7 @@ TRACE_1("fnc_addMoneyToPlayer",_this);
 private _uid = getPlayerUID _player;
 
 // Prépare la requête
-private _query = FORMAT_2("addMoneyToUserBySteamId:%1:%2",_uid,_amount);
+private _query = FORMAT_2("addMoneyToPlayerProfileBySteamId:%1:%2",_uid,_amount);
 TRACE_1("fnc_addMoneyToPlayer Query",_query);
 
 // Exécution de la requête

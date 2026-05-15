@@ -12,7 +12,7 @@
 	 * Return description <NONE>
 	 *
 	 * Example:
-	 * ["getUserBySteamId:76561198113173701",2] call pc_database_fnc_asyncCall //! Need to be executed by the server
+	 * ["getPlayerProfileBySteamId:76561198113173701",2] call pc_database_fnc_asyncCall //! Need to be executed by the server
 	 *
 	 * Public: No
  */
