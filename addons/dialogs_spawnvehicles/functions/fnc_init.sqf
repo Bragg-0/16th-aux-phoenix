@@ -49,7 +49,9 @@ private _vehicleList = [];
                 "3AS_Saber_M1G",
                 "3AS_Saber_M1Recon",
                 "3AS_Saber_Super",
-                "3AS_ATTE_TCW"
+                "3AS_ATTE_TCW",
+                "3AS_RX200_Base",
+                "ls_vehicle_pkv5"
             ];
         };
         case "helicopter": {
@@ -60,7 +62,9 @@ private _vehicleList = [];
                 "PC_Vehicles_LAAT_I_Mk2Lights",
                 "PC_Vehicles_LAAT_I_Mk2",
                 "3AS_Nu_REP_F",
-                "3AS_Rho_REP_F"
+                "3AS_Rho_REP_F",
+                "3AS_Rep_LAS_Z6_F",
+                "3AS_Rep_LAS_F"
             ];
         };
         case "plane": {
