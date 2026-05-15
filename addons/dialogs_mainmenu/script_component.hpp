@@ -2,3 +2,5 @@
 #define SUBCOMPONENT_BEAUTIFIED Main Menu
 
 #include "\x\pc\addons\dialogs\script_component.hpp"
+
+#include "script_macros.hpp"
