@@ -4,8 +4,3 @@ options.release = [
     "DISABLE_COMPILE_CACHE",
     "ENABLE_PERFORMANCE_COUNTERS"
 ]
-
-[sqf.command_case]
-options.ignore = [
-    "force",
-]
