@@ -5,7 +5,7 @@ options.release = [
     "ENABLE_PERFORMANCE_COUNTERS"
 ]
 
-[lints.sqf.command_case]
+[sqf.command_case]
 options.ignore = [
     "force",
 ]
