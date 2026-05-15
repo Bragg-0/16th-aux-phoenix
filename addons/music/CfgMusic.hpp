@@ -605,6 +605,12 @@ class CfgMusic {
         duration = 501;
         musicClass = QGVAR(SW_Dark);
     };
+    class GVAR(SW_Dark_Maul_Shadow_Lord_Marroks_Theme) {
+        name = "Maul Shadow Lord - Marroks Theme";
+        sound[] = {QPATHTOF(Data\SW_Dark\Maul Shadow Lord - Marroks Theme.ogg), "db + 0", 1.0};
+        duration = 285;
+        musicClass = QGVAR(SW_Dark);
+    };
     class GVAR(SW_Dark_Valkorion_Theme_Darth_Vitiate_Tenebrae) {
         name = "Valkorion Theme (Darth Vitiate - Tenebrae)";
         sound[] = {QPATHTOF(Data\SW_Dark\Valkorion Theme (Darth Vitiate - Tenebrae).ogg), "db + 0", 1.0};
@@ -753,6 +759,30 @@ class CfgMusic {
         name = "Mandalorian War Song x Vode An";
         sound[] = {QPATHTOF(Data\SW_Epic\Mandalorian War Song x Vode An.ogg), "db + 0", 1.0};
         duration = 193;
+        musicClass = QGVAR(SW_Epic);
+    };
+    class GVAR(SW_Epic_Maul_Shadow_Lord_Duel_of_the_Fates_Imperial_March) {
+        name = "Maul Shadow Lord - Duel of the Fates & Imperial March";
+        sound[] = {QPATHTOF(Data\SW_Epic\Maul Shadow Lord - Duel of the Fates & Imperial March.ogg), "db + 0", 1.0};
+        duration = 195;
+        musicClass = QGVAR(SW_Epic);
+    };
+    class GVAR(SW_Epic_Maul_Shadow_Lord_Hallway_Scene) {
+        name = "Maul Shadow Lord - Hallway Scene";
+        sound[] = {QPATHTOF(Data\SW_Epic\Maul Shadow Lord - Hallway Scene.ogg), "db + 0", 1.0};
+        duration = 208;
+        musicClass = QGVAR(SW_Epic);
+    };
+    class GVAR(SW_Epic_Maul_Shadow_Lord_Lightsaber_Duel) {
+        name = "Maul Shadow Lord - Lightsaber Duel";
+        sound[] = {QPATHTOF(Data\SW_Epic\Maul Shadow Lord - Lightsaber Duel.ogg), "db + 0", 1.0};
+        duration = 125;
+        musicClass = QGVAR(SW_Epic);
+    };
+    class GVAR(SW_Epic_Maul_Shadow_Lord_Maul_vs_The_Eleventh_Brother_Marrok) {
+        name = "Maul Shadow Lord - Maul vs The Eleventh Brother & Marrok";
+        sound[] = {QPATHTOF(Data\SW_Epic\Maul Shadow Lord - Maul vs The Eleventh Brother & Marrok.ogg), "db + 0", 1.0};
+        duration = 195;
         musicClass = QGVAR(SW_Epic);
     };
     class GVAR(SW_Epic_Obi_Wan_Kenobi_Theme) {
@@ -909,6 +939,12 @@ class CfgMusic {
         name = "The Kraken & Duel of The Fates";
         sound[] = {QPATHTOF(Data\SW_Epic\The Kraken & Duel of The Fates.ogg), "db + 0", 1.0};
         duration = 257;
+        musicClass = QGVAR(SW_Epic);
+    };
+    class GVAR(SW_Epic_The_Mandalorian_and_Grogu) {
+        name = "The Mandalorian and Grogu";
+        sound[] = {QPATHTOF(Data\SW_Epic\The Mandalorian and Grogu.ogg), "db + 0", 1.0};
+        duration = 163;
         musicClass = QGVAR(SW_Epic);
     };
     class GVAR(SW_Epic_The_Old_Republic_Theme_Clash_of_Destiny) {
