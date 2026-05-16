@@ -28,14 +28,14 @@ if (isDedicated) then {
         INFO_1("extDB3 - Version %1",_ret);
 
 		/* Add database */
-		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE:%1", "phoenix-company"]);
+		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE:%1", "phoenix"]);
 		if (_ret select 0 == 0) exitWith {
             WARNING_1("extDB3 - Database error %1",_ret);
 		};
         INFO("extDB3 - Database connected");
 
 		/* Add custom SQL protocol */
-		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:a3phoenix.ini", "phoenix-company", "sqf"]);
+		_ret = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:a3phoenix.ini", "phoenix", "sqf"]);
 		if (_ret select 0 == 0) exitWith {
 			WARNING_1("extDB3 - Database error %1",_ret);
 		};
