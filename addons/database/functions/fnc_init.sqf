@@ -67,6 +67,11 @@ if (isDedicated) then {
         /* Add attendance handlers */
         addMissionEventHandler ["PlayerConnected", {
             params ["_id", "_uid", "_name"];
+
+            if (_uid isEqualTo "") exitWith {
+                TRACE_1("Skipping attendance for connection without Steam ID",_name);
+            };
+
             [_uid] call FUNC(insertPlayerAttendance);
             INFO_2("Attendance opened for %1 (%2)",_name,_uid);
         }];
@@ -83,8 +88,14 @@ if (isDedicated) then {
         }];
 
         {
-            [getPlayerUID _x] call FUNC(insertPlayerAttendance);
-            INFO_1("Attendance opened for already connected player %1",name _x);
+            private _uid = getPlayerUID _x;
+
+            if (_uid isEqualTo "") then {
+                TRACE_1("Skipping already connected player without Steam ID",name _x);
+            } else {
+                [_uid] call FUNC(insertPlayerAttendance);
+                INFO_1("Attendance opened for already connected player %1",name _x);
+            };
         } forEach allPlayers;
 
 	} else {
