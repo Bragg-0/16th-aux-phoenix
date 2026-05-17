@@ -32,15 +32,12 @@ if (isNull _unit) exitWith {
 private _medicalTrait = {
 	params ["_unit", "_value", "_lvlValue"];
 	_unit setVariable ["ace_medical_medicclass", _lvlValue, true];
-	_unit setUnitTrait ["Medic", _value];
 };
 
 private _eodTrait = {
 	params ["_unit", "_value", "_lvlValue"];
 	_unit setVariable ["ace_isEngineer", _lvlValue, true];
-	_unit setUnitTrait ["Engineer", _value];
 	_unit setVariable ["ace_isExplosiveSpecialist", _value, true];
-	_unit setUnitTrait ["ExplosiveSpecialist", _value];
 };
 
 if (_trait isNotEqualTo "") then {
