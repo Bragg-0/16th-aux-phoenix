@@ -64,6 +64,29 @@ if (isDedicated) then {
             [_unit] call FUNC(updatePlayerData);
         }];
 
+        /* Add attendance handlers */
+        addMissionEventHandler ["PlayerConnected", {
+            params ["_id", "_uid", "_name"];
+            [_uid] call FUNC(insertPlayerAttendance);
+            INFO_2("Attendance opened for %1 (%2)",_name,_uid);
+        }];
+
+        addMissionEventHandler ["PlayerDisconnected", {
+            params ["_id", "_uid", "_name"];
+            [_uid] call FUNC(closePlayerAttendance);
+            INFO_2("Attendance closed for %1 (%2)",_name,_uid);
+        }];
+
+        addMissionEventHandler ["Ended", {
+            [] call FUNC(closeRecentAttendances);
+            INFO("Recent open attendances closed at mission end");
+        }];
+
+        {
+            [getPlayerUID _x] call FUNC(insertPlayerAttendance);
+            INFO_1("Attendance opened for already connected player %1",name _x);
+        } forEach allPlayers;
+
 	} else {
 	// La base de données est déjà connectée et le protocole est en place
 		INFO("extDB3 - Database already connected");

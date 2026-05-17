@@ -2,3 +2,4 @@
     class FUNC(var) {           \
         allowedTargets = 2;     \
     }
+

@@ -43,19 +43,23 @@ private _return = [_query,2,true] call FUNC(asyncCall);
 TRACE_1("fn_extractPlayerData PreProcess",_return);
 if !(_return isEqualType []) exitWith {
     WARNING("fn_extractPlayerData: Invalid database response");
+    _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
 if (_return isEqualTo []) exitWith {
-    INFO("fn_extractPlayerData New Player, updating database");
-    [_player] call FUNC(updatePlayerData);
+    WARNING_1("fn_extractPlayerData: No profile found for Steam ID %1",_uid);
+    _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
 _return = _return param [0, []];
 TRACE_1("fn_extractPlayerData PostProcess",_return);
 
 if (_return isEqualTo []) exitWith {
-    INFO("fn_extractPlayerData New Player, updating database");
-    [_player] call FUNC(updatePlayerData);
+    WARNING_1("fn_extractPlayerData: Empty profile row for Steam ID %1",_uid);
+    _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
 // Création de la hashmap
@@ -82,11 +86,13 @@ if (_loadout isEqualType "") then {
 
 if (count (_hashmap get "loadout") == 0) then {
     // if loadout is empty == is a new player
-    INFO("fn_extractPlayerData New Player, updating database");
-    [_player] call FUNC(updatePlayerData);
+    WARNING_1("fn_extractPlayerData: Empty loadout for Steam ID %1",_uid);
+    _player setVariable [QGVAR(playerData), _hashmap, true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
 } else {
     // if loadout is not empty == is an existing player
     // Sauvegarde des données du joueur
     TRACE_1("fn_extractPlayerData Save",_hashmap);
     _player setVariable [QGVAR(playerData), _hashmap, true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
