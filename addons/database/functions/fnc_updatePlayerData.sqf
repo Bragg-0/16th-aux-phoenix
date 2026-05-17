@@ -23,7 +23,7 @@ if !(isDedicated) exitWith {
     WARNING("fn_updatePlayerData: This function must be called on the server");
 };
 
-if ((isNull _player) || !(isPlayer _player)) exitWith {
+if ((isNull _player)) exitWith {
     WARNING("fn_updatePlayerData: Invalid player object");
 };
 
@@ -34,8 +34,8 @@ private _uid = getPlayerUID _player;
 
 // Récupération des données du joueur
 private _name = name _player;
-private _isMedic = parseNumber ((_player getVariable ["ace_medical_medicclass", 0]) > 0);
-private _isEOD = parseNumber ((_player getVariable ["ace_isEngineer", 0]) > 0);
+private _isMedic = parseNumber ((_player getVariable [ARR_2('ace_medical_medicclass',0)]) > 0);
+private _isEOD = parseNumber ((_player getVariable [ARR_2('ace_isEngineer',0)]) > 0);
 private _loadout = FORMAT_1("%1",getUnitLoadout [ARR_2(_player,true)]);
 
 // Création de la chaîne de données
