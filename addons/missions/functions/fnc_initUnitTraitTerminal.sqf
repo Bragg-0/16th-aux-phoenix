@@ -28,19 +28,19 @@ if (isNull _object) exitWith {
 _object addAction [LLSTRING(giveMedicalUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
 	[_caller, "medic", true] call FUNC(setUnitTrait);
-}, nil, 1.5, true, true, "", QUOTE(!((_player getVariable [ARR_2('ace_medical_medicclass',0)]) > 0)), 5];
+}, nil, 1.5, true, true, "", QUOTE(((_caller getVariable [ARR_2('ace_medical_medicclass',0)]) == 0)), 5];
 
 _object addAction [LLSTRING(giveEODUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
 	[_caller, "eod", true] call FUNC(setUnitTrait);
-}, nil, 1.5, true, true, "", QUOTE(!((_player getVariable [ARR_2('ace_isEngineer',0)]) > 0)), 5];
+}, nil, 1.5, true, true, "", QUOTE(((_caller getVariable [ARR_2('ace_isEngineer',0)]) == 0)), 5];
 
 _object addAction [LLSTRING(removeMedicalUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
 	[_caller, "medic", false] call FUNC(setUnitTrait);
-}, nil, 1.5, true, true, "", QUOTE((_player getVariable [ARR_2('ace_medical_medicclass',0)]) > 0), 5];
+}, nil, 1.5, true, true, "", QUOTE(((_caller getVariable [ARR_2('ace_medical_medicclass',0)]) != 0)), 5];
 
 _object addAction [LLSTRING(removeEODUnitTrait), {
 	params ["_target", "_caller", "_actionId"];
 	[_caller, "eod", false] call FUNC(setUnitTrait);
-}, nil, 1.5, true, true, "", QUOTE((_player getVariable [ARR_2('ace_isEngineer',0)]) > 0), 5];
+}, nil, 1.5, true, true, "", QUOTE(((_caller getVariable [ARR_2('ace_isEngineer',0)]) != 0)), 5];
