@@ -47,3 +47,6 @@ TRACE_1("fn_updatePlayerData Query",_query);
 
 // Exécute la requête
 [_query] call FUNC(asyncCall);
+
+// Recharge les données du joueur pour mettre à jour les variables locales
+[_player] call FUNC(extractPlayerData);
