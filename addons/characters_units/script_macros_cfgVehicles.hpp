@@ -12,10 +12,10 @@
 #define MAGS_X40(var1) MAGS_X30(var1),MAGS_X10(var1)
 
 #define WEAPONS_2(var1,var2) \
-{ var1,var2,"JLTS_CloneBinocular","Throw","Put" }
+{ var1,var2,"ls_clone_electrobinocularsCommander","Throw","Put" }
 
 #define WEAPONS_3(var1,var2,var3) \
-{ var1,var2,var3,"JLTS_CloneBinocular","Throw","Put" }
+{ var1,var2,var3,"ls_clone_electrobinocularsCommander","Throw","Put" }
 
 #define DC17S "3AS_DC17S_F"
 #define DC17S_MAG "3AS_16Rnd_EC20_Mag"
