@@ -25,8 +25,7 @@ params [
 TRACE_1("fnc_getDescriptionTemplate",_this);
 
 private _replacements = createHashMap;
-_replacements set ["%MINIMAL_VERSION%", QUOTE(GVAR(minimalVersion))];
-_replacements set ["%MINIMAL_VERSION_VALUE%", QUOTE(VERSION_AR)];
+_replacements set ["%VERSION%", QUOTE(VERSION_AR)];
 _replacements set ["%LOADSCREEN_PATH%", QPATHTOEF(missions,data\loadscreen_co.paa)];
 _replacements set ["%AUTHOR%", str profileName];
 _replacements set ["%MISSION_NAME%", str _nameText];

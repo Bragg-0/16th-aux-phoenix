@@ -58,6 +58,7 @@ private _handler = [
 
                 {
                     [ _x, _money ] call EFUNC(database,addMoneyToPlayer);
+                    INFO_2("fnc_autoPayment: paid %1 to player %2",_money,name _x);
                 } forEach allPlayers;
 
                 missionNamespace setVariable [QGVAR(lastAutoPaymentKey), _paymentKey, true];
