@@ -23,8 +23,29 @@ if !(isDedicated) exitWith {
     WARNING("fn_extractPlayerData: This function must be called on the server");
 };
 
-if ((isNull _player) || !(isPlayer _player)) exitWith {
+if (isNil { uiNamespace getVariable "JL_persistence_protocolID" }) exitWith {
+    WARNING("fn_extractPlayerData: Database is not ready, delaying extraction");
+    [{
+        !(isNil { uiNamespace getVariable "JL_persistence_protocolID" })
+    }, {
+        params ["_player"];
+        [_player] call FUNC(extractPlayerData);
+    }, [_player]] call CBA_fnc_waitUntilAndExecute;
+};
+
+if (isNull _player) exitWith {
     WARNING("fn_extractPlayerData: Invalid player object");
+};
+
+if !(isPlayer _player) exitWith {
+    WARNING_1("fn_extractPlayerData: Player object is not ready, delaying extraction for %1",_player);
+    [{
+        params ["_player"];
+        !isNull _player && {isPlayer _player}
+    }, {
+        params ["_player"];
+        [_player] call FUNC(extractPlayerData);
+    }, [_player]] call CBA_fnc_waitUntilAndExecute;
 };
 
 TRACE_1("fn_extractPlayerData",_this);
