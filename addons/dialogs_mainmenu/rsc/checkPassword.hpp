@@ -50,7 +50,7 @@ class RscCheckPassword {
             y = Y_COORD(0.48611112);
             w = W_COORD(0.309375);
             h = GUI_STD_HEIGHT;
-            text = "";
+            text = SUBCSTRING(password);
             onEditChanged = QUOTE(profileNamespace setVariable [ARR_2('PC_Dialogs_PasswordSaved',ARG_1(_this,1))]);
         };
         class btnCancel : RscButtonMenuCancel {

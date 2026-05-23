@@ -9,6 +9,10 @@
             <English>Please enter the server password to continue.</English>
             <French>Veuillez entrer le mot de passe du serveur pour continuer.</French>
         </Key>
+        <Key ID="STR_PC_Dialogs_MainMenu_password">
+            <English>The password can be found in the server rules on the website</English>
+            <French>Le mot de passe se trouve dans le réglement du serveur sur le site web</French>
+        </Key>
     </Package>
     <Package name="rsc (mainMenu)">
         <Key ID="STR_PC_Dialogs_MainMenu_connect">
