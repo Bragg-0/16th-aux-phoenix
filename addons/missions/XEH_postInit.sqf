@@ -24,7 +24,7 @@ if (isServer) then {
 };
 
 if (isDedicated) then {
-	[10, 6, 22, 30] call FUNC(autoPayment);// add 10 money, every saturday at 22:30 to allPlayer;
+	[10, 5, 22, 30] call FUNC(autoPayment);// add 10 money, every saturday at 22:30
 
 	// stop mission if mission version is different than server version
 	private _serverVersion = [VERSION_AR];
