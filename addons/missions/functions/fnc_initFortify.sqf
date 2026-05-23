@@ -21,15 +21,13 @@ params [
 
 TRACE_1("fnc_initFortify",_this);
 
-[_side, 5000, [
+[_side, 10000, [
 	["3AS_Barricade_2_C_prop", 25],
 	["3AS_Cover1", 15],
 	["3AS_Cover2", 20],
 	["3AS_H_barrier_small_1", 40],
 	["3AS_H_barrier_small_3", 50],
 	["3AS_H_barrier_small_5", 50],
-	["3AS_HeavyRepeater_Unarmoured", 110],
-	["3AS_Republic_Mortar", 125],
 	["3AS_Short_Wall_Bunker", 80],
 	["Land_Plank_01_4m_F", 5],
 	["Land_Plank_01_8m_F", 10],
