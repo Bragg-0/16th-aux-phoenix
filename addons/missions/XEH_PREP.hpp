@@ -1,5 +1,4 @@
 PREP(addCurator);
-PREP(autoPayment);
 PREP(canEarProtection);
 PREP(initArsenal);
 PREP(initEarProtection);
