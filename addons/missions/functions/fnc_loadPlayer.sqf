@@ -44,10 +44,8 @@ _unit setVariable [QEGVAR(database,playerDataLoaded), false, true];
 
 [{
     // Check if the player data exists
-    params ["_unit", "_requestId"];
-    ((_unit getVariable [QGVAR(loadPlayerRequestId), -1]) isEqualTo _requestId) && {
-        _unit getVariable [QEGVAR(database,playerDataLoaded), false]
-    }
+    params ["_unit"];
+    _unit getVariable [QEGVAR(database,playerDataLoaded), false]
 }, {
     // Load the player data
     params ["_unit", "_requestId"];
