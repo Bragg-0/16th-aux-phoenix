@@ -87,6 +87,21 @@ if (isDedicated) then {
             INFO("Recent open attendances closed at mission end");
         }];
 
+        addMissionEventHandler ["HandleChatMessage", {
+            params ["_channel", "_owner", "_from", "_text", "_person"];
+
+            if (_text select [0, 5] != "!pay ") exitWith { false };
+            if ((admin _owner) < 1) exitWith { false };
+
+            private _amount = parseNumber (_text select [5]);
+            if (_amount <= 0) exitWith { false };
+
+            INFO_2("Admin %1 déclenche !pay %2",name _person,_amount);
+            [_amount] call FUNC(payAllPlayers);
+
+            true
+        }];
+
         {
             private _uid = getPlayerUID _x;
 

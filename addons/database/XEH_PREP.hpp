@@ -5,4 +5,5 @@ PREP(closeRecentAttendances);
 PREP(extractPlayerData);
 PREP(init);
 PREP(insertPlayerAttendance);
+PREP(payAllPlayers);
 PREP(updatePlayerData);
