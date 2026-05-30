@@ -23,3 +23,16 @@
             ITEM_XX(ECVAR(var1,P2_Pilot),1);                \
         };                                                  \
     }
+
+#define CLASS_P2_ARF_HELMET_F(var1)                       \
+    class ECVARF(var1,P2_ARF) : Headgear_Base_F {           \
+        Author = AUTHOR;                                    \
+        scopeCurator = 2;                                   \
+        scope = 2;                                          \
+        displayName = SUBCSTRING(ECVARF(var1,P2_ARF));      \
+        editorCategory = QEGVAR(main,3den);                 \
+        editorSubcategory = "EdSubcat_Helmets";             \
+        class TransportItems {                              \
+            ITEM_XX(ECVAR(var1,P2_ARF),1);                \
+        };                                                  \
+    }

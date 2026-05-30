@@ -15,6 +15,8 @@ class CfgPatches {
                 QECVARF(Shiny,P2_Pilot),
                 QECVARF(Trooper,P2),
                 QECVARF(Trooper,P2_Pilot),
+                QECVARF(Shiny,P2_ARF),
+                QECVARF(Trooper,P2_ARF),
                 #undef CHARACTERS_TYPE
 
             // Customs
@@ -29,6 +31,8 @@ class CfgPatches {
                 QECVAR(Shiny,P2_Pilot),
                 QECVAR(Trooper,P2),
                 QECVAR(Trooper,P2_Pilot),
+                QECVAR(Shiny,P2_ARF),
+                QECVAR(Trooper,P2_ARF),
                 #undef CHARACTERS_TYPE
 
             // Customs
@@ -49,6 +53,7 @@ class CfgVehicles {
 class CfgWeapons {
     CLASS_INHERITANCE(ls_gar_phase2_helmet);
     CLASS_INHERITANCE(ls_gar_phase2Pilot_helmet);
+    CLASS_INHERITANCE(ls_gar_phase2ARF_helmet);
     #include "CfgWeapons_Regs.hpp"
     #include "CfgWeapons_Customs.hpp"
 };

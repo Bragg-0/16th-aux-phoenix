@@ -48,3 +48,14 @@
             "\ls\core\addons\characters_clone_legacy\helmets\phase2Pilot\data\visor_co.paa" \
         };                                                                          \
     }
+
+#define CLASS_P2_ARF_HELMET(var1)                                                   \
+    class ECVAR(var1,P2_ARF) : ls_gar_phase2ARF_helmet_base {                       \
+        HELMET_BASE;                                                                \
+        displayName = SUBCSTRING(ECVAR(var1,P2_ARF));                               \
+        hiddenSelectionsTextures[] = {                                              \
+            QPATHTOF(data\##CHARACTERS_TYPE##\P2_ARF\##var1##_helmet_co.paa),       \
+            "\ls\core\addons\characters_clone_legacy\helmets\arf\data\camo2_co.paa", \
+            "\ls\core\addons\characters_clone_legacy\helmets\arf\data\visor_co.paa" \
+        };                                                                          \
+    }

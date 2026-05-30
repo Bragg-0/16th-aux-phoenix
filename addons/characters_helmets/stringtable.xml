@@ -23,6 +23,14 @@
             <English>[16th] Trooper P2 Pilot Helmet</English>
             <French>[16th] Casque P2 Pilote Trooper</French>
         </Key>
+        <Key ID="str_pc_characters_helmets_pc_helmets_regs_shiny_p2_arf_f">
+            <English>[16th] Shiny P2 ARF Helmet</English>
+            <French>[16th] Casque P2 ARF Shiny</French>
+        </Key>
+        <Key ID="str_pc_characters_helmets_pc_helmets_regs_trooper_p2_arf_f">
+            <English>[16th] Trooper P2 ARF Helmet</English>
+            <French>[16th] Casque P2 ARF Trooper</French>
+        </Key>
     </Package>
     <Package name="CfgWeapons_Customs">
         <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Customs_1337_P2">
@@ -46,6 +54,14 @@
         <Key ID="STR_PC_Characters_Helmets_PC_Helmets_Regs_Trooper_P2_Pilot">
             <English>[16th] Trooper P2 Pilot Helmet</English>
             <French>[16th] Casque P2 Pilote Trooper</French>
+        </Key>
+        <Key ID="str_pc_characters_helmets_pc_helmets_regs_shiny_p2_arf">
+            <English>[16th] Shiny P2 ARF Helmet</English>
+            <French>[16th] Casque P2 ARF Shiny</French>
+        </Key>
+        <Key ID="str_pc_characters_helmets_pc_helmets_regs_trooper_p2_arf">
+            <English>[16th] Trooper P2 ARF Helmet</English>
+            <French>[16th] Casque P2 ARF Trooper</French>
         </Key>
     </Package>
 </Project>
