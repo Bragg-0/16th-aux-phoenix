@@ -91,7 +91,7 @@ if (isDedicated) then {
             params ["_channel", "_owner", "_from", "_text", "_person"];
 
             if (_text select [0, 5] != "!pay ") exitWith { false };
-            if ((admin _owner) < 1) exitWith { false };
+            if (isNull _person || (admin _person) < 1) exitWith { false };
 
             private _amount = parseNumber (_text select [5]);
             if (_amount <= 0) exitWith { false };
