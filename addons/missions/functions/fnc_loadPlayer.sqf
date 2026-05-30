@@ -25,7 +25,7 @@ if !(hasInterface) exitWith {
     WARNING("fnc_loadPlayer: This function must be called on a client");
 };
 
-if (isNull _unit) exitWith {
+if (isNull _unit || !isPlayer _unit) exitWith {
     [{
         !isNull player && {isPlayer player}
     }, {
@@ -33,14 +33,10 @@ if (isNull _unit) exitWith {
     }] call CBA_fnc_waitUntilAndExecute;
 };
 
-if (isNull _unit || !isPlayer _unit) exitWith {
-	WARNING_1("fnc_loadPlayer: Invalid player object %1",_unit);
-};
-
 private _requestId = (_unit getVariable [QGVAR(loadPlayerRequestId), 0]) + 1;
 _unit setVariable [QGVAR(loadPlayerRequestId), _requestId];
 _unit setVariable [QEGVAR(database,playerDataLoaded), false, true];
-[_unit] remoteExecCall [QEFUNC(database,extractPlayerData), 2];
+[_unit] remoteExec [QEFUNC(database,extractPlayerData), 2];
 
 [{
     // Check if the player data exists
