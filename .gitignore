@@ -1,15 +1,16 @@
 # HEMTT
-hemtt.exe
 .hemtt/missions/~*
 .hemttout/
-releases/
 .hemttprivatekey
+hemtt.exe
+releases/
 
 # Textures
-Exports/
+*.png
+*.psd
 *.spp
 *.spp.painter_lock
-*.psd
+Exports/
 
 # Music
 *.ogg
@@ -17,13 +18,14 @@ Exports/
 
 # Other
 *.biprivatekey
-*.zip
+*.blend*
+*.fbx
 *.pbo
 *.sqfc
-*.blend*
+*.zip
 
 # Arma 3 Server Configuration
-server.cfg
 *conf.ini
-arma3_player_profiles.md
 ARMA3_INTEGRATION.md
+arma3_player_profiles.md
+server.cfg

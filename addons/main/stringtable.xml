@@ -29,6 +29,10 @@
             <English>[16th] Units (Trooper)</English>
             <French>[16th] Unités (Trooper)</French>
         </Key>
+        <Key ID="str_pc_main_Objects_Droid">
+            <English>Droid</English>
+            <French>Droïde</French>
+        </Key>
         <Key ID="str_pc_main_Vehicles_Laat">
             <English>[16th] Vehicles (LAAT)</English>
             <French>[16th] Véhicules (LAAT)</French>

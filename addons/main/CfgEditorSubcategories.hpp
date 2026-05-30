@@ -11,4 +11,7 @@ class CfgEditorSubcategories {
     class GVAR(Vehicles_Laat) {
         displayName = CSTRING(Vehicles_Laat);
     };
+    class GVAR(Objects_Droid) {
+        displayName = CSTRING(Objects_Droid);
+    };
 };

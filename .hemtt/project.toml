@@ -17,9 +17,14 @@ include = [
     "README.md",
 ]
 exclude = [
-    "*.psd",
-    "*.png",
+    "*.blend*",
+    "*.fbx",
+    "*.ini",
     "*.md",
+    "*.png",
+    "*.psd",
+    "*.spp*",
+    "server.cfg",
 ]
 
 [hemtt.release]
