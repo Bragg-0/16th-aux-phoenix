@@ -41,9 +41,12 @@ if !(isPlayer _player) exitWith {
     WARNING_1("fn_extractPlayerData: Player object is not ready, delaying extraction for %1",_player);
     [{
         params ["_player"];
-        !isNull _player && {isPlayer _player}
+        isNull _player || {isPlayer _player}
     }, {
         params ["_player"];
+        if (isNull _player) exitWith {
+            WARNING_1("fn_extractPlayerData: Player %1 disconnected before extraction could complete",_player);
+        };
         [_player] call FUNC(extractPlayerData);
     }, [_player]] call CBA_fnc_waitUntilAndExecute;
 };
