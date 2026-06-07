@@ -11,6 +11,13 @@ class Header {
 	maxPlayers = 32; // Maximum players
 };
 
+// Remote execution settings
+class CfgRemoteExec {
+	class Functions	{
+		mode = 2;
+	};
+};
+
 // Mission information
 loadScreen = "%LOADSCREEN_PATH%";
 author = %AUTHOR%;
