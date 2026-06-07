@@ -9,14 +9,12 @@ class CfgVehicles {
         scope = 2;
         scopecurator = 2;
         model = QPATHTOF(data\models\viper_droid.p3d);
-        hiddenSelections[] = { "camo1", "camo2" };
+        hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = {
-            QPATHTOF(data\body_viper_droid_co.paa),
-            "#(rgb,8,8,3)color(0,0,0,1))"
+            QPATHTOF(data\camo1_co.paa)
         };
         hiddenSelectionsMaterials[] = {
-            "\a3\data_f\penetration\armour_plate.rvmat",
-            "\a3\data_f\penetration\glass.rvmat"
+            "\a3\data_f\penetration\armour_plate.rvmat"
         };
     };
 };
