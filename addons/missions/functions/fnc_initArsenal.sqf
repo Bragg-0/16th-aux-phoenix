@@ -83,6 +83,8 @@ private _allItems = [
     "JLTS_sabacc_deck",
     "RTX_RemoteMagazine",
     "TrainingMine_Mag",
+    "acc_flashlight",
+    "acc_pointer_IR",
     "ace_marker_flags_green",
     "ace_marker_flags_red",
     "ls_carrierFlag_republic_item",
