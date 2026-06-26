@@ -1,6 +1,7 @@
 PREP(addCurator);
 PREP(canEarProtection);
 PREP(initArsenal);
+PREP(initCheckVersion);
 PREP(initEarProtection);
 PREP(initFortify);
 PREP(initHealTerminal);
