@@ -19,3 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "CfgLoadout.hpp"
+
+#include "CfgDebriefing.hpp"
