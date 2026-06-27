@@ -1034,7 +1034,6 @@ zen_common_autoAddObjects = true;
 zen_common_cameraBird = false;
 zen_common_darkMode = true;
 zen_common_disableGearAnim = true;
-zen_common_preferredArsenal = 0;
 zen_compat_ace_hideModules = true;
 zen_context_menu_enabled = 2;
 zen_context_menu_overrideWaypoints = false;
