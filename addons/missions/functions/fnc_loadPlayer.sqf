@@ -35,7 +35,8 @@ if (isNull _unit || !isPlayer _unit) exitWith {
 
 private _requestId = (_unit getVariable [QGVAR(loadPlayerRequestId), 0]) + 1;
 _unit setVariable [QGVAR(loadPlayerRequestId), _requestId];
-_unit setVariable [QEGVAR(database,playerDataLoaded), false, true];
+_unit setVariable [QEGVAR(database,playerDataArray), []];
+_unit setVariable [QEGVAR(database,playerDataLoaded), false];
 [_unit] remoteExec [QEFUNC(database,extractPlayerData), 2];
 
 [{
@@ -47,14 +48,26 @@ _unit setVariable [QEGVAR(database,playerDataLoaded), false, true];
     params ["_unit", "_requestId"];
     if ((_unit getVariable [QGVAR(loadPlayerRequestId), -1]) isNotEqualTo _requestId) exitWith {};
 
-    private _playerData = _unit getVariable [QEGVAR(database,playerData), createHashMap];
-    if !(_playerData isEqualType createHashMap) exitWith {
-        WARNING_1("fnc_loadPlayer: Invalid player data for %1",_unit);
-    };
+    private _playerDataArray = _unit getVariable [QEGVAR(database,playerDataArray), []];
+    private _isMedic = false;
+    private _isEOD = false;
+    private _loadout = [];
 
-    private _isMedic = _playerData getOrDefault ["isMedic", false];
-    private _isEOD = _playerData getOrDefault ["isEOD", false];
-    private _loadout = _playerData getOrDefault ["loadout", []];
+    if (_playerDataArray isEqualType [] && {count _playerDataArray == 3}) then {
+        _playerDataArray params ["_loadedMedic", "_loadedEOD", "_loadedLoadout"];
+        _isMedic = _loadedMedic;
+        _isEOD = _loadedEOD;
+        _loadout = _loadedLoadout;
+    } else {
+        private _playerData = _unit getVariable [QEGVAR(database,playerData), createHashMap];
+        if !(_playerData isEqualType createHashMap) exitWith {
+            WARNING_1("fnc_loadPlayer: Invalid player data for %1",_unit);
+        };
+
+        _isMedic = _playerData getOrDefault ["isMedic", false];
+        _isEOD = _playerData getOrDefault ["isEOD", false];
+        _loadout = _playerData getOrDefault ["loadout", []];
+    };
 
     [_unit,"medic",_isMedic] call FUNC(setUnitTrait);
     [_unit,"eod",_isEOD] call FUNC(setUnitTrait);

@@ -68,12 +68,14 @@ TRACE_1("fn_extractPlayerData PreProcess",_return);
 if !(_return isEqualType []) exitWith {
     WARNING("fn_extractPlayerData: Invalid database response");
     _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataArray), [false, false, []], true];
     _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
 if (_return isEqualTo []) exitWith {
     WARNING_1("fn_extractPlayerData: No profile found for Steam ID %1",_uid);
     _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataArray), [false, false, []], true];
     _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
@@ -83,6 +85,7 @@ TRACE_1("fn_extractPlayerData PostProcess",_return);
 if (_return isEqualTo []) exitWith {
     WARNING_1("fn_extractPlayerData: Empty profile row for Steam ID %1",_uid);
     _player setVariable [QGVAR(playerData), createHashMap, true];
+    _player setVariable [QGVAR(playerDataArray), [false, false, []], true];
     _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
 
@@ -108,15 +111,27 @@ if (_loadout isEqualType "") then {
     _hashmap set ["loadout", _loadout];
 };
 
-if (count (_hashmap get "loadout") == 0) then {
+_loadout = _hashmap getOrDefault ["loadout", []];
+
+if !(_loadout isEqualType []) exitWith {
+    WARNING_1("fn_extractPlayerData: Invalid loadout for Steam ID %1",_uid);
+    _hashmap set ["loadout", []];
+    _player setVariable [QGVAR(playerData), _hashmap, true];
+    _player setVariable [QGVAR(playerDataArray), [_isMedic, _isEod, []], true];
+    _player setVariable [QGVAR(playerDataLoaded), true, true];
+};
+
+if (count _loadout == 0) then {
     // if loadout is empty == is a new player
     WARNING_1("fn_extractPlayerData: Empty loadout for Steam ID %1",_uid);
     _player setVariable [QGVAR(playerData), _hashmap, true];
+    _player setVariable [QGVAR(playerDataArray), [_isMedic, _isEod, _loadout], true];
     _player setVariable [QGVAR(playerDataLoaded), true, true];
 } else {
     // if loadout is not empty == is an existing player
     // Sauvegarde des données du joueur
     TRACE_1("fn_extractPlayerData Save",_hashmap);
     _player setVariable [QGVAR(playerData), _hashmap, true];
+    _player setVariable [QGVAR(playerDataArray), [_isMedic, _isEod, _loadout], true];
     _player setVariable [QGVAR(playerDataLoaded), true, true];
 };
