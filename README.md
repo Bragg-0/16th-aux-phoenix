@@ -11,7 +11,7 @@ Le mod auxiliaire de la 16th Phoenix Company est un mod pour Arma 3 qui ajoute d
 ## 📜 Licence
 
 <a href="https://www.bohemia.net/community/licenses/arma-public-license-share-alike">
-  <img src="https://www.bohemia.net/assets/img/licenses/APL-SA.png" alt="licence">
+  <img src="https://files.bistudio.com/public/2d36aa7e-6a0e-4ae8-bdab-dfeb2273f731-1" alt="licence">
 </a>
 
 Le code source et les ressources **originales** de ce projet sont disponibles sous licence [APL-SA](https://www.bohemia.net/community/licenses/arma-public-license-share-alike).
