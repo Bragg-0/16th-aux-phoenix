@@ -27,7 +27,7 @@
 #define DC15A_GL "3AS_DC15A_GL"
 #define DC15S_MAG "3AS_60Rnd_EC30_mag"
 #define DC15A_MAG "3AS_45Rnd_EC50_mag"
-#define DC15A_MAG_GL "3AS_3UGL_MK54_HE_shell"
+#define DC15A_MAG_GL "1Rnd_HE_Grenade_shell"
 
 #define RPS6 "3AS_RPS6_HP"
 #define RPS6_MAG "3AS_MK41_AT"

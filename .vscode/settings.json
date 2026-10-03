@@ -13,5 +13,6 @@
         "*.inc": "cpp",
         "*.cfg": "cpp",
         "*.rvmat": "arma-config"
-    }
+    },
+    "C_Cpp.default.compilerPath": ""
 }

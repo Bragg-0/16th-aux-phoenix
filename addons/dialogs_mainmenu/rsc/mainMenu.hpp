@@ -1,3 +1,5 @@
+class RscMainMenuSpotlight;
+class RscActivePictureKeepAspect;
 class RscStandardDisplay;
 class RscDisplayMain : RscStandardDisplay {
     delete Spotlight;
@@ -46,15 +48,6 @@ class RscDisplayMain : RscStandardDisplay {
         class LogoApex : Logo {
         };
 
-        delete Spotlight1;
-        delete Spotlight2;
-        delete Spotlight3;
-        delete BackgroundSpotlightRight;
-        delete BackgroundSpotlightLeft;
-        delete BackgroundSpotlight;
-        delete SpotlightNext;
-        delete SpotlightPrev;
-
         class GVAR(connect1): RscButton {
             idc = 6101;
             x = X_COORD(0.43802084);
@@ -66,5 +59,39 @@ class RscDisplayMain : RscStandardDisplay {
             colorBackgroundActive[] = GUI_BCG_COLOR_SELECTED;
             colorBackgroundDisabled[] = GUI_BCG_MENU;
         };
+
+		class BackgroundSpotlight: RscPicture
+		{
+			show=0;
+		};
+		class BackgroundSpotlightLeft: BackgroundSpotlight
+		{
+			show=0;
+		};
+		class BackgroundSpotlightRight: BackgroundSpotlightLeft
+		{
+			show=0;
+		};
+		class Spotlight1: RscMainMenuSpotlight
+		{
+			show=0;
+		};
+		class Spotlight2: RscText
+		{
+			w="0 *  (pixelW * pixelGridNoUIScale * 2)";
+			h="0 *  (pixelH * pixelGridNoUIScale * 2)";
+		};
+		class Spotlight3: RscMainMenuSpotlight
+		{
+			show=0;
+		};
+		class SpotLightPrev: RscActivePictureKeepAspect
+		{
+			show=0;
+		};
+		class SpotlightNext: SpotLightPrev
+		{
+			show=0;
+		};
     };
 };

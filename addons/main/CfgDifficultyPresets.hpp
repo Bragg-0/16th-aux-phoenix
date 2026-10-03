@@ -14,7 +14,7 @@ class CfgDifficultyPresets {
 
             // Situational awareness
             groupIndicators = 0; // Group indicators		(0 = never, 1 = limited distance, 2 = always)
-            friendlyTags = 1; // Friendly name tags	(0 = never, 1 = limited distance, 2 = always)
+            friendlyTags = 0; // Friendly name tags	(0 = never, 1 = limited distance, 2 = always)
             enemyTags = 0; // Enemy name tags		(0 = never, 1 = limited distance, 2 = always)
             detectedMines = 0; // Detected mines		(0 = never, 1 = limited distance, 2 = always)
             commands = 1; // Commands				(0 = never, 1 = fade out, 2 = always)

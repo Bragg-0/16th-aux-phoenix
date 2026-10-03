@@ -17,12 +17,13 @@
 	 * Public: No
  */
 
-private["_queryStmt","_mode","_multiarr","_queryResult","_key","_return","_loop"];
-_queryStmt = [_this,0,"",[""]] call BIS_fnc_param;
-_mode = [_this,1,1,[0]] call BIS_fnc_param;
-_multiarr = [_this,2,false,[false]] call BIS_fnc_param;
+params [
+    ["_queryStmt","",[""]],
+    ["_mode",1,[0]],
+    ["_multiarr",false,[false]]
+];
 
-_key = "extDB3" callExtension format["%1:%2:%3",_mode,"sqf",_queryStmt];
+private _key = "extDB3" callExtension format["%1:%2:%3",_mode,"sqf",_queryStmt];
 
 if (_mode isEqualTo 1) exitWith {true};
 
@@ -32,7 +33,7 @@ if (isNil "_keyRaw" || (typeName _keyRaw != "ARRAY") || (count _keyRaw < 2)) exi
     []
 };
 _key = _keyRaw select 1;
-_queryResult = "extDB3" callExtension format["4:%1", _key];
+private _queryResult = "extDB3" callExtension format["4:%1", _key];
 
 //Make sure the data is received
 if (_queryResult isEqualTo "[3]") then {
@@ -62,7 +63,7 @@ if (isNil "_queryResultRaw" || (typeName _queryResultRaw != "ARRAY") || (count _
 };
 _queryResult = _queryResultRaw;
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
-_return = (_queryResult select 1);
+private _return = (_queryResult select 1);
 if (!_multiarr && count _return > 0) then {
     _return = (_return select 0);
 };
