@@ -74,4 +74,10 @@
             <French>[16th] Gilet Spécialiste</French>
         </Key>
     </Package>
+    <Package name="CfgWeapons_Customs">
+        <Key ID="STR_PC_Characters_Vests_PC_Vests_Customs_Arthur_ARCPlate">
+            <English>[16th] Arthur ARC Plate Vest</English>
+            <French>[16th] Gilet Blindé Arthur</French>
+        </Key>
+    </Package>
 </Project>

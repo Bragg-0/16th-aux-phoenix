@@ -5,7 +5,7 @@
     picture = QPATHTOEF(characters,data\##CHARACTERS_TYPE##_ca.paa); \
     class ItemInfo : ItemInfo {                 \
         mass = 40;                              \
-        containerClass = SUPPLY_XX(100);        \
+        containerClass = SUPPLY_XX(110);        \
         class HitpointsProtectionInfo {         \
             class Chest {                       \
                 hitpointName = "HitChest";      \
@@ -115,12 +115,12 @@
     }
 
 #define CLASS_ARCPLATE_VEST(var1)                                                   \
-    class ECVAR(var1,ARCPlate) : ls_gar_arc_vest_base {                            \
+    class ECVAR(var1,ARCPlate) : ls_gar_arc_vest_base {                             \
         VESTS_BASE;                                                                 \
-        displayName = SUBCSTRING(ECVAR(var1,ARCPlate));                            \
+        displayName = SUBCSTRING(ECVAR(var1,ARCPlate));                             \
         hiddenSelectionsTextures[] = {                                              \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_arc_accessories_co.paa),     \
-            ""                                                                      \
+            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_officer_accessories_co.paa)  \
         };                                                                          \
     }
 

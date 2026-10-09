@@ -12,7 +12,7 @@
     class ECVAR(var1,Medic) : ls_gar_heavyMedic_backpack {                  \
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,HeavyMedic));                   \
-        maximumLoad = 500;                                                  \
+        maximumLoad = 400;                                                  \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_Medic_co.paa),                  \
 			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\cover_co.paa",     \
@@ -26,7 +26,7 @@
     class ECVAR(var1,Standard) : ls_gar_heavy_backpack {                    \
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Heavy));                        \
-        maximumLoad = 500;                                                  \
+        maximumLoad = 160;                                                  \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),    \
 			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\cover_co.paa",     \
@@ -53,7 +53,7 @@
     class ECVAR(var1,Rocket) : ls_gar_rocket_backpack {                     \
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Rocket));                       \
-        maximumLoad = 400;                                                  \
+        maximumLoad = 200;                                                  \
         backpackClass = QECVAR(var1,Rocket);                                \
         hiddenSelectionsTextures[] = {                                      \
             QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_co.paa),                        \
@@ -68,7 +68,7 @@
     class ECVAR(var1,Invisible) : ls_gar_heavy_backpack {                   \
         BACKPACKS_BASE;                                                     \
         displayName = SUBCSTRING(ECVAR(var1,Invisible));                    \
-        maximumLoad = 300;                                                  \
+        maximumLoad = 50;                                                   \
         backpackClass = QECVAR(var1,Invisible);                             \
         hiddenSelectionsTextures[] = {};                                    \
     }
