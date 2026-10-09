@@ -21,7 +21,7 @@ class CfgPatches {
 
             // Customs
                 #define CHARACTERS_TYPE Customs
-                QECVARF(1337,P2)
+                // template "QECVARF(1337,P2)"
                 #undef CHARACTERS_TYPE
         };
         weapons[] = {
@@ -37,7 +37,7 @@ class CfgPatches {
 
             // Customs
                 #define CHARACTERS_TYPE Customs
-                QECVAR(1337,P2)
+                // template "QECVAR(1337,P2)"
                 #undef CHARACTERS_TYPE
         };
         VERSION_CONFIG;
