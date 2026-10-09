@@ -34,6 +34,7 @@ class CfgPatches {
 
             // Customs
                 #define CHARACTERS_TYPE Customs
+                QECVAR(Arthur,ARCPlate),
                 //* Add the class names for custom vests here
                 #undef CHARACTERS_TYPE
         };

@@ -954,6 +954,14 @@ sc_scripts_jumppack_maxJumpHeightLow = 10;
 sc_scripts_jumppack_maxJumpVelocityMultiplier = 3;
 sc_scripts_jumppack_useACEOverpressure = true;
 
+// Simple Suppress
+simplesuppress_suppress_checkLOS = true;
+simplesuppress_suppress_overlayFadeoutTime = 20;
+simplesuppress_suppress_overlayOpacity = 0.95;
+simplesuppress_suppress_overlayTexture = 2;
+simplesuppress_suppress_projectileMaxDistance = 10;
+simplesuppress_suppress_shooterMinDistance = 0;
+
 // TFAR - Global settings
 TFAR_AICanHearPlayer = true;
 TFAR_AICanHearSpeaker = true;

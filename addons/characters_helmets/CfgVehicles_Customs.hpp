@@ -1,5 +1,5 @@
 #define CHARACTERS_TYPE Customs
 
-CLASS_P2_HELMET_F(1337);
+// template "CLASS_P2_HELMET_F(1337);"
 
 #undef CHARACTERS_TYPE
