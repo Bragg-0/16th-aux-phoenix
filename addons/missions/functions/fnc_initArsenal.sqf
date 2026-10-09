@@ -26,6 +26,10 @@ private _allItems = [
     // Add your classnames here
     "3AS_10Rnd_EC30_Pellets",
     "3AS_10Rnd_ESlug_Mag",
+    "3AS_DC17S_Dual_F",
+    "3AS_Z6_F",
+    "3AS_300Rnd_EC60_Mag",
+    "3AS_32Rnd_EC20_Dual_Mag",
     "3AS_5Rnd_Stun_Mag",
     "3AS_DC15X_F",
     "3AS_DP23_F",
@@ -97,6 +101,7 @@ private _allItems = [
     "acc_pointer_IR",
     "ace_marker_flags_green",
     "ace_marker_flags_red",
+    "ACE_MapTools",
     "laserbatteries",
     "ls_carrierFlag_republic_item",
     "ls_clone_electrobinoculars",
@@ -115,7 +120,6 @@ private _allItems = [
     "ls_glasses_scarf",
     "ls_launcher_mrbc_carry",
     "ls_magazine_30mw_500Rnd_blue",
-    "lsd_gar_arfAntenna_hud",
     "lsd_gar_rangefinder_nvg",
     "lsd_gar_standardSPC_nvg",
     "lsd_gar_standard_nvg"
