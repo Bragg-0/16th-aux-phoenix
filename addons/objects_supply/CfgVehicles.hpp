@@ -15,8 +15,10 @@ class CfgVehicles {
             WEAP_XX(3AS_DC15A_F,5);
             WEAP_XX(3AS_DC15A_GL,2);
             WEAP_XX(3AS_DC17S_F,10);
-            WEAP_XX(JLTS_Z6,2);
+            WEAP_XX(3AS_Z6_F,2);
             WEAP_XX(3AS_DC15X_F,2);
+            WEAP_XX(3AS_DC17S_Dual_F,5);
+            WEAP_XX(3AS_DP23_F,3);
         };
         EMPTY_MAGAZINE;
         editorPreview = EDITORPREVIEW(SUBGVAR(weapons));
@@ -33,7 +35,10 @@ class CfgVehicles {
             MAG_XX(3AS_10Rnd_EC100_Mag,30);
             MAG_XX(3AS_45Rnd_EC50_Mag,20);
             MAG_XX(3AS_60Rnd_EC30_mag,20);
-            MAG_XX(JLTS_Z6_mag,10);
+            MAG_XX(3AS_300Rnd_EC60_Mag,10);
+            MAG_XX(3AS_32Rnd_EC20_Dual_Mag,20);
+            MAG_XX(3AS_10Rnd_EC30_Pellets,20);
+            MAG_XX(3AS_10Rnd_ESlug_Mag,20);
         };
         editorPreview = EDITORPREVIEW(SUBGVAR(ammo));
     };
@@ -67,11 +72,13 @@ class CfgVehicles {
         EMPTY_ITEM;
         EMPTY_BACKPACK;
         class TransportWeapons {
-            WEAP_XX(3AS_RPS6_HP,5);
+            WEAP_XX(3AS_RPS6_F,10);
+            WEAP_XX(3AS_RPS6_G,10);
+            WEAP_XX(3AS_PLX1_AT,2);
         };
         class TransportMagazines {
-            MAG_XX(3AS_MK41_AT,20);
-            MAG_XX(3AS_MK42_HE,10);
+            MAG_XX(3AS_JLTS_MK43_AT,10);
+            MAG_XX(3AS_JLTS_MK39_AA,10);
         };
         editorPreview = EDITORPREVIEW(SUBGVAR(launchers));
     };
