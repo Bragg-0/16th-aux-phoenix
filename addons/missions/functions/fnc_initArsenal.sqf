@@ -35,7 +35,7 @@ private _allItems = [
     "3AS_DP23_F",
     "3AS_JLTS_MK39_AA",
     "3AS_JLTS_MK43_AT",
-    "3AS_PLX1_AT",
+    "3AS_PLX1_F",
     "3AS_RPS6_F",
     "3AS_RPS6_G",
     "3AS_bipod_DC15X_F",

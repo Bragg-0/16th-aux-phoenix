@@ -20,8 +20,8 @@
 #define DC17S "3AS_DC17S_F"
 #define DC17S_MAG "3AS_16Rnd_EC20_Mag"
 
-#define Z6 "JLTS_Z6"
-#define Z6_MAG "JLTS_Z6_mag"
+#define Z6 "3AS_Z6_F"
+#define Z6_MAG "3AS_300Rnd_EC60_Mag"
 
 #define DC15S "3AS_DC15S_F"
 #define DC15A_GL "3AS_DC15A_GL"
@@ -29,8 +29,8 @@
 #define DC15A_MAG "3AS_45Rnd_EC50_mag"
 #define DC15A_MAG_GL "1Rnd_HE_Grenade_shell"
 
-#define RPS6 "3AS_RPS6_HP"
-#define RPS6_MAG "3AS_MK41_AT"
+#define RPS6 "3AS_PLX1_F"
+#define RPS6_MAG "3AS_JLTS_MK43_AT"
 
 #define CTBI "ls_grenade_n20_magazine"
 #define DETONATOR "3AS_ThermalDetonator"

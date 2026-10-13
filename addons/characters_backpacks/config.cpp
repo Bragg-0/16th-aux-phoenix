@@ -13,7 +13,7 @@ class CfgPatches {
                 #define CHARACTERS_TYPE Regs
                 QECVAR(Base,Medic),
                 QECVAR(Base,Standard),
-                QECVAR(EOD,Standard),
+                QECVAR(Base,EOD),
                 QECVAR(Base,Radio),
                 QECVAR(Base,Rocket),
                 QECVAR(Base,Invisible),

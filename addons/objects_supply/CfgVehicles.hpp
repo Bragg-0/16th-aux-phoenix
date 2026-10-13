@@ -50,12 +50,14 @@ class CfgVehicles {
         EMPTY_BACKPACK;
         EMPTY_WEAPON;
         class TransportMagazines {
-            MAG_XX(3AS_3UGL_MK55_Smoke_Red_shell,10);
-            MAG_XX(3AS_3UGL_MK55_Smoke_Green_shell,10);
-            MAG_XX(3AS_3UGL_MK55_Smoke_Blue_shell,10);
-            MAG_XX(3AS_3UGL_MK56_Flare_White_shell,10);
-            MAG_XX(3AS_3UGL_MK56_Flare_Red_shell,10);
-            MAG_XX(3AS_3UGL_MK56_Flare_Green_shell,10);
+            MAG_XX(3Rnd_Smoke_Grenade_shell,10);
+            MAG_XX(3Rnd_SmokeYellow_Grenade_shell,10);
+            MAG_XX(3Rnd_SmokeRed_Grenade_shell,10);
+            MAG_XX(3Rnd_UGL_FlareWhite_Illumination_F,10);
+            MAG_XX(3Rnd_UGL_FlareRed_Illumination_F,10);
+            MAG_XX(3Rnd_UGL_FlareWhite_F,10);
+            MAG_XX(3Rnd_UGL_FlareRed_F,10);
+            MAG_XX(3Rnd_UGL_FlareGreen_F,10);
             MAG_XX(3AS_SmokeWhite,10);
             MAG_XX(3AS_SmokeRed,10);
             MAG_XX(3AS_SmokeGreen,10);
@@ -74,7 +76,7 @@ class CfgVehicles {
         class TransportWeapons {
             WEAP_XX(3AS_RPS6_F,10);
             WEAP_XX(3AS_RPS6_G,10);
-            WEAP_XX(3AS_PLX1_AT,2);
+            WEAP_XX(3AS_PLX1_F,2);
         };
         class TransportMagazines {
             MAG_XX(3AS_JLTS_MK43_AT,10);

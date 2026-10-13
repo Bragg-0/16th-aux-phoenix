@@ -72,3 +72,16 @@
         backpackClass = QECVAR(var1,Invisible);                             \
         hiddenSelectionsTextures[] = {};                                    \
     }
+
+#define CLASS_EOD_BACKPACK(var1)                                                                \
+    class ECVAR(var1,EOD) : ls_gar_heavy_backpack {                                             \
+        BACKPACKS_BASE;                                                                         \
+        displayName = SUBCSTRING(ECVAR(var1,EOD));                                              \
+        maximumLoad = 500;                                                                      \
+        hiddenSelectionsTextures[] = {                                                          \
+            QPATHTOF(data\##CHARACTERS_TYPE##\##var1##_Backpack_EOD_co.paa),                        \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\cover_co.paa",     \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\pouches_co.paa",   \
+			"\ls\core\addons\characters_clone_legacy\backpacks\standard\data\tube_co.paa"       \
+        };                                                                                      \
+    }
