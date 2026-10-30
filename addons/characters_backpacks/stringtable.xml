@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="16th_aux_phoenix (characters_backpacks)">
     <Package name="CfgVehicles_Regs">
+        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_EOD">
+            <English>[16th] EOD Backpack</English>
+            <French>[16th] Sac à dos EOD</French>
+        </Key>
         <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Heavy">
             <English>[16th] Backpack</English>
             <French>[16th] Sac à dos</French>
@@ -20,10 +24,6 @@
         <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_Base_Rocket">
             <English>[16th] Rocket Backpack</English>
             <French>[16th] Sac à dos roquettes</French>
-        </Key>
-        <Key ID="STR_PC_Characters_Backpacks_PC_Backpacks_Regs_EOD_Heavy">
-            <English>[16th] EOD Backpack</English>
-            <French>[16th] Sac à dos EOD</French>
         </Key>
     </Package>
 </Project>
